@@ -1,0 +1,150 @@
+/* CSS Document */
+html{
+font-family:Arial, Helvetica, sans-serif;
+}
+body{
+margin:0;
+padding:0;
+background:url(../img/fondo.jpg);
+}
+
+/*--------------------------------*/
+/*LOGGING*/
+/*--------------------------------*/
+
+#loging{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	margin-left: -255px;
+	margin-top: -128px;
+	width:510px;
+	height:257px;
+	background-image:url(../img/fondo_loging.png);
+	background-repeat:no-repeat;
+}
+#texto_loging{
+margin:30px 25px;
+font-size:15px;
+}
+
+.campos {
+	margin-bottom:5px;
+	margin-left:10px;
+    border:1px solid #CCCCCC;
+	background-color:#d8e6f7;
+	color:#5b6470;
+	padding:5px;
+}
+.campos:focus {
+	border:1px solid #3372a8;
+}
+
+.campos:hover {
+	border:1px solid #3372a8;
+}
+
+/*-------------------------------------------*/
+/*MENU*/
+/*------------------------------------------- */
+
+#banner_sup_fondo{
+background-image:url(../img/fondo_sup.jpg);
+background-repeat:repeat-x;
+width:100%;
+height:100px;
+}
+
+#menu{
+margin-top:50px;
+font-size:10px;
+color:#FFFFFF;
+float:left;
+}
+#menu ul{
+list-style:none;
+}
+#menu li{
+display:inline;
+border-right:#FFFFFF thin solid ;
+}
+#menu a{
+color:#FFFFFF;
+font-weight:bold;
+padding:5px;
+text-decoration:none;
+}
+#menu a:hover{
+color:#000000;
+background-color:#FFFFFF;
+padding:2px 5px;
+}
+#menu li.ultimo{
+border-right:none;
+}
+#menu li.seleccionado{
+border:#FFFFFF 1px dotted;
+}
+
+/* ------------------------------------- */
+/* BLOQUE CENTRAL TOTAL */
+/* ------------------------------------- */
+
+.cuerpo{
+margin-left:auto;
+margin-right:auto;
+background-color:#FFFFFF;
+padding:10px 25px;
+height:550px;
+}
+
+.bloque_der{
+float:right;
+width:430px;
+height:450px;
+overflow-y:scroll;
+}
+
+.titulo_azul{
+color:#3372a8;
+font-size:16px;
+}
+
+/* ------------------------------------- */
+
+/*--------------------------------------------*/
+/* CUADROS DE EJECUTAR DE LA PAG DE INICIO
+/*--------------------------------------------*/
+.ejecutar{
+width:300px; 
+font-size:12px; 
+border-right:#343633 1px solid; 
+padding: 0px 10px 5px 10px;
+float:left;
+}
+.ejecutar:hover{
+border-right:#666666 1px solid; 
+}
+
+.boton_gris{
+color:#FFFFFF;
+background-color:#343633;
+line-height:2em;
+background-image:url(../img/boton.png);
+background-repeat:no-repeat;
+background-position:90% 50%;
+padding-left:10px;
+}
+.boton_gris a{
+color:#FFFFFF;
+text-decoration:none;
+padding: 5px 15px 5px 10px;
+}
+.boton_gris a:hover{
+color:#c3cf03;
+}
+.boton_gris:hover{
+background-color:#666666;
+}
+
+/*--------------------------------------------*/
