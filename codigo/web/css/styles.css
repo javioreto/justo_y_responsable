@@ -1,0 +1,39 @@
+ul {
+	clear: both;
+}
+
+#top ul{
+	clear: none;
+}
+
+
+ul.pagination li:hover {
+	background-color: #7CB078;
+}
+
+
+
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    /*padding-top: -15px;
+    /*margin-bottom: 10px;*/
+    font-family: georgia;
+	font-size:15px;
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage {
+    background: #D50000;	
+    border-radius: 4px;
+    height: 35px;
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
+}

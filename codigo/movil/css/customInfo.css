@@ -1,0 +1,53 @@
+html{
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	position:relative;	
+	max-height:100%;
+	margin:0;
+	padding:0;
+	background-color: #BBBBBB;
+   	height:100%;
+}
+
+#head{
+	height: 52px;
+	/**/
+	background-color: #D50000;
+}
+
+#head img{
+	margin-top:6px;
+}
+
+#head h1{
+	margin-top:9px;
+	font-size: 20px;
+}
+
+#head a{
+	margin-top:6px;
+}
+
+#divinfo{
+	margin-top:10px;
+}
+
+#titleSettPanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+	
+}
+
+#btnclose{
+	margin-top:20px;
+}
+
+#settingPanel{
+	margin-top:53px;
+}

@@ -1,0 +1,114 @@
+html{
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	position:relative;	
+	
+	margin:0;
+	padding:0;
+	background-color: #BBBBBB;
+   	height:100%;
+}
+
+#mapE {
+	
+    height: 700px;
+    width: 100%;
+}
+
+#contentInfo{
+	min-width: 100px;
+	min-height: 100px;
+}
+
+#head{
+	height: 52px;
+/**/
+	background-color: #D50000;
+}
+
+#head img{
+	margin-top:6px;
+}
+
+#head h1{
+	margin-top:9px;
+	font-size: 20px;
+}
+
+#head a{
+	margin-top:6px;
+}
+
+#body{
+	padding-bottom:95px; 
+}
+
+
+#map-page {
+	min-height:100%;
+	height:100%;
+	position:relative;
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height: 95px;
+}
+
+#titleSettPanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+	
+}
+
+#btnclose{
+	margin-top:20px;
+}
+
+#result{
+	font-size: small;
+	background-color:#666666 ;
+	width: 100%;
+}
+
+#name{
+	text-align: left;
+	margin-left: 10px;
+}
+
+#titleLegenPanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+	
+}
+
+#legenList li{
+	min-height: 2px;
+}
+
+#legenList img{
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#legenPanel{
+	margin-top:97px;
+}
+
+
+#legenList p{
+	margin-left:-50px;
+}
+
+#settingPanel{
+	margin-top:53px;
+}

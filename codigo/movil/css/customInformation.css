@@ -1,0 +1,157 @@
+#name{
+	background-color:#666666 ;
+}
+
+#name h1{
+	text-align: left;
+	margin-left: 10px;
+}
+
+#information{
+	margin-left:20px;
+}
+
+#divloc{
+	background-color: #BBBBBB;
+}
+
+#divsec{
+	background-color: #BBBBBB;
+}
+
+#divcont{
+	background-color: #BBBBBB;
+}
+
+#divsoc{
+	background-color: #BBBBBB;
+}
+
+#divorg{
+	background-color: #BBBBBB;
+}
+
+#locationtitle{
+	
+	color: #FFFFFF;
+}
+
+#sectortitle{
+	
+	color: #FFFFFF;
+}
+
+#contacttitle{
+	color: #FFFFFF;
+}
+
+#socialttitle{
+	color: #FFFFFF;
+}
+
+#orgttitle{
+	color: #FFFFFF;
+}
+
+hr{
+	margin-left:-20px;
+}
+
+#closePanel{
+	style="float: right";
+}
+
+#titlePanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+}
+
+#titleSettPanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+	
+}
+
+#btnclose{
+	margin-top:20px;
+}
+
+#img{
+	border: 2px solid black;	
+	max-width: 150px;
+	max-height: 150px;
+	margin-top: 10px;
+	margin-left: -5px;
+	
+}
+
+
+
+#desccomment{
+	white-space: pre-wrap;
+	
+}
+
+#proddesc{
+	white-space: pre-wrap;
+}
+
+#adddesc{
+	white-space: pre-wrap;
+}
+
+#facelink{
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+#twitterlink{
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+#websitelink{
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+#head{
+	height: 52px;
+	/**/
+	background-color: #D50000;
+}
+
+#head img{
+	margin-top:6px;
+}
+
+#head h1{
+	margin-top:9px;
+	font-size: 20px;
+}
+
+#head a{
+	margin-top:6px;
+}
+
+table td p{
+	text-overflow: ellipsis;
+}
+
+#settingPanel{
+	margin-top:53px;
+}
+
+#productPanel{
+	margin-top:97px;
+}
+
+a{
+	text-decoration: none;
+	
+}
+
+
+

@@ -1,0 +1,132 @@
+body{
+	background-color:#E5E5E5;
+}
+
+.controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
+
+#ubicacion{
+	background-color:#666666 ;
+}
+
+#sector{
+	background-color:#666666 ;
+}
+
+#productos{
+	background-color:#666666 ;
+}
+
+#category{
+	margin-top: 120px;
+}
+
+#subcategory{
+	margin-top: 20px;
+	
+}
+
+#head{
+	height: 52px;
+	/**/
+	background-color: #D50000;
+}
+
+#head img{
+	margin-top:6px;
+}
+
+#head h1{
+	margin-top:9px;
+	font-size: 20px;
+}
+
+#head a{
+	margin-top:6px;
+}
+
+
+
+/**
+ * 	Estilo del flip de la distancia
+ */
+
+
+/*Custom indentations are needed because the length of custom labels differs from
+   the length of the standard labels*/
+
+.custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+    text-indent: -2.1em;
+}
+.custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+    text-indent: 0.5em;
+}
+/*
+Custom widths are needed because the length of custom labels differs from
+   the length of the standard labels*/
+.custom-size-flipswitch.ui-flipswitch {
+    width: 4.875em;
+}
+.custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+    padding-left: 3em;
+    width: 1.875em;
+}
+
+.ui-slider-label-b{
+	background-color: #D50000;	
+}
+
+.ui-page-theme-a .ui-bar-inherit{
+
+background-color: red;
+
+}
+
+
+#labeldistance{
+	float:left;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+
+#labelcity{
+	float:left;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+#titleSettPanel{
+	margin-top: -2px;
+	/*color: #7cb078;*/
+	color: #D50000;
+	
+}
+
+#btnclose{
+	margin-top:20px;
+}
+
+#allcheck a{
+	margin:8px;
+}
+
+#divallcheckall{
+	padding-top: 10px;
+}
+
+#cnall{
+	font-size: 20px;
+	text-decoration: none;
+}
+
+#settingPanel{
+	margin-top:53px;
+}
+
+#checkalllabel{
+	/*color: green;*/
+	color: #D50000;
+}
