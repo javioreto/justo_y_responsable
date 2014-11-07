@@ -3,9 +3,11 @@ session_start();
 
 if (is_file("dataAccess/dataBase.php")){
     include_once ("dataAccess/dataBase.php");
+    include_once ("../controller/mailingSystem.php");
 }
 else {
     include_once ("../dataAccess/dataBase.php");
+    include_once ("../controller/mailingSystem.php");
 }
 
    
@@ -26,6 +28,9 @@ if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['dni']) && 
     $exist = false;
     $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
     
+    //Connect with mailing system
+    $mailingSystem= new mailingSystem();
+    
     //get user by dni
     $user = $dataBase->getUserByDni($dni,$con);
     if($user != ""){
@@ -41,11 +46,14 @@ if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['dni']) && 
             if(isset($_SESSION["admin"])){
                 if($_SESSION["admin"]==1){
                     $dataBase->insertUserValid($name, $surname, $dni, md5($password), $phone, $email,$admin,$con);
+                    $mailingSystem->newUser($email, $name);
                 }else{
                     $dataBase->insertUser($name, $surname, $dni, md5($password), $phone, $email,$admin,$con);
+                    $mailingSystem->newUser($email, $name);
                 }
             }else{
                 $dataBase->insertUser($name, $surname, $dni, md5($password), $phone, $email,$admin,$con);
+                $mailingSystem->newUser($email, $name);
             }
         }
         
