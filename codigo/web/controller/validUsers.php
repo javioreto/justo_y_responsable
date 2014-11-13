@@ -14,11 +14,20 @@ else {
     include_once ("../controller/load.php");
 }
 
+if (is_file("controller/mailingSystem.php")){
+    include_once ("controller/mailingSystem.php");
+}
+else {
+    include_once ("../controller/mailingSystem.php");
+}
+
+
    
 if(isset($_POST['arrayUsers'])){
     
     $dataBase = new dataBase();
     $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+    $mailingSystem = new mailingSystem();
     $html = "no;";
     
     $arrayUsers = $_POST['arrayUsers'];    
@@ -29,7 +38,7 @@ if(isset($_POST['arrayUsers'])){
     }else{
         foreach($arrayUsers AS $us){
             $html = "si;";
-            $dataBase->updateValidUser($us,$con);
+            $mailingSystem->userAcepted($dataBase->updateValidUser($us,$con));
         }
     }
            

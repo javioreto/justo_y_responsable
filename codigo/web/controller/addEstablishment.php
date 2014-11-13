@@ -7,7 +7,16 @@ else {
     include_once ("../dataAccess/dataBase.php");
 }
 
+if (is_file("controller/mailingSystem.php")){
+    include_once ("controller/mailingSystem.php");
+}
+else {
+    include_once ("../controller/mailingSystem.php");
+}
+
+
 session_start();
+
 
 //get params
 $name = $_POST["name"];
@@ -117,14 +126,17 @@ $refiduser = $_SESSION["iduser"];
 //Connect with the database
 $dataBase = new dataBase();
 $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+$mailingSystem=new mailingSystem();
 
 //insert the establishment and return the id of that establishment.
 if($userselect!=""){
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
         $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect,$con);
+        $mailingSystem->newEstablishment($name);
 }else{
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
     $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser,$con);
+    $mailingSystem->newEstablishment($name);
 }
 
 //if the array of products are different of empty string insert the products.

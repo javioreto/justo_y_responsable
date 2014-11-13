@@ -825,21 +825,11 @@ class DataBase{
      * 
      * @param id user id
      * @param con the connection
-     *
-     * @return email of user 
+     * 
      */
     function updateValidUser($id,$con){
         $sql = "UPDATE usuario SET validado=1 WHERE idusuario=$id"; 
         mysql_query($sql,$con);
-        
-        /* return user email to send confirmation */
-        
-        $sql = "SELECT * FROM usuario WHERE idusuario=$id";
-        $result = mysql_query($sql, $con);
-        $row = mysql_fetch_array($result);
-        $email=$row['correo'];
-        
-        return $email;
     }
     
     
