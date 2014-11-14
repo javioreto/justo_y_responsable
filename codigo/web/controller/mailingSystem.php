@@ -95,6 +95,30 @@ else {
 
 }
 
+
+/*
+Send email to restore user password 
+*/
+function restorePass($id,$email){
+
+if (is_file("view/mailView.php")){
+    include_once ("view/mailView.php");
+}
+else {
+    include_once ("../view/mailView.php");
+}
+
+	$ssubject="Cambiar tu contraseña";
+	$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
+	$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
+	$sheader=$sheader."Mime-Version: 1.0\n";
+	$sheader=$sheader."Content-Type: text/html";
+
+	mail($email,$ssubject,$restorePass,$sheader);
+
+}
+
+
 /*
 Get url to make static img-url in emails 
 */

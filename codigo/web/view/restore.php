@@ -38,7 +38,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         <link rel="stylesheet"  href="../css/customLogin.css">
 
         <script src="../js/static/jquery.js"></script>
-        <script type="text/javascript" src="../js/loginRegister.js"></script>
+        <script type="text/javascript" src="../js/restore.js"></script>        
         <script type="text/javascript" src="../js/language.js"></script>
         
         
@@ -52,8 +52,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
     <div class="bs-docs-header" id="content">
         <div class="container">
             <div class="col-md-10">
-                <a href="login.php" ><img style="float: left"  src="../../images/logojyr.png" /></a>
-                <a href="login.php"><h1 id="titleheader" ><?php echo _("Justo y Responsable") ?></h1></a>
+                <a href="restore.php" ><img style="float: left"  src="../../images/logojyr.png" /></a>
+                <a href="restore.php"><h1 id="titleheader" ><?php echo _("Justo y Responsable") ?></h1></a>
             </div>
             <div class="col-md-2" >
                 <?php
@@ -98,6 +98,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav navbar-right">
+          	  <li><a data-ajax="false" style="cursor:pointer;" onclick='volver()'><?php echo _("Volver") ?></a></li>
               <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
           </ul>
@@ -111,47 +112,36 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
        <div id="divpanelaccess" class="form-horizontal col-md-offset-3 col-md-6" role="form">
         <div class="panel panel-default">
           <div id="headpanelaccess" class="panel-heading col-md-13">
-            <h3 class="panel-title"><?php echo _("Acceso") ?></h3>
+            <h3 class="panel-title"><?php echo _("Recuperar contraseña") ?></h3>
           </div>
           
           <div id="bodypanelaccess" class="panel-body">
             <div class="form-horizontal" role="form">
               <div class="form-group">
+              <div class="col-md-10 col-md-offset-1">
                 <div id="alertCampos" class="alert alert-danger" style="display: none">
                    <button type="button" class="close" onclick="$('#alertCampos').hide()" aria-hidden="true">&times;</button>
                    <strong><?php echo _("Error: ") ?></strong><?php echo _("Debe rellenar todos los campos.") ?>
                 </div>
-                <div id="alertDatos" class="alert alert-danger" style="display: none">
-                   <button type="button" class="close" onclick="$('#alertDatos').hide()" aria-hidden="true">&times;</button>
-                   <strong><?php echo _("Error: ") ?></strong><?php echo _("Usuario o contraseña incorrecta.") ?>
-                </div>
-                <div id="alertCorrect" class="alert alert-info" style="display: none">
-                   <button type="button" class="close" onclick="$('#alertCorrect').hide()" aria-hidden="true">&times;</button>
-                   <strong><?php echo _("Datos correctos-") ?></strong><?php echo _("no puede acceder con esta cuenta hasta que no sea validado por un administrador.") ?>
-                </div>
-                <div id="alertDni" class="alert alert-warning" style="display: none">
+                <div id="alertOk" class="alert alert-success" style="display: none">
                    <button type="button" class="close" onclick="$('#alertDni').hide()" aria-hidden="true">&times;</button>
-                   <strong><?php echo _("Error: ") ?></strong><?php echo _("El dni no es válido") ?>
+                   <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Compruebe su correo electrónico y siga los pasos que se le indiquen.") ?>
                 </div>
-                <label for="dni" class="col-md-3 col-md-offset-1 control-label"><?php echo _("DNI:") ?></label>
+                </div>
+                
+                <div class="col-md-8 col-md-offset-2 text-center">
+                   <?php echo _("Introduzca su DNI y le enviaremos un correo electrónico para proceder a recuperar su contraseña. ") ?>
+                </div>
+              </div>
+              <div class="form-group">
+              	<label for="dni" class="col-md-3 col-md-offset-1 control-label"><?php echo _("Introduzca su DNI:") ?></label>
                 <div class="col-md-6">
                   <input type="text" class="form-control" id="dni" placeholder="<?php echo _("DNI") ?>">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="pass" class="col-md-3 col-md-offset-1 control-label"><?php echo _("Contraseña:") ?></label>
-                <div class="col-md-6">
-                  <input type="password" class="form-control" id="pass" placeholder="<?php echo _("Contraseña") ?>">
-                  <div class="clearfix"></div>
-                  <a href="restore.php" data-ajax="false">¿Has olvidado tu contraseña?</a>
-                </div>
-              </div>
               <div class="form-group form-inline">
                 <div id="divent" class="col-md-offset-4 col-md-2">
-                  <button id="btnentrar" type="submit" onclick="checkCamposLogin()" class="btn btn-default"><?php echo _("Entrar") ?></button>
-                </div>
-                <div class="col-md-offset-1 col-md-2">
-                  <a id="btnreg" href="register.php" class="btn btn-default"><?php echo _("Registrarse") ?></a>
+                  <button id="btnentrar" type="submit" onclick="checkCamposLogin()" class="btn btn-default"><?php echo _("Recuperar contraseña") ?></button>
                 </div>
               </div>
             </div>

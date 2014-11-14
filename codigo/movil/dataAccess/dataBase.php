@@ -57,10 +57,10 @@ class DataBase{
      * Constructor of DataBase class.
      */
 	function DataBase(){
-		$this->server = "localhost";
-		$this->username = "root";
-		$this->password = "";
-		$this->database = "justoyresponsable";
+		$this->server = "db552234123.db.1and1.com";
+        $this->username = "dbo552234123";
+        $this->password = "1234567";
+        $this->database = "db552234123";
 	}
 	
     /**
