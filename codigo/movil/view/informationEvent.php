@@ -69,7 +69,15 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 	
 	
 	<body >
-		
+			<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=373994508049&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>	
+
 		
 		<div>
 			
@@ -242,6 +250,19 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 <a href="#demo-links" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline"><?php echo _("Cerrar") ?></a>
             </div>
         </div>
+	     
+	           <div class="footer">
+    	<div class="redes">
+    	<div class="redes-contenido">
+			<div class="fb-like" data-href="<?php echo "http://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>   
+		</div>	
+		<div class="redes-contenido">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Mira el evento <?php echo $establishment->getnombre() ?>" data-via="CEComercioJusto">Tweet</a></div>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+	</div>
+
+	     
 	     
     <script>
         document.getElementById('captcha').src='../images/captcha.php?'+Math.random();

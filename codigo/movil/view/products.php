@@ -30,6 +30,15 @@ else {
       
 	</head>
   <body>
+			<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=373994508049&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>	
+		
   <div id="head" data-role="header" data-theme="a">
 	    <a href="../views/capturar.php" data-ajax="false" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext"></a>
 	    <div id="tablehead" align="center">
@@ -47,9 +56,11 @@ else {
 		
 		<a data-ajax='false' href='#settingPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-right ui-btn-icon-notext"></a>
 	</div>	
+	<div style="background-color:white">
 		<div class="prod_titulo">
 			<?php echo $nombre; ?>
 		</div>
+		<center>
 			<?php
 			if (is_file("../../images/".$img)){
 				echo('<img src="../../images/'.$img.'" class="prod_img">');
@@ -57,14 +68,22 @@ else {
 				echo('<img src="../../images/nofoto.jpg" class="prod_img">');
 			}
 			?>
+		</center>
 	<div class="prod_contenedor">
 		<div class="prod_descrip">
 			<p><?php echo $descripcion; ?></p>
 		</div>
 	</div>
     <div class="footer">
-    
-    </div>
+    	<div class="redes">
+    	<div class="redes-contenido">
+			<div class="fb-like" data-href="<?php echo "http://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>   
+		</div>	
+		<div class="redes-contenido">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Encuentra cientos de productos de comercio justo como este:" data-via="CEComercioJusto">Tweet</a></div>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+	</div>
     
     
     
