@@ -299,6 +299,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
           ?>     
 		
 		<hr/>
+		  <div id="comentOk" data-role="header" style="visibility:hidden; height:0px;">
+                <h3><?php echo _("Su comentario se ha publicado correctamente.") ?></h3>
+              </div>
+
 		<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
             <h4><?php echo _("Comentarios") ?></h4>
             <ul id="newComment" data-role="listview" data-inset="false">
@@ -365,8 +369,12 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 	<div data-role="panel" id="settingPanel" data-position="right" data-display="overlay" >
 	    <h2 id="titleSettPanel" align="center"><?php echo _("Menu") ?></h2>
             <ul id="settingList" data-role="listview" data-inset="false">
+                    <li>
+                    <a data-ajax="false" href="index.php"><p><?php echo _("Volver a inicio") ?></p></a>
+                </li>
+
                 <li>
-                    <a data-ajax="false" href="advancedSearch.php"><p><?php echo _("Nueva búsqueda") ?></p></a>
+                    <a data-ajax="false" href="loadSearchEstablishment.php"><p><?php echo _("Nueva búsqueda") ?></p></a>
                 </li>
                 <li>
                     <a data-ajax="false" href="info.php" ><p><?php echo _("Acerca de") ?></p></a>

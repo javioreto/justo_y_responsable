@@ -1,0 +1,90 @@
+﻿body{
+	background-color:#E5E5E5;
+}
+
+.controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
+
+#ubicacion{
+	background-color:#666666 ;
+}
+
+#sector{
+	background-color:#666666 ;
+}
+
+#productos{
+	background-color:#666666 ;
+}
+
+#category{
+	margin-top: 120px;
+}
+
+#subcategory{
+	margin-top: 20px;
+	
+}
+
+#head{
+	height: 52px;
+	/**/
+	background-color: #D50000;
+}
+
+#head img{
+	margin-top:6px;
+}
+
+#head h1{
+	margin-top:9px;
+	font-size: 20px;
+}
+
+#head a{
+	margin-top:6px;
+}
+
+
+
+/**
+ * 	Styles
+ */
+ 
+ .banner_over_scan{
+	background-color:black; 
+	color:white; 
+	opacity:0.5; 
+	text-align:center; 
+	padding:20px; 
+	margin-top:-65px;
+}
+
+.ver{
+ 	position: absolute;
+   top: 250px;
+	background-color:black; 
+	color:white; 
+	opacity:0.5; 
+	text-align:center; 
+	padding:20px; 
+	margin-top:-65px;
+	width:100%;
+	overflow:hidden;
+}
+ .mostrar{
+	max-height: 500px;  
+	display:block;
+}
+ .hidden{
+   max-height: 0px;
+   display:none;
+}
+
+.subir{
+	z-index:5;
+}
+ 
+ 

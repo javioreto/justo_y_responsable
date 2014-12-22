@@ -12,8 +12,9 @@ else {
  * 
  * @author Gadea Hidalgo López
  * 
- * @version 1.0
+ * @version 2.0
  * 
+ * @author Javier López Martínez
  */
 class Search{
     
@@ -76,7 +77,7 @@ class Search{
                     if($array[$h][0]->getSector()->getName()=="Comercio justo"){
                         echo"<a style='background-color: #B5D6E6' data-ajax='false' href='information.php?idEstablecimiento=".$array[$h][0]->getIdEstablishment()."'>";
                     }
-                    if($array[$h][0]->getSector()->getName()=="Banca etica"){
+                    if($array[$h][0]->getSector()->getName()=="Finanzas éticas"){
                         echo"<a style='background-color: #E6CCE4' data-ajax='false' href='information.php?idEstablecimiento=".$array[$h][0]->getIdEstablishment()."'>";
                     }
                     if($array[$h][0]->getSector()->getName()=="Economia solidaria"){
@@ -107,7 +108,7 @@ class Search{
                             if($array[$h][0]->getSector()->getName()=="Comercio justo"){
                                 echo"<a style='background-color: #B5D6E6' data-ajax='false' href='information.php?idEstablecimiento=".$array[$h][0]->getIdEstablishment()."'>";
                             }
-                            if($array[$h][0]->getSector()->getName()=="Banca etica"){
+                            if($array[$h][0]->getSector()->getName()=="Finanzas éticas"){
                                 echo"<a style='background-color: #E6CCE4' data-ajax='false' href='information.php?idEstablecimiento=".$array[$h][0]->getIdEstablishment()."'>";
                             }
                             if($array[$h][0]->getSector()->getName()=="Economia solidaria"){
@@ -332,5 +333,7 @@ class Search{
         $s = str_replace("Ú","U",$str);
         return $s;
     } 
+    
+
 }
 ?>

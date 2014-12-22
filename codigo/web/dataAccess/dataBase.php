@@ -17,6 +17,9 @@ include_once("../model/importOrganization.php");
 
 include_once("../model/network.php");
 
+include_once("../model/event.php");
+
+
 /**
  * Class Database responsible for communicating with the database.
  * 
@@ -1035,9 +1038,9 @@ class DataBase{
      * @return id the id of insert product
      * 
      */
-    function insertProduct($name, $date, $description, $refCateg,$con){
-        $sql = "insert into producto (idproducto, nombre, fecha, descripcion, refidcategoria) 
-        values ('','".$name."','".$date."','".$description."','".$refCateg."')";
+    function insertProduct($name, $date, $description, $refCateg,$code,$img,$con){
+        $sql = "insert into producto (idproducto, nombre, fecha, descripcion, refidcategoria, codbarras, img) 
+        values ('','".$name."','".$date."','".$description."','".$refCateg."','".$code."','".$img."')";
         mysql_query($sql,$con);
         
         $sql2 = "select * from producto ORDER BY idproducto";
@@ -1225,6 +1228,93 @@ class DataBase{
         $sql = "DELETE FROM comentario WHERE idcomentario = $id";
         mysql_query($sql,$con);
     }
+    
+    
+    
+    
+    
+    
+    /** NUEVAS FUNCIONES */
+    
+    
+    
+     function insertEvent($name,$address,$postcode,$latitude,$longitude,$locality,$descripcion,$fecha,$inicio,$inicio,$fin,$tipo,$val,$userselect,$con){
+        
+        $sql = "insert into evento (idEvento, descripcion, direccion, localidad, cp,fecha, inicio, fin, fecha_creacion, nombre, longitud, latitud, validado, idTipo, idEstablecimiento) values ('','".$descripcion."','".$address."','".$locality."','".$postcode."','".$fecha."','".$inicio."','".$fin."','".$fecha."','".$name."','".$longitude."','".$latitude."','".$val."','".$tipo."','".$userselect."')";
+             
+        mysql_query($sql,$con);
+        
+        $sql2 = "select * from evento ORDER BY idEvento";
+        
+        $result = mysql_query($sql2, $con);
+        $array = array();
+        $id = "";
+        while ($row = mysql_fetch_array($result)) {
+                
+            $id =  $row['idEvento'];   
+            
+        }
+        return $id;
+    }
+    
+    
+     function updateEvent($id,$name,$address,$postcode,$latitude,$longitude,$locality,$descripcion,$fecha,$inicio,$inicio,$fin,$tipo,$userselect,$con){
+        
+        $sql = "UPDATE evento SET descripcion='$descripcion', direccion='$address', localidad='$locality', cp='$postcode',fecha='$fecha', inicio='$inicio', fin='$fin', fecha_creacion='$fecha', nombre='$name', longitud='$longitude', latitud='$latitude', idTipo='$tipo', idEstablecimiento='$userselect' WHERE idEvento=$id";      
+        mysql_query($sql,$con);
+        
+     }
+
+
+
+    function getAllEvents($con){
+        $arrayEvent = array();
+        $sql = "select * from evento order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+    
+    
+    function getAllEventsByEstablishmentId($id,$con){
+        $arrayEvent = array();
+        $sql = "select * from evento where idEstablecimiento =".$id." order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+    
+    function getEventById($id,$con){
+        $sql = "select * from evento where idEvento =".$id;
+        $result = mysql_query($sql, $con);
+        $row = mysql_fetch_array($result);                   
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+        return $event;  
+    }
+    
+    
+    
+        
+    function deleteEvent($id,$con){
+        $sql = "DELETE FROM evento WHERE idEvento =".$id;
+        mysql_query($sql, $con);
+       }
+       
+    
 }
 
 ?>

@@ -102,7 +102,15 @@ $user = Load::loadUserById($id);
                     <?php
                     }else{
                     ?>
-                          <li><a href="newEstablishment.php"><?php echo _("Nuevo") ?></a></li>
+                          <li><a href="newEstablishment.php"><?php echo _("Nuevo establecimiento") ?></a></li>
+                          <?php
+              			if($admin!=1){
+              				?>
+                          <li><a href="newEvent.php"><?php echo _("Nuevo evento") ?></a></li>
+						<?php
+              			}
+              				?>
+
                           <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
                           <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>
                     <?php
@@ -126,14 +134,14 @@ $user = Load::loadUserById($id);
         if(count($establishment)>0){
         ?>
        
-        <div class="col-md-8 col-md-offset-2">
-            <ul id="list" class="list-group col-md-12 pagination">
+        
                 
                 <?php
                     
                     foreach($establishment AS $est){
-                    ?>
-                        <a id="<?php $est->getIdEstablishment() ?>" href='informationEstablishment.php?id=<?php echo $est->getIdEstablishment() ?>' class='list-group-item'>
+                    ?><div class="col-md-8 col-md-offset-2">
+            <ul id="list" class="list-group col-md-12 pagination">
+                        <a id="<?php echo $est->getIdEstablishment() ?>" href='informationEstablishment.php?id=<?php echo $est->getIdEstablishment() ?>' class='list-group-item'>
                                 <div id="listestab" class='form-group col-md-12'>
                                     <div id="imgdiv" class=" col-md-1">
                                     <?php
@@ -154,18 +162,60 @@ $user = Load::loadUserById($id);
                                     </div>   
                                 </div>
                               </a>
+                              
+        
+        <?php
+        $events = "";
+        if($admin==0){
+            $events = Load::loadAllEventsByEstablishmentId($est->getIdEstablishment());
+        
+        if(count($events)>0){       
+        ?>
+                                     <div class="clearfix"></div>
+<h3>Eventos asociados a este establecimiento:</h3>
+        <div class="col-md-12">
+            <ul id="list" class="list-group col-md-12 pagination">
+                
                 <?php
-                    }
+                    
+                    foreach($events AS $est){
+                    ?>
+                        <a id="<?php $est->getidEvento() ?>" href='editEvent.php?id=<?php echo $est->getidEvento() ?>' class='list-group-item'>
+                                <div id="listestab" class='form-group col-md-12'>
+                                    <div id="info" class="col-md-offset-1 col-md-4">
+                                        <p id='name'><strong><?php echo $est->getnombre() ?></strong> - <small><?php echo Load::eventType($est->getidTipo()) ?></small></p>
+                                        <p><b><?php echo _("Dirección: ") ?></b><?php echo $est->getdireccion() ?> - <?php echo $est->getlocalidad() ?></p>
+                                    </div>  
+                                    <div class="col-md-offset-1 col-md-4">
+                                        <p><b><?php echo _("Fecha: ") ?></b><?php echo $est->getfecha() ?> &nbsp; <b>Horario: </b> de <?php echo $est->getinicio() ?> a <?php echo $est->getfin() ?> </p>
+										<p><b><?php echo _("Descripción: ") ?></b><?php echo substr($est->getdescripcion(),0,110)."..." ?></p>
+                                    </div> 
+                                </div>
+                              </a>
+                <?php
+                  } }
                 ?> 
             </ul>
         </div>
         <?php
+        } ?>
+                              
+                              
+                    </ul>
+        </div>           
+                <?php
+                    }
+                ?> 
+           
+        <?php
         }else{
         ?>
-        <h4 class="col-md-offset-1 col-md-10"><?php echo _("No existen establecimientos almacenados para este usuario. Puede añadirlos pulsando sobre el botón 'Nuevo' en la barra de navegación superior.") ?></h4>
+        <h4 class="col-md-offset-1 col-md-10"><?php echo _("No existen establecimientos almacenados para este usuario. Puede añadirlos pulsando sobre el botón 'Nuevo establecimiento' en la barra de navegación superior.") ?></h4>
         <?php
         }
         ?>
+        
+
     </body> 
 
 </html>

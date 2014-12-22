@@ -147,7 +147,7 @@ $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dat
                 </div>
                 <div id="alertOk" class="alert alert-success" style="display: none">
                    <button type="button" class="close" onclick="$('#alertOk').hide()" aria-hidden="true">&times;</button>
-                   <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Su contraseña se ha actualizado correctamente.") ?>
+                   <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Su contraseña se ha actualizado correctamente. <a href=\"login.php\">Acceder a mi perfil</a>") ?>
                 </div>
                 </div>
                 

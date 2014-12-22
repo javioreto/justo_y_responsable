@@ -198,7 +198,7 @@ a:hover{
 		<td style="border-right:solid 1px #d50000; border-left:solid 1px #d50000;">
 			<div style="width:80%; margin-left:auto; margin-right:auto; padding:15px 0px 25px 0px;">
 				<h2>Nuevo establecimiento dado de alta</h2>
-				<p>Se ha registrado un nuevo establecimiento con el nombre <strong>"'.$name.'"</strong></p>
+				<p>Se ha registrado un nuevo establecimiento con el nombre <strong>"'.$name.'"</strong> en la localidad de <strong>'.$location.'</strong></p>
 				<a href="'.$this->getURL().'/view/login.php" target="_blank" alt="visualizar">Ir a zona de administración</a>
 			</div>
 		</td>

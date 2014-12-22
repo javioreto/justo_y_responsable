@@ -14,13 +14,31 @@ if(isset($_POST['language'])){
         }
     }
     
+    switch($language){
+	    case "spain":	$lang = "es_ES";
+	    				break;
+	
+	    case "english":	$lang = "en_US";
+	    				break;
+	    				
+	    case "eus":		$lang = "es_ES";
+	    				break;
+	
+	    case "cat":		$lang = "es_ES";
+	    				break;
+	    				
+	    case "gal":		$lang = "es_ES";
+	    				break;  
+	    				
+	    default: 		$lang = "es_ES";
+    }
+    
     $_SESSION["lang"] = $lang;
         
     $html = "";
     //Reply with information
     $response = array("html"=>$html);
-    echo json_encode($response);
-    
+    echo json_encode($response);   
 }
 
 ?>

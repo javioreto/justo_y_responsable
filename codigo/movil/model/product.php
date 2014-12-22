@@ -35,6 +35,14 @@ class Product{
      * @access private
      */
     private $description;
+    
+    /**
+     * image of product of database.
+     * @var string img
+     * @access private
+     */
+    private $img;
+
 
     /**
      * Constructor
@@ -43,12 +51,14 @@ class Product{
      * @param date the date
      * @param name the name
      * @param description the description
+     * @param img the image
      */
-    function Product($idProduct,$date,$name, $description) {
+    function Product($idProduct,$date,$name, $description, $img) {
         $this->idProduct = $idProduct;
         $this->date = $date;
         $this->name = $name;
         $this->description = $description;
+        $this->img = $img;
     }
     
     /**
@@ -122,5 +132,24 @@ class Product{
     function setDescription($val){
         $this->description = $val;
     }    
+    
+        /**
+     * Method that return the image of product.
+     * 
+     * @return image
+     */
+    function getImg(){
+        return $this->img;
+    }
+    
+    /**
+     * Method that change the imahe of product.
+     * 
+     * @param iamage
+     */
+    function setImg($val){
+        $this->img = $val;
+    }    
+
 }
 ?>

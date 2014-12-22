@@ -2,8 +2,9 @@
 
 class mailingSystem{
 
-
+//el mail de envio no-replay@comerciojusto.org
 private $system_mail="info@factoria76.com";
+
 private $admin_mail="javioreto@gmail.com";
 
 
@@ -74,7 +75,7 @@ else {
 Send email confirmation when users 
 register a new establishment acount 
 */
-function newEstablishment($name){
+function newEstablishment($name,$location){
 
 if (is_file("view/mailView.php")){
     include_once ("view/mailView.php");

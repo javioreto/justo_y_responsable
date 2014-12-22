@@ -14,6 +14,9 @@ else {
  * 
  * @version 1.0
  * 
+ * @author Javier López Martínez
+ * 
+ * @version 2.0
  */
 class Load{
         
@@ -48,6 +51,17 @@ class Load{
             return $establishment;
             
         }
+        
+        public static function loadEstablishmentByUserId($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $establishment = $dataBase->getEstablishmentByIdUser($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $establishment;
+            
+        }
+       
+        
         
         /**
          * Static method that returns all establishment included in the database.
@@ -275,5 +289,59 @@ class Load{
             $dataBase->disconnectDataBase($con);
             return $comments;
         }
+        
+         /**
+         * Static method that returns all events included in the database.
+         * 
+         * @return array of events 
+         */
+        public static function loadAllEvents(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->getAllEvents($con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
+        
+         /**
+         * Static method that returns all events included in the database.
+         * 
+         * @return array of events 
+         */
+        public static function loadEventById($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->getEventById($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
+        
+
+        
+        
+       /**
+         * Static method that returns events included in the database by id of establishment.
+         * 
+         * @return array of events 
+         */
+        public static function loadAllEventsByEstablishmentId($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->getAllEventsByEstablishmentId($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
+
+		public static function eventType($id){
+                       
+            $array=array("","Charla/conferencia","Videoforum","Presentación de libro","Encuentro con productores","Exposición","Actividad infantil","Degustación de productos","Taller formativo","Manifestación");
+                        
+            return $array[$id];
+        }
+
+        
+  
+        
+        
    }
 ?>

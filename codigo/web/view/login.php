@@ -142,8 +142,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 <label for="pass" class="col-md-3 col-md-offset-1 control-label"><?php echo _("Contraseña:") ?></label>
                 <div class="col-md-6">
                   <input type="password" class="form-control" id="pass" placeholder="<?php echo _("Contraseña") ?>">
-                  <div class="clearfix"></div>
-                  <a href="restore.php" data-ajax="false">¿Has olvidado tu contraseña?</a>
+                  <div class="clearfix" style="margin-top:10px;"></div>
+                  <a href="restore.php" data-ajax="false"><?php echo _("¿Has olvidado tu contraseña?") ?></a>
                 </div>
               </div>
               <div class="form-group form-inline">

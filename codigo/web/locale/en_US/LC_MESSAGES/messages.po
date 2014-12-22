@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JustoYResponsable\n"
-"POT-Creation-Date: 2014-06-22 12:27+0100\n"
-"PO-Revision-Date: 2014-06-22 12:27+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-11-19 02:32+0100\n"
+"PO-Revision-Date: 2014-11-19 02:32+0100\n"
+"Last-Translator: Javier <jlm0051@alu.ubu.es>\n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -18,28 +18,29 @@ msgstr ""
 
 #: ../../../view/editEstablishment.php:63 ../../../view/editUser.php:54
 #: ../../../view/errorBd.php:25 ../../../view/gestion.php:53
-#: ../../../view/gestionEstablishment.php:61 ../../../view/gestionUser.php:55
+#: ../../../view/gestionEstablishment.php:61 ../../../view/gestionUser.php:64
 #: ../../../view/info.php:48 ../../../view/info.php:89
 #: ../../../view/informationEstablishment.php:55
-#: ../../../view/informationUser.php:52 ../../../view/login.php:56
+#: ../../../view/informationUser.php:61 ../../../view/login.php:56
 #: ../../../view/newEstablishment.php:54 ../../../view/register.php:44
+#: ../../../view/restore.php:56 ../../../view/restorePass.php:75
 msgid "Justo y Responsable"
 msgstr "Fair & Ethical"
 
 #: ../../../view/editEstablishment.php:66 ../../../view/editUser.php:57
 #: ../../../view/gestion.php:56 ../../../view/gestionEstablishment.php:64
-#: ../../../view/gestionUser.php:58 ../../../view/info.php:54
+#: ../../../view/gestionUser.php:67 ../../../view/info.php:54
 #: ../../../view/informationEstablishment.php:58
-#: ../../../view/informationUser.php:55 ../../../view/newEstablishment.php:57
+#: ../../../view/informationUser.php:64 ../../../view/newEstablishment.php:57
 #: ../../../view/register.php:50
 msgid "Bienvenid@: "
 msgstr "Welcome:"
 
 #: ../../../view/editEstablishment.php:67 ../../../view/editUser.php:58
 #: ../../../view/gestion.php:57 ../../../view/gestionEstablishment.php:65
-#: ../../../view/gestionUser.php:59 ../../../view/info.php:55
+#: ../../../view/gestionUser.php:68 ../../../view/info.php:55
 #: ../../../view/informationEstablishment.php:59
-#: ../../../view/informationUser.php:56 ../../../view/newEstablishment.php:58
+#: ../../../view/informationUser.php:65 ../../../view/newEstablishment.php:58
 #: ../../../view/register.php:51
 msgid "Cerrar sesión"
 msgstr "close session"
@@ -50,43 +51,47 @@ msgstr "Edit form"
 
 #: ../../../view/editEstablishment.php:91
 #: ../../../view/editEstablishment.php:98 ../../../view/editUser.php:77
-#: ../../../view/gestionEstablishment.php:98 ../../../view/gestionUser.php:79
+#: ../../../view/gestionEstablishment.php:98 ../../../view/gestionUser.php:88
 #: ../../../view/info.php:76 ../../../view/informationEstablishment.php:89
 #: ../../../view/informationEstablishment.php:95
-#: ../../../view/informationUser.php:84 ../../../view/newEstablishment.php:80
+#: ../../../view/informationUser.php:93 ../../../view/newEstablishment.php:80
 #: ../../../view/newEstablishment.php:87 ../../../view/register.php:75
+#: ../../../view/restore.php:101
 msgid "Volver"
 msgstr "Back"
 
 #: ../../../view/editEstablishment.php:92
 #: ../../../view/editEstablishment.php:99 ../../../view/editUser.php:78
-#: ../../../view/gestion.php:76 ../../../view/gestionEstablishment.php:99
-#: ../../../view/gestionEstablishment.php:106 ../../../view/gestionUser.php:80
+#: ../../../view/gestion.php:81 ../../../view/gestionEstablishment.php:99
+#: ../../../view/gestionEstablishment.php:106 ../../../view/gestionUser.php:89
 #: ../../../view/info.php:72 ../../../view/info.php:77
 #: ../../../view/informationEstablishment.php:90
 #: ../../../view/informationEstablishment.php:96
-#: ../../../view/informationUser.php:85 ../../../view/login.php:101
+#: ../../../view/informationUser.php:94 ../../../view/login.php:101
 #: ../../../view/newEstablishment.php:81 ../../../view/newEstablishment.php:88
 #: ../../../view/register.php:76 ../../../view/register.php:83
+#: ../../../view/restore.php:102 ../../../view/restorePass.php:120
 msgid "Acerca de"
 msgstr "About"
 
 #: ../../../view/editEstablishment.php:93
 #: ../../../view/editEstablishment.php:100 ../../../view/editUser.php:79
-#: ../../../view/gestion.php:77 ../../../view/gestionEstablishment.php:100
-#: ../../../view/gestionEstablishment.php:107 ../../../view/gestionUser.php:81
+#: ../../../view/gestion.php:82 ../../../view/gestionEstablishment.php:100
+#: ../../../view/gestionEstablishment.php:107 ../../../view/gestionUser.php:90
 #: ../../../view/info.php:78 ../../../view/informationEstablishment.php:91
 #: ../../../view/informationEstablishment.php:97
-#: ../../../view/informationUser.php:86 ../../../view/login.php:102
+#: ../../../view/informationUser.php:95 ../../../view/login.php:102
 #: ../../../view/newEstablishment.php:82 ../../../view/newEstablishment.php:89
 #: ../../../view/register.php:77 ../../../view/register.php:84
+#: ../../../view/restore.php:103 ../../../view/restorePass.php:121
 msgid "Ayuda"
 msgstr "Help"
 
 #: ../../../view/editEstablishment.php:94 ../../../view/editUser.php:80
-#: ../../../view/gestionEstablishment.php:101 ../../../view/gestionUser.php:82
-#: ../../../view/info.php:79 ../../../view/informationEstablishment.php:98
-#: ../../../view/informationUser.php:87 ../../../view/newEstablishment.php:83
+#: ../../../view/gestion.php:76 ../../../view/gestionEstablishment.php:101
+#: ../../../view/gestionUser.php:91 ../../../view/info.php:79
+#: ../../../view/informationEstablishment.php:98
+#: ../../../view/informationUser.php:96 ../../../view/newEstablishment.php:83
 #: ../../../view/register.php:78
 msgid "Inicio"
 msgstr "Home"
@@ -98,19 +103,20 @@ msgstr "Save"
 #: ../../../view/editEstablishment.php:119
 #: ../../../view/editEstablishment.php:123
 #: ../../../view/editEstablishment.php:127
-#: ../../../view/editEstablishment.php:542 ../../../view/editUser.php:91
+#: ../../../view/editEstablishment.php:535 ../../../view/editUser.php:91
 #: ../../../view/editUser.php:95 ../../../view/editUser.php:99
 #: ../../../view/editUser.php:103 ../../../view/editUser.php:107
-#: ../../../view/editUser.php:111 ../../../view/gestionUser.php:108
+#: ../../../view/editUser.php:111 ../../../view/gestionUser.php:117
 #: ../../../view/login.php:122 ../../../view/login.php:126
 #: ../../../view/login.php:134 ../../../view/newEstablishment.php:104
 #: ../../../view/newEstablishment.php:108
 #: ../../../view/newEstablishment.php:112
-#: ../../../view/newEstablishment.php:434 ../../../view/register.php:99
+#: ../../../view/newEstablishment.php:420 ../../../view/register.php:99
 #: ../../../view/register.php:103 ../../../view/register.php:107
 #: ../../../view/register.php:111 ../../../view/register.php:115
 #: ../../../view/register.php:119 ../../../view/register.php:123
-#: ../../../view/register.php:127
+#: ../../../view/register.php:127 ../../../view/restore.php:124
+#: ../../../view/restorePass.php:142 ../../../view/restorePass.php:146
 msgid "Error: "
 msgstr "Error:"
 
@@ -134,17 +140,17 @@ msgid "La dirección no es correcta, debe seleccionar una de la lista."
 msgstr "The address is incorrect, you must selected one for the list."
 
 #: ../../../view/editEstablishment.php:131
-#: ../../../view/editEstablishment.php:546 ../../../view/editUser.php:116
+#: ../../../view/editEstablishment.php:539 ../../../view/editUser.php:116
 #: ../../../view/newEstablishment.php:153 ../../../view/register.php:134
-#: ../../../view/register.php:227
+#: ../../../view/register.php:222
 msgid "*Nombre:"
 msgstr "*Name:"
 
 #: ../../../view/editEstablishment.php:133
-#: ../../../view/editEstablishment.php:548
+#: ../../../view/editEstablishment.php:541
 #: ../../../view/newEstablishment.php:155
-#: ../../../view/newEstablishment.php:440 ../../../view/register.php:136
-#: ../../../view/register.php:229
+#: ../../../view/newEstablishment.php:426 ../../../view/register.php:136
+#: ../../../view/register.php:224
 msgid "Nombre"
 msgstr "Name"
 
@@ -154,12 +160,12 @@ msgstr "Image"
 
 #: ../../../view/editEstablishment.php:154
 #: ../../../view/informationEstablishment.php:290
-#: ../../../view/newEstablishment.php:167
+#: ../../../view/newEstablishment.php:165
 msgid "Ubicación"
 msgstr "Location"
 
 #: ../../../view/editEstablishment.php:159
-#: ../../../view/newEstablishment.php:172
+#: ../../../view/newEstablishment.php:170
 msgid "*Dirección:"
 msgstr "*Address:"
 
@@ -169,178 +175,178 @@ msgstr "Click on the map to manually locate it."
 
 #: ../../../view/editEstablishment.php:194 ../../../view/editUser.php:152
 #: ../../../view/informationEstablishment.php:130
-#: ../../../view/informationUser.php:131
-#: ../../../view/newEstablishment.php:215 ../../../view/register.php:183
-#: ../../../view/register.php:257
+#: ../../../view/informationUser.php:140
+#: ../../../view/newEstablishment.php:208 ../../../view/register.php:178
+#: ../../../view/register.php:252
 msgid "Teléfono:"
 msgstr "Telephone:"
 
 #: ../../../view/editEstablishment.php:197
-#: ../../../view/newEstablishment.php:217 ../../../view/register.php:185
-#: ../../../view/register.php:259
+#: ../../../view/newEstablishment.php:210 ../../../view/register.php:180
+#: ../../../view/register.php:254
 msgid "Teléfono"
 msgstr "Telephone"
 
 #: ../../../view/editEstablishment.php:202
-#: ../../../view/newEstablishment.php:221
+#: ../../../view/newEstablishment.php:214
 msgid "Email:"
 msgstr "Email:"
 
 #: ../../../view/editEstablishment.php:205
-#: ../../../view/newEstablishment.php:223
+#: ../../../view/newEstablishment.php:216
 msgid "Email"
 msgstr "Email"
 
 #: ../../../view/editEstablishment.php:210
 #: ../../../view/informationEstablishment.php:155
-#: ../../../view/newEstablishment.php:227
+#: ../../../view/newEstablishment.php:220
 msgid "Página web:"
 msgstr "Web page:"
 
 #: ../../../view/editEstablishment.php:218
 #: ../../../view/informationEstablishment.php:162
-#: ../../../view/newEstablishment.php:233
+#: ../../../view/newEstablishment.php:226
 msgid "Horario:"
 msgstr "Schedule:"
 
 #: ../../../view/editEstablishment.php:220
-#: ../../../view/newEstablishment.php:235
+#: ../../../view/newEstablishment.php:228
 msgid "Horario"
 msgstr "Schedule"
 
 #: ../../../view/editEstablishment.php:225
-#: ../../../view/newEstablishment.php:240
+#: ../../../view/newEstablishment.php:233
 msgid "*Organización perteneciente:"
 msgstr "*Member of:"
 
 #: ../../../view/editEstablishment.php:300
 #: ../../../view/informationEstablishment.php:183
-#: ../../../view/newEstablishment.php:276
+#: ../../../view/newEstablishment.php:269
 msgid "Organización importadora:"
 msgstr "Importing organization:"
 
 #: ../../../view/editEstablishment.php:350
-#: ../../../view/newEstablishment.php:305
+#: ../../../view/newEstablishment.php:298
 msgid "Redes sociales"
 msgstr "Social networks"
 
 #: ../../../view/editEstablishment.php:408
-#: ../../../view/newEstablishment.php:339
+#: ../../../view/newEstablishment.php:332
 msgid "Formas de pago y acceso"
 msgstr "Ways of payment & access"
 
 #: ../../../view/editEstablishment.php:419
 #: ../../../view/editEstablishment.php:423
-#: ../../../view/newEstablishment.php:347
+#: ../../../view/newEstablishment.php:340
 msgid "Moneda social"
 msgstr "Social currency"
 
 #: ../../../view/editEstablishment.php:435
 #: ../../../view/editEstablishment.php:439
-#: ../../../view/newEstablishment.php:352
+#: ../../../view/newEstablishment.php:345
 msgid "Tarjeta"
 msgstr "Credit card"
 
 #: ../../../view/editEstablishment.php:455
 #: ../../../view/editEstablishment.php:459
-#: ../../../view/newEstablishment.php:361
+#: ../../../view/newEstablishment.php:354
 msgid "Acceso para discapacitados"
 msgstr "Disability access"
 
 #: ../../../view/editEstablishment.php:475
-#: ../../../view/newEstablishment.php:373
+#: ../../../view/newEstablishment.php:366
 msgid "*Sector"
 msgstr "*Sector"
 
 #: ../../../view/editEstablishment.php:477
-#: ../../../view/editEstablishment.php:498
-#: ../../../view/newEstablishment.php:375
-#: ../../../view/newEstablishment.php:395
+#: ../../../view/editEstablishment.php:491
+#: ../../../view/newEstablishment.php:368
+#: ../../../view/newEstablishment.php:381
 msgid "-- Seleccione uno --"
 msgstr "-- Select one--"
 
 #: ../../../view/editEstablishment.php:478
 #: ../../../view/informationEstablishment.php:198
-#: ../../../view/newEstablishment.php:376
+#: ../../../view/newEstablishment.php:369
 msgid "Comercio justo"
 msgstr "Fair Trade"
 
 #: ../../../view/editEstablishment.php:479
 #: ../../../view/informationEstablishment.php:203
-#: ../../../view/newEstablishment.php:377
+#: ../../../view/newEstablishment.php:370
 msgid "Banca ética"
 msgstr "Ethical banking"
 
 #: ../../../view/editEstablishment.php:480
 #: ../../../view/informationEstablishment.php:208
-#: ../../../view/newEstablishment.php:378
+#: ../../../view/newEstablishment.php:371
 msgid "Economía solidaria"
 msgstr "Solidarity economy"
 
 #: ../../../view/editEstablishment.php:481
 #: ../../../view/informationEstablishment.php:213
-#: ../../../view/newEstablishment.php:379
+#: ../../../view/newEstablishment.php:372
 msgid "Consumidores y usuarios organizados"
 msgstr "Consumers and users organized"
 
-#: ../../../view/editEstablishment.php:496
-#: ../../../view/newEstablishment.php:393
+#: ../../../view/editEstablishment.php:489
+#: ../../../view/newEstablishment.php:379
 msgid "*Tipo"
 msgstr "*Type"
 
-#: ../../../view/editEstablishment.php:527
+#: ../../../view/editEstablishment.php:520
 #: ../../../view/informationEstablishment.php:334
-#: ../../../view/newEstablishment.php:419
+#: ../../../view/newEstablishment.php:405
 msgid "Sección de productos"
 msgstr "Product section"
 
-#: ../../../view/editEstablishment.php:537
-#: ../../../view/newEstablishment.php:429
+#: ../../../view/editEstablishment.php:530
+#: ../../../view/newEstablishment.php:415
 msgid "Nuevo producto"
 msgstr "New product"
 
-#: ../../../view/editEstablishment.php:542
-#: ../../../view/newEstablishment.php:434
+#: ../../../view/editEstablishment.php:535
+#: ../../../view/newEstablishment.php:420
 msgid "Debe completar todos los campos."
 msgstr "You must fill out all fields."
 
-#: ../../../view/editEstablishment.php:552
-#: ../../../view/newEstablishment.php:444
+#: ../../../view/editEstablishment.php:545
+#: ../../../view/newEstablishment.php:430
 msgid "Descripción:"
 msgstr "Description:"
 
-#: ../../../view/editEstablishment.php:554
-#: ../../../view/newEstablishment.php:446
+#: ../../../view/editEstablishment.php:547
+#: ../../../view/newEstablishment.php:432
 msgid "Descripción"
 msgstr "Description"
 
-#: ../../../view/editEstablishment.php:565
-#: ../../../view/newEstablishment.php:457
+#: ../../../view/editEstablishment.php:558
+#: ../../../view/newEstablishment.php:443
 msgid "-- *Categoría --"
 msgstr "-- *Category --"
 
-#: ../../../view/editEstablishment.php:579
-#: ../../../view/newEstablishment.php:471
+#: ../../../view/editEstablishment.php:572
+#: ../../../view/newEstablishment.php:457
 msgid "Añadir"
 msgstr "Add"
 
-#: ../../../view/editEstablishment.php:588
-#: ../../../view/newEstablishment.php:480
+#: ../../../view/editEstablishment.php:581
+#: ../../../view/newEstablishment.php:466
 msgid "Todos los productos"
 msgstr "All products"
 
-#: ../../../view/editEstablishment.php:622
+#: ../../../view/editEstablishment.php:615
 #: ../../../view/informationEstablishment.php:379
 msgid "Sección de comentarios"
 msgstr "Comments section"
 
-#: ../../../view/editEstablishment.php:657
+#: ../../../view/editEstablishment.php:650
 #: ../../../view/informationEstablishment.php:406
 msgid "No existen comentarios sobre este establecimiento"
 msgstr "There are currently no comments available"
 
-#: ../../../view/editEstablishment.php:668 ../../../view/editUser.php:179
-#: ../../../view/newEstablishment.php:493 ../../../view/register.php:352
+#: ../../../view/editEstablishment.php:661 ../../../view/editUser.php:179
+#: ../../../view/newEstablishment.php:479 ../../../view/register.php:347
 msgid "Los campos marcados con (*) deben rellenarse obligatoriamente."
 msgstr "Input fields marked with an asterisk (*) are required fields."
 
@@ -369,7 +375,7 @@ msgid "El Dni no es válido"
 msgstr "The ID number is not valid"
 
 #: ../../../view/editUser.php:122 ../../../view/register.php:140
-#: ../../../view/register.php:233
+#: ../../../view/register.php:228
 msgid "*Apellidos:"
 msgstr "*Surnames:"
 
@@ -382,17 +388,16 @@ msgid "Nueva contraseña"
 msgstr "New password"
 
 #: ../../../view/editUser.php:135
-#, fuzzy
 msgid "Confirme contraseña:"
 msgstr "*Confirm password:"
 
 #: ../../../view/editUser.php:137 ../../../view/register.php:154
-#: ../../../view/register.php:247
+#: ../../../view/register.php:242
 msgid "Confirme contraseña"
 msgstr "Confirm password"
 
 #: ../../../view/editUser.php:141 ../../../view/register.php:158
-#: ../../../view/register.php:251
+#: ../../../view/register.php:246
 msgid "*DNI:"
 msgstr "*ID number"
 
@@ -401,9 +406,8 @@ msgid "*Correo electónico:"
 msgstr "*e-mail:"
 
 #: ../../../view/errorBd.php:33
-#, fuzzy
 msgid "Error"
-msgstr "Error:"
+msgstr "Error"
 
 #: ../../../view/errorBd.php:44
 msgid ""
@@ -415,11 +419,27 @@ msgstr "It has an error in the database please try again later"
 msgid "Administración"
 msgstr "Management"
 
-#: ../../../view/gestion.php:89 ../../../view/gestionUser.php:74
+#: ../../../view/gestion.php:77
+msgid "Usuarios"
+msgstr "Users"
+
+#: ../../../view/gestion.php:78
+msgid "Establecimientos"
+msgstr "Establishment"
+
+#: ../../../view/gestion.php:79
+msgid "Productos"
+msgstr "Products"
+
+#: ../../../view/gestion.php:80
+msgid "Estadísticas"
+msgstr "Statistics"
+
+#: ../../../view/gestion.php:94 ../../../view/gestionUser.php:83
 msgid "Gestión de usuarios"
 msgstr "User management"
 
-#: ../../../view/gestion.php:94 ../../../view/gestionEstablishment.php:83
+#: ../../../view/gestion.php:99 ../../../view/gestionEstablishment.php:83
 msgid "Gestión de establecimientos"
 msgstr "Establishment management"
 
@@ -428,12 +448,12 @@ msgid "Mis establecimientos"
 msgstr "My establishment"
 
 #: ../../../view/gestionEstablishment.php:97
-#: ../../../view/gestionEstablishment.php:105 ../../../view/gestionUser.php:78
+#: ../../../view/gestionEstablishment.php:105 ../../../view/gestionUser.php:87
 msgid "Nuevo"
 msgstr "New"
 
 #: ../../../view/gestionEstablishment.php:153
-#: ../../../view/informationUser.php:190
+#: ../../../view/informationUser.php:200
 msgid "Dirección: "
 msgstr "Address:"
 
@@ -445,27 +465,27 @@ msgstr ""
 "There are no establishments for this user. You can add one by clicking on "
 "the 'New' button in the navigation bar."
 
-#: ../../../view/gestionUser.php:96
+#: ../../../view/gestionUser.php:105
 msgid "Validación de nuevos usuarios"
 msgstr "Validation of new users"
 
-#: ../../../view/gestionUser.php:108
+#: ../../../view/gestionUser.php:117
 msgid "No ha seleccionado ningun usuario para validar."
 msgstr "You have not selected any user to be validated."
 
-#: ../../../view/gestionUser.php:111
+#: ../../../view/gestionUser.php:120
 msgid "Todos"
 msgstr "All"
 
-#: ../../../view/gestionUser.php:127
+#: ../../../view/gestionUser.php:136
 msgid "Validar"
 msgstr "Validate"
 
-#: ../../../view/gestionUser.php:134
+#: ../../../view/gestionUser.php:143
 msgid "No existen usuarios pendientes de validar"
 msgstr "There are no users to be validated"
 
-#: ../../../view/gestionUser.php:145
+#: ../../../view/gestionUser.php:154
 msgid "Todos los usuarios"
 msgstr "All users"
 
@@ -482,7 +502,6 @@ msgid "&nbspGadea Hidalgo López"
 msgstr "&nbspGadea Hidalgo López"
 
 #: ../../../view/info.php:92
-#, fuzzy
 msgid "email:"
 msgstr "Email:"
 
@@ -531,12 +550,12 @@ msgid "Establecimiento: "
 msgstr "Establishment:"
 
 #: ../../../view/informationEstablishment.php:83
-#: ../../../view/informationUser.php:82
+#: ../../../view/informationUser.php:91
 msgid "Editar"
 msgstr "Edit"
 
 #: ../../../view/informationEstablishment.php:84
-#: ../../../view/informationUser.php:83
+#: ../../../view/informationUser.php:92
 msgid "Borrar"
 msgstr "Remove"
 
@@ -546,7 +565,7 @@ msgid "Imagen:"
 msgstr "Image:"
 
 #: ../../../view/informationEstablishment.php:148
-#: ../../../view/informationUser.php:145
+#: ../../../view/informationUser.php:154
 msgid "Correo electrónico:"
 msgstr "e-mail:"
 
@@ -587,13 +606,11 @@ msgid "No"
 msgstr "No"
 
 #: ../../../view/informationEstablishment.php:295
-#: ../../../view/newEstablishment.php:180
+#: ../../../view/newEstablishment.php:178
 msgid "Dirección:"
 msgstr "Address:"
 
 #: ../../../view/informationEstablishment.php:301
-#: ../../../view/newEstablishment.php:186
-#: ../../../view/newEstablishment.php:188
 msgid "C.P:"
 msgstr "PO Box:"
 
@@ -610,7 +627,7 @@ msgstr ""
 "'Edit' button in the navigation menu"
 
 #: ../../../view/informationEstablishment.php:422
-#: ../../../view/informationUser.php:211
+#: ../../../view/informationUser.php:222
 msgid "Confirmación"
 msgstr "Confirmation"
 
@@ -619,49 +636,50 @@ msgid "¿Seguro que quiere eliminar el establecimiento?"
 msgstr "Are you sure you want to delete this establishment?"
 
 #: ../../../view/informationEstablishment.php:428
-#: ../../../view/informationUser.php:217
+#: ../../../view/informationUser.php:228
 msgid "Cancelar"
 msgstr "Cancel"
 
 #: ../../../view/informationEstablishment.php:430
-#: ../../../view/informationUser.php:219 ../../../view/register.php:370
+#: ../../../view/informationUser.php:230 ../../../view/register.php:365
 msgid "Aceptar"
 msgstr "Acept"
 
-#: ../../../view/informationUser.php:78
+#: ../../../view/informationUser.php:87
 msgid "Usuario: "
 msgstr "User"
 
-#: ../../../view/informationUser.php:103
+#: ../../../view/informationUser.php:112
 msgid "Datos personales"
 msgstr "Personal information"
 
-#: ../../../view/informationUser.php:108
-#: ../../../view/newEstablishment.php:438
+#: ../../../view/informationUser.php:117
+#: ../../../view/newEstablishment.php:424
 msgid "Nombre:"
 msgstr "Name:"
 
-#: ../../../view/informationUser.php:114
+#: ../../../view/informationUser.php:123
 msgid "Apellidos:"
 msgstr "Surnames:"
 
-#: ../../../view/informationUser.php:120 ../../../view/login.php:136
+#: ../../../view/informationUser.php:129 ../../../view/login.php:136
 msgid "DNI:"
 msgstr "ID number:"
 
-#: ../../../view/informationUser.php:160
+#: ../../../view/informationUser.php:169
 msgid "Establecimientos asociados:"
 msgstr "Establishments associated"
 
-#: ../../../view/informationUser.php:201
+#: ../../../view/informationUser.php:212
 msgid "No existen establecimientos almacenados para este usuario."
 msgstr "There are no establishments for this user."
 
-#: ../../../view/informationUser.php:214
+#: ../../../view/informationUser.php:225
 msgid "¿Seguro que quiere eliminar el usuario?"
 msgstr "Are you sure you want to delete this user?"
 
-#: ../../../view/login.php:72
+#: ../../../view/login.php:72 ../../../view/restore.php:72
+#: ../../../view/restorePass.php:91
 msgid "Idioma"
 msgstr "Language"
 
@@ -669,7 +687,7 @@ msgstr "Language"
 msgid "Acceso"
 msgstr "Access"
 
-#: ../../../view/login.php:122
+#: ../../../view/login.php:122 ../../../view/restore.php:124
 msgid "Debe rellenar todos los campos."
 msgstr "You must fill in all fields."
 
@@ -682,18 +700,18 @@ msgid "Datos correctos-"
 msgstr "Correct user"
 
 #: ../../../view/login.php:130
-#, fuzzy
 msgid ""
 "no puede acceder con esta cuenta hasta que no sea validado por un "
 "administrador."
-msgstr "but can not be accessed until it is validated by an administrator."
+msgstr ""
+"You can not access this account until it is validated by an administrator."
 
 #: ../../../view/login.php:134
 msgid "El dni no es válido"
 msgstr "ID number is invalid"
 
 #: ../../../view/login.php:138 ../../../view/register.php:160
-#: ../../../view/register.php:253
+#: ../../../view/register.php:248 ../../../view/restore.php:139
 msgid "DNI"
 msgstr "ID number"
 
@@ -702,15 +720,20 @@ msgid "Contraseña:"
 msgstr "Password:"
 
 #: ../../../view/login.php:144 ../../../view/register.php:148
-#: ../../../view/register.php:241
+#: ../../../view/register.php:236 ../../../view/restorePass.php:162
+#: ../../../view/restorePass.php:168
 msgid "Contraseña"
 msgstr "Password"
 
-#: ../../../view/login.php:149
+#: ../../../view/login.php:146
+msgid "¿Has olvidado tu contraseña?"
+msgstr "Forgot your password?"
+
+#: ../../../view/login.php:151
 msgid "Entrar"
 msgstr "Enter"
 
-#: ../../../view/login.php:152
+#: ../../../view/login.php:154
 msgid "Registrarse"
 msgstr "Register"
 
@@ -726,27 +749,21 @@ msgstr "Save"
 msgid "--  Seleccione uno --"
 msgstr "-- Select --"
 
-#: ../../../view/newEstablishment.php:162
-msgid "subir"
-msgstr "upload"
-
-#: ../../../view/newEstablishment.php:204
-#, fuzzy
+#: ../../../view/newEstablishment.php:197
 msgid "Pulse sobre el mapa para localizar manualmente."
 msgstr "Click on the map to locate manually."
 
-#: ../../../view/newEstablishment.php:315
+#: ../../../view/newEstablishment.php:308
 msgid "Ej:https://www.facebook.com/CEComercioJusto"
 msgstr "Example:https://www.facebook.com/CEComercioJusto"
 
-#: ../../../view/newEstablishment.php:326
+#: ../../../view/newEstablishment.php:319
 msgid "Ej:https://twitter.com/CEComercioJusto"
 msgstr "Ej:https://twitter.com/CEComercioJusto"
 
 #: ../../../view/register.php:68
-#, fuzzy
 msgid "Formulario de registro - Nuevo usuario"
-msgstr "Register form"
+msgstr "Register form - New user"
 
 #: ../../../view/register.php:82
 msgid "Login"
@@ -757,70 +774,64 @@ msgid "Debe aceptar los términos y condiciones."
 msgstr "You must acept the terms and conditions"
 
 #: ../../../view/register.php:119
-#, fuzzy
 msgid "Ya existe un usuario con ese DNI."
 msgstr "There is already a user with this Dni."
 
 #: ../../../view/register.php:123
-#, fuzzy
 msgid "El DNI no es válido"
 msgstr "The Dni is invalid"
 
 #: ../../../view/register.php:127
-#, fuzzy
 msgid "No se a introducido correctamente el texto de la imagen."
-msgstr "The text corresponding to the image is wrong"
+msgstr "The text corresponding to the image is wrong."
 
-#: ../../../view/register.php:142 ../../../view/register.php:235
+#: ../../../view/register.php:142 ../../../view/register.php:230
 msgid "Apellidos"
 msgstr "Surnames"
 
-#: ../../../view/register.php:146 ../../../view/register.php:239
+#: ../../../view/register.php:146 ../../../view/register.php:234
 msgid "*Contraseña:"
 msgstr "*Password:"
 
-#: ../../../view/register.php:152 ../../../view/register.php:245
+#: ../../../view/register.php:152 ../../../view/register.php:240
 msgid "*Confirme contraseña:"
 msgstr "*Confirm password:"
 
-#: ../../../view/register.php:171
-#, fuzzy
+#: ../../../view/register.php:168
 msgid "Administrador"
-msgstr "Administration"
+msgstr "Administrator"
 
-#: ../../../view/register.php:189 ../../../view/register.php:263
-#: ../../../view/register.php:274
+#: ../../../view/register.php:184 ../../../view/register.php:258
+#: ../../../view/register.php:269
 msgid "*Correo electrónico:"
 msgstr "*e-mail:"
 
-#: ../../../view/register.php:191 ../../../view/register.php:265
-#: ../../../view/register.php:276
+#: ../../../view/register.php:186 ../../../view/register.php:260
+#: ../../../view/register.php:271
 msgid "Correo electrónico"
 msgstr "E-mail"
 
-#: ../../../view/register.php:198 ../../../view/register.php:284
+#: ../../../view/register.php:193 ../../../view/register.php:279
 msgid "Seguridad"
 msgstr "Security"
 
-#: ../../../view/register.php:204 ../../../view/register.php:290
+#: ../../../view/register.php:199 ../../../view/register.php:285
 msgid "Recargar"
 msgstr "Refresh"
 
-#: ../../../view/register.php:209 ../../../view/register.php:295
-#, fuzzy
+#: ../../../view/register.php:204 ../../../view/register.php:290
 msgid "*Introduzca el texto de la imagen:"
-msgstr "*Enter the text for the image:"
+msgstr "*Enter the text from the image:"
 
-#: ../../../view/register.php:211 ../../../view/register.php:297
+#: ../../../view/register.php:206 ../../../view/register.php:292
 msgid "Texto"
 msgstr "Text"
 
-#: ../../../view/register.php:309
-#, fuzzy
+#: ../../../view/register.php:304
 msgid "Términos y condiciones"
-msgstr "Acept the terms and conditions"
+msgstr "Terms and conditions"
 
-#: ../../../view/register.php:315
+#: ../../../view/register.php:310
 msgid ""
 "La presente 'Ley Orgánica de Protección de Datos' tiene por objeto "
 "garantizar\n"
@@ -836,7 +847,7 @@ msgstr ""
 "to the processing of personal data, public freedoms and rights core of "
 "individuals, and especially their honor and personal and family privacy."
 
-#: ../../../view/register.php:324
+#: ../../../view/register.php:319
 msgid ""
 "Los datos personales recogidos en el presente formulario\n"
 "                                únicamente serán utilizados para fines "
@@ -851,24 +862,88 @@ msgstr ""
 "or modification thereof through the email address: "
 "coordinadora@comerciojusto.org"
 
-#: ../../../view/register.php:335
+#: ../../../view/register.php:330
 msgid "Acepto los términos y condiciones"
 msgstr "Acept the terms and conditions"
 
-#: ../../../view/register.php:355
+#: ../../../view/register.php:350
 msgid "Registrar"
 msgstr "Register"
 
-#: ../../../view/register.php:364
+#: ../../../view/register.php:359
 msgid "Aviso"
 msgstr "Alert"
 
-#: ../../../view/register.php:367
-#, fuzzy
+#: ../../../view/register.php:362
 msgid ""
 "Su registro se ha realizado correctamente pero no podrá acceder a esta "
 "aplicación hasta que no sea validado por un administrador"
-msgstr "but can not be accessed until it is validated by an administrator."
+msgstr ""
+"Your registration was successful but you can not access until your account "
+"is validated by an administrator"
+
+#: ../../../view/restore.php:115 ../../../view/restore.php:144
+msgid "Recuperar contraseña"
+msgstr "Recover password"
+
+#: ../../../view/restore.php:128 ../../../view/restorePass.php:150
+msgid "Correcto: "
+msgstr "Correct:"
+
+#: ../../../view/restore.php:128
+msgid ""
+"Si el DNI introducido es correcto, compruebe su correo electrónico y siga "
+"los pasos que se le indiquen."
+msgstr "If the DNI entered is correct, check your email and follow the steps."
+
+#: ../../../view/restore.php:133
+msgid ""
+"Introduzca su DNI y le enviaremos un correo electrónico para proceder a "
+"recuperar su contraseña. "
+msgstr ""
+"Enter your DNI and we'll send you an email to proceed to recover your "
+"password."
+
+#: ../../../view/restore.php:137
+msgid "Introduzca su DNI:"
+msgstr "Enter your ID:"
+
+#: ../../../view/restorePass.php:133 ../../../view/restorePass.php:178
+msgid "Crear nueva contraseña"
+msgstr "Create new password"
+
+#: ../../../view/restorePass.php:142
+msgid "No puede dejar en blanco ningún campo."
+msgstr "You can not leave any field empty."
+
+#: ../../../view/restorePass.php:146
+msgid "Compruebe que ha introducido correctamente la segunda contraseña."
+msgstr "Check that you have correctly entered your second password."
+
+#: ../../../view/restorePass.php:150
+msgid ""
+"Su contraseña se ha actualizado correctamente. <a href=\"login.php\">Acceder "
+"a mi perfil</a>"
+msgstr ""
+"Your password has been successfully updated. <a href=\"login.php\">Access my "
+"profile</a>"
+
+#: ../../../view/restorePass.php:155
+msgid ""
+"Introduzca su nueva contraseña de acceso, se solicita por duplicado para "
+"evitar errores. "
+msgstr "Enter your new password twice."
+
+#: ../../../view/restorePass.php:160
+msgid "Nueva contraseña:"
+msgstr "New password:"
+
+#: ../../../view/restorePass.php:166
+msgid "Repita la contraseña:"
+msgstr "Repeat password:"
+
+#~ msgid "subir"
+#~ msgstr "upload"
 
 #, fuzzy
 #~ msgid "*Email:"
@@ -900,10 +975,6 @@ msgstr "but can not be accessed until it is validated by an administrator."
 #~ msgid "Localidad"
 #~ msgstr "Locality"
 
-#, fuzzy
-#~ msgid "Productos"
-#~ msgstr "New product"
-
 #~ msgid "Buscar"
 #~ msgstr "Search"
 
@@ -926,10 +997,6 @@ msgstr "but can not be accessed until it is validated by an administrator."
 #, fuzzy
 #~ msgid "Posición:"
 #~ msgstr "Description:"
-
-#, fuzzy
-#~ msgid "Introduzca su comentario"
-#~ msgstr "New establishment"
 
 #, fuzzy
 #~ msgid "Texto:"

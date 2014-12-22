@@ -16,12 +16,16 @@ include_once("../model/importOrganization.php");
 
 include_once("../model/network.php");
 
+include_once("../model/event.php");
+
+
 /**
  * Class Database responsible for communicating with the database.
  * 
+ * @author Javier López Martínez
  * @author Gadea Hidalgo López
  * 
- * @version 1.0
+ * @version 2.0
  * 
  */
 class DataBase{
@@ -57,10 +61,10 @@ class DataBase{
      * Constructor of DataBase class.
      */
 	function DataBase(){
-		$this->server = "db552234123.db.1and1.com";
-        $this->username = "dbo552234123";
-        $this->password = "1234567";
-        $this->database = "db552234123";
+		$this->server = "localhost";
+        $this->username = "root";
+        $this->password = "";
+        $this->database = "justoyresponsable";
 	}
 	
     /**
@@ -860,6 +864,19 @@ class DataBase{
         return $arrayComments;
     }
     
+    function getEventCommentsById($id,$connection){
+        $sql = "select * from comentario where idevento =". $id." order by fecha DESC ";
+        $result = mysql_query($sql, $connection);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion']);
+            $arrayComments[] = $comment;
+        }
+        
+        return $arrayComments;
+    }
+
+    
     /**
      * Method that returns all sector included in the database.
      * 
@@ -891,7 +908,7 @@ class DataBase{
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -908,12 +925,228 @@ class DataBase{
      * 
      */
     function insertComment($author,$date,$text,$refE,$connection){
-        $sql = "insert into comentario (idcomentario,autor,fecha,descripcion,refidestablecimiento) values ('','".$author."','".$date."','".$text."',".$refE.")";
+        $sql = "insert into comentario (idcomentario,autor,fecha,descripcion,refidestablecimiento,idevento) values ('','".$author."','".$date."','".$text."',".$refE.",'')";
         mysql_query($sql,$connection);
     }
     
+    /**
+     * Method thar insert comment.
+     * 
+     * @param author the author
+     * @param date the date
+     * @param text the text
+     * @param refE the reference of the establishment
+     * @param connection the connection
+     * 
+     */
+    function insertCommentEvent($author,$date,$text,$refE,$connection){
+        $sql = "insert into comentario (idcomentario,autor,fecha,descripcion,refidestablecimiento,idevento) values ('','".$author."','".$date."','".$text."','',".$refE.")";
+        mysql_query($sql,$connection) or die(mysql_error());
+    }
+
     
     
+    /** NEW FUNCTIONS */
+    
+     /**
+     * Method that returns the products by barcode.
+     * 
+     * @param barcode barcode of product
+     * @param connection the connection
+     * 
+     * @return num products
+     */
+    function checkProductsByCode($barcode,$connection){
+    	$id;
+    	
+        $sql = "SELECT idproducto FROM producto WHERE codbarras = '".$barcode."' limit 0,1";
+        $result = mysql_query($sql, $connection) or die("Error en: ".$sql.": " . mysql_error());;
+	        while($row = mysql_fetch_array($result)){
+	        	$id=$row['idproducto']; 
+	        }
+	       
+        return $id;
+    }
+
+    
+    /**
+     * Method that returns the products by establishmentid.
+     * 
+     * @param id id of establishment
+     * @param connection the connection
+     * 
+     * @return arrayProducts array of products
+     */
+    function getProductById($id,$connection){
+        $sql = "SELECT * FROM producto WHERE idproducto = ". $id;
+        $result = mysql_query($sql, $connection);
+        $arrayProducts = array();
+        while ($row = mysql_fetch_array($result)) {
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img']);
+            $arrayProducts[] = $product;
+        }
+        return $arrayProducts;
+    }
+
+    
+
+
+    function getAllEvents($con){
+        $arrayEvent = array();
+        $sql = "select * from evento order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+    
+    
+    function getAllEventsByEstablishmentId($id,$con){
+        $arrayEvent = array();
+        $sql = "select * from evento where idEstablecimiento =".$id." order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+    
+    function getEventById($id,$con){
+        $sql = "select * from evento where idEvento =".$id;
+        $result = mysql_query($sql, $con);
+        $row = mysql_fetch_array($result);                   
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+        return $event;  
+    }
+    
+    function getEventsInMadrid($con){
+        $arrayEvent = array();
+        $sql = "select * from evento where localidad='Madrid'";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+                }
+        return $arrayEvent;  
+    }
+
+    
+    
+    function getEventByData($arraySector,$inicio,$fin,$desde,$hasta,$idEstablecimiento,$connection){
+        $hasta1 = date("Y-m-d", strtotime($hasta));
+		$desde1 = date("Y-m-d", strtotime($desde));
+		
+        $sql = "select * from evento where (inicio >=  '$inicio' AND  fin <=  '$fin') AND (";
+        
+        if($desde!="" && $hasta!=""){
+	        $sql .= "fecha >=  '$desde1' AND  fecha <=  '$hasta1') AND (";
+        }else{
+        
+	         if($desde!=""){
+		        $sql .= "fecha >=  '$desde1') AND (";
+	        }
+	
+	 		if($hasta!=""){
+		        $sql .= "fecha <=  '$hasta1') AND (";
+	        }
+
+        }
+        
+        if($idEstablecimiento!=""){
+	        $sql .= "idEstablecimiento =  '$idEstablecimiento') AND (";
+        }
+        
+        $flag = false;
+        foreach($arraySector AS $sector){
+            if($sector != 1){
+                $sql .= " idTipo = $sector OR ";
+                $flag = true;
+            }
+        }
+        $arrayEvent = array();
+        if($flag){
+            $sql = substr($sql,0,-3);
+            $sql .=")";
+            
+            $result = mysql_query($sql, $connection) or die(mysql_error());
+            while ($row = mysql_fetch_array($result)) {
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+                 }
+        }
+        return $arrayEvent;
+    }
+
+
+    function getEventsByLocality($locality, $connection){
+        $sql = "select * from evento where localidad='".$locality."'";
+        $result = mysql_query($sql, $connection);
+        $arrayEvent = array();
+        while ($row = mysql_fetch_array($result)) {
+            $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;
+    }
+
+	function getEstablishmentByName($name, $connection){
+	$establishment=null;
+        $sql = "select * from establecimiento where nombre LIKE '%".$name."%'";
+        $result = mysql_query($sql, $connection);
+       $arrayEstablishments = array();
+        if($row = mysql_fetch_array($result)){
+            $idEstablishment = $row['idestablecimiento'];
+            $name = $row['nombre'];
+            $phone = $row['telefono'];          
+            $mail = $row['correo'];
+            $logo = $row['logo'];
+            $cash = $row['pagoefectivo'];
+            $card = $row['pagotarjeta'];
+            $postcode = $row['codigopostal'];
+            $address = $row['direccion'];
+            $website = $row['paginaweb'];
+            $schedule = $row['horario'];
+            $facebook = $row['facebook'];
+            $twitter = $row['twitter'];
+            $disabledaccess = $row['accesominusvalidos'];
+            $latitude = $row['latitud'];
+            $longitude = $row['longitud'];
+            $location = $row['localidad'];
+            $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
+            $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
+            $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
+            $comments = $this->getCommentsById($row['idestablecimiento'],$connection);
+            $schedule = $row['horario'];
+            $type = $this->getTypeById($row['refidtipo'], $connection);
+            $sector = $this->getSectorById($row['refidsector'],$connection);
+            $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
+    $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
+    $products,$comments, $type, $sector);
+        }
+        return $establishment;
+    }
+
+
     
 }
 

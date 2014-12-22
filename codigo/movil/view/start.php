@@ -52,8 +52,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 	
 	    
 	<div data-role="page" id="map-page" data-url="map-page" data-theme="a" >
-	
-	   <div id="head" data-role="header" align="center">
+
+	   <div id="head" data-role="header" align="center">	
+	    <a href="index.php" data-ajax="false" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext"></a>
+
 	       <table id="tablehead">
 	           <tr>
 	               <td>
@@ -68,10 +70,6 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
           <a data-ajax='false' href='#settingPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-right ui-btn-icon-notext"></a>
           
        </div>
-       <div id="languages" data-role="header" class="bgimg" align="right" >
-            <img src="../../images/spainflag.png" alt="logo" onclick="selectLanguage('spain')" />
-            <img src="../../images/inglesflag.png" alt="logo" onclick="selectLanguage('english')" />     
-        </div>
        <div data-role="header">
 
             <div class="segmented-control ui-bar-d">
@@ -148,7 +146,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                                                 <?php if($result->getSector()->getName()=="Comercio justo"){ ?>
                                                     <a style='background-color: #B5D6E6' data-ajax='false' href='information.php?idEstablecimiento="<?php echo $result->getIdEstablishment() ?>"'>
                                                 <?php }
-                                                if($result->getSector()->getName()=="Banca etica"){ ?>
+                                                if($result->getSector()->getName()=="Finanzas éticas"){ ?>
                                                     <a style='background-color: #E6CCE4' data-ajax='false' href='information.php?idEstablecimiento="<?php echo $result->getIdEstablishment() ?>"'>
                                                 <?php }
                                                 if($result->getSector()->getName()=="Economia solidaria"){ ?>
@@ -182,7 +180,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                                                 <?php if($result->getSector()->getName()=="Comercio justo"){ ?>
                                                     <a style='background-color: #B5D6E6' data-ajax='false' href='information.php?idEstablecimiento="<?php echo $result->getIdEstablishment() ?>"'>
                                                 <?php }
-                                                if($result->getSector()->getName()=="Banca etica"){ ?>
+                                                if($result->getSector()->getName()=="Finanzas éticas"){ ?>
                                                     <a style='background-color: #E6CCE4' data-ajax='false' href='information.php?idEstablecimiento="<?php echo $result->getIdEstablishment() ?>"'>
                                                 <?php }
                                                 if($result->getSector()->getName()=="Economia solidaria"){ ?>
@@ -244,6 +242,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         <div data-role="panel" id="settingPanel" data-position="right" data-display="overlay" >
         <h2 id="titleSettPanel" align="center"><?php echo _("Menu") ?></h2>
             <ul id="settingList" data-role="listview" data-inset="false">
+            <li>
+                    <a data-ajax="false" href="index.php"><p><?php echo _("Volver a inicio") ?></p></a>
+                </li>
+
                 <li>
                     <a data-ajax="false" href="advancedSearch.php"><p><?php echo _("Nueva búsqueda") ?></p></a>
                 </li>
@@ -268,7 +270,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 </li>
                 <li>
                     <img src="../../images/bancaetica.png" />
-                    <p><?php echo _("Banca ética") ?></p>
+                    <p><?php echo _("Finanzas éticas") ?></p>
                 </li>
                 <li>
                     <img  src="../../images/economiasolidaria.png" />

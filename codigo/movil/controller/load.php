@@ -90,6 +90,24 @@ class Load{
             return $comments;
         }
         
+                /**
+         * Static method that returns all comments of the id of event.
+         * 
+         * @param id the id of event
+         * 
+         * @return comments the array of comments
+         */
+        public static function getEventsComments($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEventCommentsById($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+        
+        
+        
         /**
          * Static method that returns import organizations of establishment.
          * 

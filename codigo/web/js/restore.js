@@ -54,7 +54,6 @@ function checkCamposRestore(){
 					$('#alertCampos').hide();
    					$('#alertIguales').hide();
    					$('#alertOk').show();
-					setTimeout("location.href = './login.php';",3000);
 				},
 				error:	function(xhr,err){
 					page = '../view/errorBd.php';

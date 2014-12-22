@@ -76,6 +76,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
           		<li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
 				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
+				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Productos") ?></a></li>
 				<li><a data-ajax="false" href="info.php"><?php echo _("Estadísticas") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
@@ -97,6 +98,11 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             <div align="center">
                 <a id="btngestionestablishment" type="button" href="gestionEstablishment.php" class="btn btn-default btn-lg">
                   <span class="glyphicon glyphicon-home"></span> <?php echo _("Gestión de establecimientos") ?>
+                </a>
+            </div>
+            <div align="center" style="margin-top:10px;">
+                <a id="btngestionestablishment"  type="button" href="gestionEventos.php" class="btn btn-default btn-lg">
+                  <span class="glyphicon glyphicon-bullhorn"></span> <?php echo _("Gestión de eventos") ?>
                 </a>
             </div>
         </div>

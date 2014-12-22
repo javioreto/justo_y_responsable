@@ -132,11 +132,11 @@ $mailingSystem=new mailingSystem();
 if($userselect!=""){
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
         $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect,$con);
-        $mailingSystem->newEstablishment($name);
+        $mailingSystem->newEstablishment($name,$locality);
 }else{
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
     $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser,$con);
-    $mailingSystem->newEstablishment($name);
+    $mailingSystem->newEstablishment($name,$locality);
 }
 
 //if the array of products are different of empty string insert the products.

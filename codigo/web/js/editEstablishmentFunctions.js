@@ -1,3 +1,28 @@
+$(document).ready(function(){
+	var button = $('#upload_button'), interval;
+	new AjaxUpload('#upload_button', {
+        action: '../controller/upload.php',
+		onSubmit : function(file , ext){
+		if (! (ext && /^(jpg|png|jpeg|gif)$/.test(ext))){
+			// extensiones permitidas
+			alert('Error: Solo se permiten imagenes');
+			// cancela upload
+			return false;
+		} else {
+			button.text('Cargando...');
+			this.disable();
+		}
+		},
+		onComplete: function(file, response){
+			button.text('Imagen cargada');
+			// enable upload button
+			this.enable();			
+			// Agrega archivo a la lista
+			document.getElementById('nameimg').value=response;
+		}	
+	});
+});
+
 function valida(){
 	var name = $("#name").val();
 	var address = $("#address").val();
@@ -126,10 +151,13 @@ function addProducts(){
 	if(ok){
 		var name = $("#namedata").val();
 		var description = $("#descriptiondata").val();
+		var code = $("#codedata").val();
+		var img = $("#nameimg").val();
+		
 		if(name != "" && idCateg != ""){
 	    	$.ajax({
 				dataType: "json",
-				data: {"name":name, "description":description, "idCateg":idCateg},
+				data: {"name":name, "description":description, "idCateg":idCateg, "code": code, "img": img},
 				url:   '../controller/addProduct.php',
 				type:  'post',
 				beforeSend: function(){
@@ -150,6 +178,10 @@ function addProducts(){
 						
 						$("#namedata").val("");
 						$("#descriptiondata").val("");
+						$("#codedata").val("");
+						$("#nameimg").val("");
+						$('#upload_button').text('Seleccionar imagen');
+
 						
 						var selectSub = num-1;
 						while($("#cat"+selectSub).length && selectSub>0){

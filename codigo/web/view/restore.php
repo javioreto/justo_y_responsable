@@ -125,7 +125,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 </div>
                 <div id="alertOk" class="alert alert-success" style="display: none">
                    <button type="button" class="close" onclick="$('#alertDni').hide()" aria-hidden="true">&times;</button>
-                   <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Compruebe su correo electrónico y siga los pasos que se le indiquen.") ?>
+                   <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Si el DNI introducido es correcto, compruebe su correo electrónico y siga los pasos que se le indiquen.") ?>
                 </div>
                 </div>
                 

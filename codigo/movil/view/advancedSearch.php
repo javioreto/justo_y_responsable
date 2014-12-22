@@ -213,6 +213,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         <h2 id="titleSettPanel" align="center"><?php echo _("Menu") ?></h2>
             <ul id="settingList" data-role="listview" data-inset="false">
                 <li>
+                    <a data-ajax="false" href="index.php"><p><?php echo _("Volver a inicio") ?></p></a>
+                </li>
+
+                <li>
                     <a data-ajax="false" href="advancedSearch.php"><p><?php echo _("Nueva búsqueda") ?></p></a>
                 </li>
                 <li>

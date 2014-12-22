@@ -79,9 +79,9 @@ function showInitialMap(array){
 		      	map.addMarker({
 		        	lat: position.coords.latitude,
 		        	lng: position.coords.longitude,
-		        	title: "Usted est√° aqu√≠",
+		        	title: "Usted est· aquÌ≠",
 		        	infoWindow: {
-		          		content: '<div id="contentInfo" style="width: 100px; height: 20px;"><b>Usted est√° aqu√≠</b></div>'
+		          		content: '<div id="contentInfo" style="width: 100px; height: 20px;"><b>Usted est· aquÌ≠</b></div>'
 		        	}
 		      	});
 		      	
