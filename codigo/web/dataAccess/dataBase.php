@@ -545,7 +545,7 @@ class DataBase{
      * 
      * @return arrayCategories array of categories
      */
-    function getAllCategories($connection) {
+    function getCategories($connection) {
         
         $sql = "select * from categoria where refcategoria is null ORDER BY nombre";
         $result = mysql_query($sql, $connection);
@@ -1314,6 +1314,92 @@ class DataBase{
         mysql_query($sql, $con);
        }
        
+    
+	//funciones de importador   
+	
+	function insertImportador($name,$con){
+        $sql = "INSERT INTO organizacionimportadora (idorganizacionimportadora, nombre) VALUES (NULL, '$name')";      
+        mysql_query($sql,$con);
+        
+     }
+
+       
+    function deleteImportador($id,$con){
+        $sql = "DELETE FROM organizacionimportadora WHERE idorganizacionimportadora =".$id;
+        if(mysql_query($sql, $con)){
+        	return true;
+        }else{
+        	return false;
+        }
+       }
+       
+        
+     function updateImportador($id,$name,$con){
+        $sql = "UPDATE organizacionimportadora SET nombre='$name' WHERE idorganizacionimportadora =".$id;      
+        mysql_query($sql,$con) or die (mysql_error());
+     }
+     
+     
+     //funciones de tipo
+     
+     function insertTipo($name,$con){
+        $sql = "INSERT INTO tipo (idtipo, nombre) VALUES (NULL, '$name')";      
+        mysql_query($sql,$con);
+        
+     }
+  
+
+    function deleteTipo($id,$con){
+        $sql = "DELETE FROM tipo WHERE idtipo =".$id;
+	        if(mysql_query($sql, $con)){
+	        	return true;
+	        }else{
+	        	return false;
+	        }
+       }
+            
+     function updateTipo($id,$name,$con){
+        $sql = "UPDATE tipo SET nombre='".$name."' WHERE idtipo =".$id;      
+        mysql_query($sql,$con);    
+     }
+
+	//categorias
+	
+	 function getAllCat($connection) {
+        
+        $sql = "select * from categoria";
+        $result = mysql_query($sql, $connection);
+        
+        while ($row = mysql_fetch_array($result)) {
+            $idCategory = $row['idcategoria']; 
+            $name = $row['nombre'];
+            $refcateg = $row['refcategoria'];
+            $category = new Category($idCategory,$name,$refcateg);
+            $arrayCategories[] = $category;
+        }
+        return $arrayCategories;
+    }
+
+	     
+     function insertCat($name,$refcategoria,$con){
+        $sql = "INSERT INTO categoria (idcategoria, nombre, refcategoria) VALUES (NULL, '$name', $refcategoria)";      
+        mysql_query($sql,$con);    
+     }
+  	
+	 function updateCat($id,$name,$refcategoria,$con){
+        $sql = "UPDATE categoria SET nombre='".$name."', refcategoria='".$refcategoria."' WHERE idcategoria =".$id;      
+        mysql_query($sql,$con); 
+     }
+
+     function deleteCat($id,$con){
+        $sql = "DELETE FROM categoria WHERE idcategoria =".$id;
+	        if(mysql_query($sql, $con)){
+	        	return true;
+	        }else{
+	        	return false;
+	        }
+       }
+
     
 }
 

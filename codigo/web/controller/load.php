@@ -98,11 +98,27 @@ class Load{
         public static function loadCategories(){
             $dataBase = new dataBase();
             $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
-            $categories = $dataBase->getAllCategories($con);
+            $categories = $dataBase->getCategories($con);
             $dataBase->disconnectDataBase($con);
             return $categories;   
         }
         
+         public static function loadAllCat(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $categories = $dataBase->getAllCat($con);
+            $dataBase->disconnectDataBase($con);
+            return $categories;   
+        }
+        
+       public static function loadSubCategories($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $categories = $dataBase->getSubCategories($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $categories;   
+        }
+
         /**
          * Static method that returns all sector included in the database.
          * 
@@ -338,9 +354,95 @@ class Load{
                         
             return $array[$id];
         }
+        
+        
+        public static function notifType($id){
+                       
+            $array=array("-- Seleccionar tipo --","Nueva solicitud de usuario establecimiento","Nuevo establecimiento dado de alta","Nuevo producto dado de alta",
+							"Nuevo evento introducido","Nuevo comentario sobre un establecimiento/evento");                      
+           if($id==0){
+             return $array;
+           }else{
+			 return $array[$id];
+			}
+        }
+        
+        //importador
+        
+        public static function insertImportador($name){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->insertImportador($name,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+        
+        public static function updateImportador($id,$name){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->updateImportador($id,$name,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+
+		public static function deleteImportador($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->deleteImportador($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
+        
+        
+        
+        //tipo
+
+        public static function insertTipo($name){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->insertTipo($name,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+       
+       public static function updateTipo($id,$name){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->updateTipo($id,$name,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+
+		public static function deleteTipo($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->deleteTipo($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
+
+        //CATEGORIAS
+        
+        public static function insertCat($name,$refcategoria){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->insertCat($name,$refcategoria,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+       
+       public static function updateCat($id,$name,$refcategoria){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->updateCat($id,$name,$refcategoria,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+
+		public static function deleteCat($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $event = $dataBase->deleteCat($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $event;
+        }
 
         
-  
+  		
         
         
    }

@@ -88,33 +88,31 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         
         
     <body>
-        <div class="container">
-        <div class="col-md-4">
-            <div align="center" style="margin-bottom:0px;">
-                <a id="btngestionuser" type="button" href="gestionUser.php" class="btn btn-default btn-lg btn_ancho">
-                  <span class="glyphicon glyphicon-user pull-left"></span> <?php echo _("Gestión de usuarios") ?>
-                </a>    
-            </div>
-            <div align="center" style="margin-top:10px;">
-                <a id="btngestionestablishment" type="button" href="gestionEstablishment.php" class="btn btn-default btn-lg btn_ancho">
-                  <span class="glyphicon glyphicon-home pull-left"></span> <?php echo _("Gestión de establecimientos") ?>
-                </a>
-            </div>
-            <div align="center" style="margin-top:10px;">
-                <a id="btngestionestablishment"  type="button" href="gestionEventos.php" class="btn btn-default btn-lg btn_ancho">
-                  <span class="glyphicon glyphicon-bullhorn pull-left"></span> <?php echo _("Gestión de eventos") ?>
-                </a>
-            </div>
-            <div align="center" style="margin-top:10px;">
-                <a id="btngestionestablishment"  type="button" href="configuracion.php" class="btn btn-default btn-lg btn_ancho">
-                  <span class="glyphicon glyphicon-cog pull-left"></span> <?php echo _("Configuración") ?>
-                </a>
-            </div>
-
-        </div>
-        <div class="col-md-8">
-        	<h3>Centro de notificaciones</h3>
-        	<div id="contenedor-objetos" class="contenedor_eventos panel-group" role="tablist" aria-multiselectable="true" style="margin-bottom:0px;">
+    
+    <div class="container">
+    <div class="col-md-6">
+        <h3>Historial de notificaciones</h3>  
+    </div>
+    <div class="col-md-2" style="text-align:right;">
+    <h4>Filtrar por:</h4>
+    </div>
+    <div class="col-md-4">
+        	
+	        	<select class="form-control">
+	        	<?php
+	        	$cont=0;
+	        	$type = Load::notifType(0); 
+					foreach($type as $ty){
+	        		echo('<option value="'.$cont.'">'.$ty.'</option>');
+	        		$cont++;
+	        		}
+	        	?>
+	        	</select>
+        	
+     </div>
+        <div class="col-md-12">
+        	
+        	<div id="contenedor-objetos" class="contenedor_eventos_hist panel-group" role="tablist" aria-multiselectable="true" style="margin-bottom:0px;">
 	        		
 			<div class="panel panel-default" style=" border-radius:0px;">
 				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
@@ -143,10 +141,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		
 		        		
         	</div>
-        		<div class="contenedor_eventos_footer">
-        		<a href="historial.php">Ver historial de notificaciones</a>
-        		</div>
-        </div>
+       </div>
         
        </div>
     </body> 

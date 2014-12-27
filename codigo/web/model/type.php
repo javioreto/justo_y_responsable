@@ -22,6 +22,8 @@ class Type{
      * @access private
      */
     private $name;
+    
+
 
     /**
      * Constructor
@@ -32,6 +34,7 @@ class Type{
     function Type($idtype, $name){
         $this->idtype = $idtype;
         $this->name = $name;
+
     }
     
     /**
@@ -42,6 +45,7 @@ class Type{
     function getIdType(){
         return $this->idtype;
     }
+
     
     /**
      * Method that change the id of type.
@@ -51,6 +55,8 @@ class Type{
     function setIdType($val){
         $this->idtype = $val;
     }
+    
+
     
     /**
      * Method that return the name of type.

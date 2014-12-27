@@ -41,7 +41,7 @@ $fin = $_POST["fin"];
 
 $tipo = $_POST["tipo"];
 
-$val=1;
+$val=0;
 
 
 $sector = $_POST["selectSector"];
