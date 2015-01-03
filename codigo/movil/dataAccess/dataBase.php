@@ -348,6 +348,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -357,7 +358,7 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
             $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
             $arrayEstablishments[] = $establishment;
         }
         return $arrayEstablishments;
@@ -421,6 +422,7 @@ class DataBase{
                         $latitude = $row['latitud'];
                         $longitude = $row['longitud'];
                         $location = $row['localidad'];
+                        $online = $row['online'];
                         $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
                         $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
                         $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -430,7 +432,7 @@ class DataBase{
                         $sector = $this->getSectorById($row['refidsector'],$connection);
                         $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
                 $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-                $products,$comments, $type, $sector);
+                $products,$comments, $type, $sector, $online);
                         $arrayEstablishmentsAllCat[] = $establishment;
                     }  
                 }
@@ -457,6 +459,7 @@ class DataBase{
                     $latitude = $row['latitud'];
                     $longitude = $row['longitud'];
                     $location = $row['localidad'];
+                    $online = $row['online'];
                     $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
                     $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
                     $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -466,7 +469,7 @@ class DataBase{
                     $sector = $this->getSectorById($row['refidsector'],$connection);
                     $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
             $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-            $products,$comments, $type, $sector);
+            $products,$comments, $type, $sector, $online);
                     if(!$this->checkInto($arrayEstablishments,$idEstablishment)){
                         $arrayEstablishments[] = $establishment;
                     }
@@ -539,6 +542,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
 			$importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
 			$reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -548,7 +552,7 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
 			$establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
 			$arrayEstablishments[] = $establishment;
 		}
         
@@ -595,6 +599,7 @@ class DataBase{
                 $latitude = $row['latitud'];
                 $longitude = $row['longitud'];
                 $location = $row['localidad'];
+                $online = $row['online'];
                 $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
                 $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
                 $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -604,7 +609,7 @@ class DataBase{
                 $sector = $this->getSectorById($row['refidsector'],$connection);
                 $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
         $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-        $products,$comments, $type, $sector);
+        $products,$comments, $type, $sector, $online);
                 $arrayEstablishments[] = $establishment;
             }
         }
@@ -640,6 +645,7 @@ class DataBase{
                 $latitude = $row['latitud'];
                 $longitude = $row['longitud'];
                 $location = $row['localidad'];
+                $online = $row['online'];
                 $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
                 $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
                 $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -649,7 +655,7 @@ class DataBase{
                 $sector = $this->getSectorById($row['refidsector'],$connection);
                 $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
         $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-        $products,$comments, $type, $sector);
+        $products,$comments, $type, $sector, $online);
                 $arrayEstablishments[] = $establishment;
             }
 
@@ -685,6 +691,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -694,7 +701,7 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
             $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
             $arrayEstablishments[] = $establishment;
         }
         return $arrayEstablishments;
@@ -730,6 +737,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -739,7 +747,7 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
             $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
             $arrayEstablishments[] = $establishment;
         }
         return $arrayEstablishments;
@@ -776,6 +784,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -785,7 +794,7 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
             $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
         }
         return $establishment;
     }
@@ -1132,6 +1141,7 @@ class DataBase{
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
@@ -1141,11 +1151,48 @@ class DataBase{
             $sector = $this->getSectorById($row['refidsector'],$connection);
             $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
         }
         return $establishment;
     }
 
+    function getEstablishmentOnline($connection){
+        $sql = "select * from establecimiento where online='1'";
+        $result = mysql_query($sql, $connection);
+        $arrayEstablishments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $idEstablishment = $row['idestablecimiento'];
+            $name = $row['nombre'];
+            $phone = $row['telefono'];          
+            $mail = $row['correo'];
+            $logo = $row['logo'];
+            $cash = $row['pagoefectivo'];
+            $card = $row['pagotarjeta'];
+            $postcode = $row['codigopostal'];
+            $address = $row['direccion'];
+            $website = $row['paginaweb'];
+            $schedule = $row['horario'];
+            $facebook = $row['facebook'];
+            $twitter = $row['twitter'];
+            $disabledaccess = $row['accesominusvalidos'];
+            $latitude = $row['latitud'];
+            $longitude = $row['longitud'];
+            $location = $row['localidad'];
+            $online = $row['online'];
+            $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$connection);
+            $reds = $this->getIdsRedById($row['idestablecimiento'],$connection);
+            $products = $this->getIdsProductsById($row['idestablecimiento'],$connection);
+            $comments = $this->getCommentsById($row['idestablecimiento'],$connection);
+            $schedule = $row['horario'];
+            $type = $this->getTypeById($row['refidtipo'], $connection);
+            $sector = $this->getSectorById($row['refidsector'],$connection);
+            $establishment = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
+    $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
+    $products,$comments, $type, $sector, $online);
+            $arrayEstablishments[] = $establishment;
+        }
+        return $arrayEstablishments;
+    }
 
     
 }

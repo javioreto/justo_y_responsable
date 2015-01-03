@@ -11,7 +11,7 @@ else {
 
         		
         		
-        		
+        		$html="";
 	        		// COMENTARIOS
 	        if($_REQUEST['filtro']==5){		
 	        		$comment = Load::loadCommentNew(); 
@@ -227,6 +227,9 @@ else {
 			$cont++;
 					}}
 
+					}
+					if($html==""){
+						$html="<div style='padding:10px 15px; text-align:center;'>No se han encontrado notificaciones.</div>";
 					}
 					
 	$html = substr( $html, 0, strlen($html));

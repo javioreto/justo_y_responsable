@@ -33,6 +33,16 @@ if(isset($_POST['radio']) && isset($_POST['distance']) && isset($_POST['lat']) &
     
     $option = "no";
     $enter=false;
+    if($radio == "online"){
+      	$results = $dataBase->getEstablishmentOnline($con);
+            foreach ($results AS $result){  
+                    $establishment[] = $result;
+            }
+            $establishmentFinal = $establishment;
+            
+            $establishment = array();
+
+    }else{
     if($radio == "locality"){
         
         if($distance == 0){
@@ -58,7 +68,7 @@ if(isset($_POST['radio']) && isset($_POST['distance']) && isset($_POST['lat']) &
             $option = "si";
         
         }
-    }
+    }}
     
     if($option == "si"){
      

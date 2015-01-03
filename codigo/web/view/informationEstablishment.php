@@ -281,6 +281,24 @@ $user = Load::loadUserById($id);
                     </div>
                 </div>
                 
+                <div class="form-group">
+                    <label class="col-md-6"><?php echo _("Establecimiento online:") ?></label>
+                    <div class=" col-md-6">
+                        <?php
+                        if($establishment->getOnline()==1){
+                        ?>
+                            <p> <?php echo _("Si") ?> </p>
+                        <?php
+                        }else{
+                        ?>
+                            <p> <?php echo _("No") ?> </p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                
              </div>
             
             <div class="form-horizontal col-md-4 " role="form">

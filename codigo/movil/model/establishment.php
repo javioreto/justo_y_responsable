@@ -170,6 +170,8 @@ class Establishment{
      */
     public $sector;
     
+    public $online;
+    
     /**
      * Constructor
      * 
@@ -200,7 +202,7 @@ class Establishment{
      */
     function Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$dissableaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $nature, $sector){
+    $products,$comments, $nature, $sector, $online){
         
         $this->idEstablishment = $idEstablishment;                      
         $this->name = $name;
@@ -226,6 +228,7 @@ class Establishment{
         
         $this->nature = $nature;
         $this->sector = $sector;
+        $this->online = $online;
     }
     
     /**
@@ -642,6 +645,21 @@ class Establishment{
         $this->sector = $val;
     }
         
+        
+                
+    function getOnline(){
+        return $this->online;
+    }
+    
+    /**
+     * Method that change the sector of establishment.
+     * 
+     * @param val the new sector to change
+     */
+    function setOnline($val){
+        $this->online = $val;
+    }
+
 }
 
 ?>

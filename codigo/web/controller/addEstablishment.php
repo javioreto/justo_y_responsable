@@ -106,6 +106,13 @@ if(isset($_POST["disableaccess"])){
     $chdisableaccess = "";
 }
 
+if(isset($_POST["online"])){
+    $online=$_POST["online"];    
+}else{
+    $online=0;
+}
+
+
 $sector = $_POST["selectSector"];
 
 $type = $_POST["selectType"];
@@ -131,11 +138,11 @@ $mailingSystem=new mailingSystem();
 //insert the establishment and return the id of that establishment.
 if($userselect!=""){
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
-        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect,$con);
+        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect, $online, $con);
         $mailingSystem->newEstablishment($name,$locality);
 }else{
 $id = $dataBase->insertEstablishment($name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
-    $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser,$con);
+    $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser, $online ,$con);
     $mailingSystem->newEstablishment($name,$locality);
 }
 
@@ -162,10 +169,10 @@ if($namexml!=""){
     
     if($userselect!=""){
     $dataBase->updateEstablishment($id, $name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
-        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect, $con);
+        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $userselect, $online, $con);
     }else{
     $dataBase->updateEstablishment($id, $name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
-        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser, $con);
+        $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $refiduser, $online, $con);
     }
 }
 

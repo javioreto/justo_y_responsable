@@ -80,6 +80,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                         <input type="radio" name="radio" id="radioLocation" value="location">
                         <label id="labelradiolocation"  for="radioLocation"><?php echo _("Mi ubicación") ?></label>
                     </div>
+                   <div id="nolocation2">
+                        <input type="radio" name="radio" id="radioLocations" value="online">
+                        <label id="labelradiolocation"  for="radioLocations"><?php echo _("Establecimientos online") ?></label>
+                    </div>
                     <div id="nolocation" style="display:none">
                         <input type="radio" name="radion" id="radioLocationn" value="location" disabled="false">
                         <label id="labelradiolocationn"  for="radioLocationn"><?php echo _("Mi ubicación (solo disponible compartiendo la ubicación)") ?></label>

@@ -102,6 +102,12 @@ if($arrayidnew!=""){
 
 
 
+if(isset($_POST["online"])){
+    $online=$_POST["online"];    
+}else{
+    $online=0;
+}
+
 
 
 //connect with database
@@ -116,7 +122,7 @@ if($sector!="1"){
 //insert establishment
 $iduser = $_POST["refuser"];
 $dataBase->updateEstablishment($idestablecimientoedit, $name, $phone, $email, $logo,$cash,$card,$postcode,$address, $webpage, 
-    $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $iduser, $con);
+    $schedule,$facebook,$twitter,$disableaccess,$latitude,$longitude,$locality,$type, $sector, $iduser, $online, $con);
 
 if($arrayids!=""){
     $dataBase->updateProductsEst($idestablecimientoedit, $arrayids,$con);

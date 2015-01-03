@@ -254,6 +254,11 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			</div>');	
 			$cont++;
 					}}
+					
+					if($cont==0){
+						echo"<div style='padding:10px 15px; text-align:center;'>No se han encontrado notificaciones.</div>";
+					}
+
 				
 			?>
 		

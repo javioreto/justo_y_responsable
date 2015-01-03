@@ -184,6 +184,12 @@ $user = Load::loadUserById($id);
                           <div style="margin-top: -20px; margin-bottom: -20px;" class="col-md-12">
                             <p><?php echo _("Pulsa sobre el mapa para localizar manualmente.") ?></p>
                           </div>
+                   <div class="col-md-12">
+                       <label >
+                         <input id="online" type="checkbox" name="online" value="1" <?php if($establishment->getOnline()==1){ echo('checked="checked"'); } ?> > <?php echo "Soy un establecimiento online." ?></input>
+                       </label>
+                   </div>
+
                       </div>
                     </div>
                   </div>
