@@ -40,6 +40,10 @@ class Comment{
      * @access private
      */
     private $description;
+    
+    private $idevento;
+    
+    private $refidestablecimiento;
 
 	/**
      * Constructor of Comment.
@@ -49,11 +53,13 @@ class Comment{
      * @param date the date of the comment
      * @param description the description of the comment
      */
-	function Comment($idComment,$author,$date, $description) {
+	function Comment($idComment,$author,$date, $description, $idevento, $refidestablecimiento) {
 	    $this->idComment = $idComment;
 		$this->author = $author;
 		$this->date = $date;
         $this->description = $description;
+        $this->idevento = $idevento;
+        $this->refidestablecimiento = $refidestablecimiento;
     }
     
     /**
@@ -126,6 +132,15 @@ class Comment{
      */
 	function setDescription($val){
 		$this->description = $val;
- 	}    
+ 	}
+ 	
+	function getrefidestablecimiento(){
+		return $this->refidestablecimiento;
+	} 
+	
+	function getidevento(){
+		return $this->idevento;
+	}     
+    
 }
 ?>

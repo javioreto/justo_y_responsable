@@ -156,3 +156,17 @@ a:link{
 	overflow:auto;
 }
 
+.ok:hover{
+	color:green;
+	cursor:pointer;
+}
+
+.cancel:hover{
+	color:red;
+	cursor:pointer;
+}
+
+
+
+
+

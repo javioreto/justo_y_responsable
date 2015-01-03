@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JustoYResponsable\n"
-"POT-Creation-Date: 2014-11-19 02:32+0100\n"
-"PO-Revision-Date: 2014-11-19 02:32+0100\n"
+"POT-Creation-Date: 2015-01-02 14:03+0100\n"
+"PO-Revision-Date: 2015-01-02 14:03+0100\n"
 "Last-Translator: Javier <jlm0051@alu.ubu.es>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -16,117 +16,162 @@ msgstr ""
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../view/editEstablishment.php:63 ../../../view/editUser.php:54
-#: ../../../view/errorBd.php:25 ../../../view/gestion.php:53
-#: ../../../view/gestionEstablishment.php:61 ../../../view/gestionUser.php:64
-#: ../../../view/info.php:48 ../../../view/info.php:89
-#: ../../../view/informationEstablishment.php:55
+#: ../../../view/configuracion.php:53 ../../../view/editEstablishment.php:65
+#: ../../../view/editEvent.php:58 ../../../view/editEvents.php:65
+#: ../../../view/editUser.php:54 ../../../view/errorBd.php:25
+#: ../../../view/estadisticas.php:95 ../../../view/gestion.php:54
+#: ../../../view/gestionEstablishment.php:61
+#: ../../../view/gestionEventos.php:61 ../../../view/gestionUser.php:64
+#: ../../../view/historial.php:54 ../../../view/info.php:48
+#: ../../../view/info.php:89 ../../../view/informationEstablishment.php:55
 #: ../../../view/informationUser.php:61 ../../../view/login.php:56
-#: ../../../view/newEstablishment.php:54 ../../../view/register.php:44
-#: ../../../view/restore.php:56 ../../../view/restorePass.php:75
+#: ../../../view/newEstablishment.php:54 ../../../view/newEvent.php:54
+#: ../../../view/register.php:44 ../../../view/restore.php:56
+#: ../../../view/restorePass.php:75
 msgid "Justo y Responsable"
 msgstr "Fair & Ethical"
 
-#: ../../../view/editEstablishment.php:66 ../../../view/editUser.php:57
-#: ../../../view/gestion.php:56 ../../../view/gestionEstablishment.php:64
-#: ../../../view/gestionUser.php:67 ../../../view/info.php:54
+#: ../../../view/configuracion.php:56 ../../../view/editEstablishment.php:68
+#: ../../../view/editEvent.php:61 ../../../view/editEvents.php:68
+#: ../../../view/editUser.php:57 ../../../view/estadisticas.php:98
+#: ../../../view/gestion.php:57 ../../../view/gestionEstablishment.php:64
+#: ../../../view/gestionEventos.php:64 ../../../view/gestionUser.php:67
+#: ../../../view/historial.php:57 ../../../view/info.php:54
 #: ../../../view/informationEstablishment.php:58
 #: ../../../view/informationUser.php:64 ../../../view/newEstablishment.php:57
-#: ../../../view/register.php:50
+#: ../../../view/newEvent.php:57 ../../../view/register.php:50
 msgid "Bienvenid@: "
 msgstr "Welcome:"
 
-#: ../../../view/editEstablishment.php:67 ../../../view/editUser.php:58
-#: ../../../view/gestion.php:57 ../../../view/gestionEstablishment.php:65
-#: ../../../view/gestionUser.php:68 ../../../view/info.php:55
+#: ../../../view/configuracion.php:57 ../../../view/editEstablishment.php:69
+#: ../../../view/editEvent.php:62 ../../../view/editEvents.php:69
+#: ../../../view/editUser.php:58 ../../../view/estadisticas.php:99
+#: ../../../view/gestion.php:58 ../../../view/gestionEstablishment.php:65
+#: ../../../view/gestionEventos.php:65 ../../../view/gestionUser.php:68
+#: ../../../view/historial.php:58 ../../../view/info.php:55
 #: ../../../view/informationEstablishment.php:59
 #: ../../../view/informationUser.php:65 ../../../view/newEstablishment.php:58
-#: ../../../view/register.php:51
+#: ../../../view/newEvent.php:58 ../../../view/register.php:51
 msgid "Cerrar sesión"
 msgstr "close session"
 
-#: ../../../view/editEstablishment.php:82 ../../../view/editUser.php:73
-msgid "Formulario de edición"
-msgstr "Edit form"
+#: ../../../view/configuracion.php:72 ../../../view/gestion.php:111
+msgid "Configuración"
+msgstr "Settings"
 
-#: ../../../view/editEstablishment.php:91
-#: ../../../view/editEstablishment.php:98 ../../../view/editUser.php:77
-#: ../../../view/gestionEstablishment.php:98 ../../../view/gestionUser.php:88
-#: ../../../view/info.php:76 ../../../view/informationEstablishment.php:89
-#: ../../../view/informationEstablishment.php:95
-#: ../../../view/informationUser.php:93 ../../../view/newEstablishment.php:80
-#: ../../../view/newEstablishment.php:87 ../../../view/register.php:75
-#: ../../../view/restore.php:101
-msgid "Volver"
-msgstr "Back"
+#: ../../../view/configuracion.php:76 ../../../view/editEstablishment.php:96
+#: ../../../view/editEvent.php:87 ../../../view/editEvents.php:96
+#: ../../../view/editUser.php:80 ../../../view/estadisticas.php:118
+#: ../../../view/gestionEstablishment.php:101
+#: ../../../view/gestionEventos.php:101 ../../../view/gestionUser.php:91
+#: ../../../view/historial.php:77 ../../../view/info.php:79
+#: ../../../view/informationEstablishment.php:98
+#: ../../../view/informationUser.php:96 ../../../view/newEstablishment.php:83
+#: ../../../view/newEvent.php:83 ../../../view/register.php:78
+msgid "Inicio"
+msgstr "Home"
 
-#: ../../../view/editEstablishment.php:92
-#: ../../../view/editEstablishment.php:99 ../../../view/editUser.php:78
-#: ../../../view/gestion.php:81 ../../../view/gestionEstablishment.php:99
-#: ../../../view/gestionEstablishment.php:106 ../../../view/gestionUser.php:89
+#: ../../../view/configuracion.php:77 ../../../view/configuracion.php:78
+#: ../../../view/editEstablishment.php:94
+#: ../../../view/editEstablishment.php:101 ../../../view/editEvent.php:85
+#: ../../../view/editEvent.php:92 ../../../view/editEvents.php:94
+#: ../../../view/editEvents.php:101 ../../../view/editUser.php:78
+#: ../../../view/estadisticas.php:119 ../../../view/estadisticas.php:120
+#: ../../../view/gestion.php:82 ../../../view/gestion.php:83
+#: ../../../view/gestionEstablishment.php:99
+#: ../../../view/gestionEstablishment.php:114
+#: ../../../view/gestionEventos.php:99 ../../../view/gestionEventos.php:106
+#: ../../../view/gestionUser.php:89 ../../../view/historial.php:83
 #: ../../../view/info.php:72 ../../../view/info.php:77
 #: ../../../view/informationEstablishment.php:90
 #: ../../../view/informationEstablishment.php:96
 #: ../../../view/informationUser.php:94 ../../../view/login.php:101
 #: ../../../view/newEstablishment.php:81 ../../../view/newEstablishment.php:88
+#: ../../../view/newEvent.php:81 ../../../view/newEvent.php:88
 #: ../../../view/register.php:76 ../../../view/register.php:83
 #: ../../../view/restore.php:102 ../../../view/restorePass.php:120
 msgid "Acerca de"
 msgstr "About"
 
-#: ../../../view/editEstablishment.php:93
-#: ../../../view/editEstablishment.php:100 ../../../view/editUser.php:79
-#: ../../../view/gestion.php:82 ../../../view/gestionEstablishment.php:100
-#: ../../../view/gestionEstablishment.php:107 ../../../view/gestionUser.php:90
+#: ../../../view/configuracion.php:79 ../../../view/editEstablishment.php:95
+#: ../../../view/editEstablishment.php:102 ../../../view/editEvent.php:86
+#: ../../../view/editEvent.php:93 ../../../view/editEvents.php:95
+#: ../../../view/editEvents.php:102 ../../../view/editUser.php:79
+#: ../../../view/estadisticas.php:121 ../../../view/gestion.php:84
+#: ../../../view/gestionEstablishment.php:100
+#: ../../../view/gestionEstablishment.php:115
+#: ../../../view/gestionEventos.php:100 ../../../view/gestionEventos.php:107
+#: ../../../view/gestionUser.php:90 ../../../view/historial.php:84
 #: ../../../view/info.php:78 ../../../view/informationEstablishment.php:91
 #: ../../../view/informationEstablishment.php:97
 #: ../../../view/informationUser.php:95 ../../../view/login.php:102
 #: ../../../view/newEstablishment.php:82 ../../../view/newEstablishment.php:89
+#: ../../../view/newEvent.php:82 ../../../view/newEvent.php:89
 #: ../../../view/register.php:77 ../../../view/register.php:84
 #: ../../../view/restore.php:103 ../../../view/restorePass.php:121
 msgid "Ayuda"
 msgstr "Help"
 
-#: ../../../view/editEstablishment.php:94 ../../../view/editUser.php:80
-#: ../../../view/gestion.php:76 ../../../view/gestionEstablishment.php:101
-#: ../../../view/gestionUser.php:91 ../../../view/info.php:79
-#: ../../../view/informationEstablishment.php:98
-#: ../../../view/informationUser.php:96 ../../../view/newEstablishment.php:83
-#: ../../../view/register.php:78
-msgid "Inicio"
-msgstr "Home"
+#: ../../../view/editEstablishment.php:84 ../../../view/editEvents.php:84
+#: ../../../view/editUser.php:73
+msgid "Formulario de edición"
+msgstr "Edit form"
 
-#: ../../../view/editEstablishment.php:113 ../../../view/editUser.php:188
+#: ../../../view/editEstablishment.php:93
+#: ../../../view/editEstablishment.php:100 ../../../view/editEvent.php:84
+#: ../../../view/editEvent.php:91 ../../../view/editEvents.php:93
+#: ../../../view/editEvents.php:100 ../../../view/editUser.php:77
+#: ../../../view/gestionEstablishment.php:98
+#: ../../../view/gestionEventos.php:98 ../../../view/gestionUser.php:88
+#: ../../../view/info.php:76 ../../../view/informationEstablishment.php:89
+#: ../../../view/informationEstablishment.php:95
+#: ../../../view/informationUser.php:93 ../../../view/newEstablishment.php:80
+#: ../../../view/newEstablishment.php:87 ../../../view/newEvent.php:80
+#: ../../../view/newEvent.php:87 ../../../view/register.php:75
+#: ../../../view/restore.php:101
+msgid "Volver"
+msgstr "Back"
+
+#: ../../../view/editEstablishment.php:115 ../../../view/editEvents.php:115
+#: ../../../view/editUser.php:188
 msgid "Guardar"
 msgstr "Save"
 
-#: ../../../view/editEstablishment.php:119
-#: ../../../view/editEstablishment.php:123
-#: ../../../view/editEstablishment.php:127
-#: ../../../view/editEstablishment.php:535 ../../../view/editUser.php:91
-#: ../../../view/editUser.php:95 ../../../view/editUser.php:99
-#: ../../../view/editUser.php:103 ../../../view/editUser.php:107
-#: ../../../view/editUser.php:111 ../../../view/gestionUser.php:117
-#: ../../../view/login.php:122 ../../../view/login.php:126
-#: ../../../view/login.php:134 ../../../view/newEstablishment.php:104
+#: ../../../view/editEstablishment.php:121
+#: ../../../view/editEstablishment.php:125
+#: ../../../view/editEstablishment.php:129
+#: ../../../view/editEstablishment.php:537 ../../../view/editEvent.php:108
+#: ../../../view/editEvent.php:112 ../../../view/editEvent.php:116
+#: ../../../view/editEvents.php:121 ../../../view/editEvents.php:125
+#: ../../../view/editEvents.php:129 ../../../view/editEvents.php:537
+#: ../../../view/editUser.php:91 ../../../view/editUser.php:95
+#: ../../../view/editUser.php:99 ../../../view/editUser.php:103
+#: ../../../view/editUser.php:107 ../../../view/editUser.php:111
+#: ../../../view/gestionUser.php:117 ../../../view/login.php:122
+#: ../../../view/login.php:126 ../../../view/login.php:134
+#: ../../../view/newEstablishment.php:104
 #: ../../../view/newEstablishment.php:108
 #: ../../../view/newEstablishment.php:112
-#: ../../../view/newEstablishment.php:420 ../../../view/register.php:99
-#: ../../../view/register.php:103 ../../../view/register.php:107
-#: ../../../view/register.php:111 ../../../view/register.php:115
-#: ../../../view/register.php:119 ../../../view/register.php:123
-#: ../../../view/register.php:127 ../../../view/restore.php:124
-#: ../../../view/restorePass.php:142 ../../../view/restorePass.php:146
+#: ../../../view/newEstablishment.php:426 ../../../view/newEvent.php:104
+#: ../../../view/newEvent.php:108 ../../../view/newEvent.php:112
+#: ../../../view/register.php:99 ../../../view/register.php:103
+#: ../../../view/register.php:107 ../../../view/register.php:111
+#: ../../../view/register.php:115 ../../../view/register.php:119
+#: ../../../view/register.php:123 ../../../view/register.php:127
+#: ../../../view/restore.php:124 ../../../view/restorePass.php:142
+#: ../../../view/restorePass.php:146
 msgid "Error: "
 msgstr "Error:"
 
-#: ../../../view/editEstablishment.php:119
-#: ../../../view/newEstablishment.php:104
+#: ../../../view/editEstablishment.php:121 ../../../view/editEvent.php:108
+#: ../../../view/editEvents.php:121 ../../../view/newEstablishment.php:104
+#: ../../../view/newEvent.php:104
 msgid "Debe completar todos los campos marcados con (*)."
 msgstr "You must fill out the fields marked with an asterisk (*)."
 
-#: ../../../view/editEstablishment.php:123
-#: ../../../view/newEstablishment.php:108
+#: ../../../view/editEstablishment.php:125 ../../../view/editEvent.php:112
+#: ../../../view/editEvents.php:125 ../../../view/newEstablishment.php:108
+#: ../../../view/newEvent.php:108
 msgid ""
 "Si el establecimiento no pertenece a la CECJ, debe indicar la organización "
 "importadora."
@@ -134,221 +179,324 @@ msgstr ""
 "If the establishment is not a member of the National Fair Trade Platform, "
 "you must select the importing organization."
 
-#: ../../../view/editEstablishment.php:127
-#: ../../../view/newEstablishment.php:112
+#: ../../../view/editEstablishment.php:129 ../../../view/editEvent.php:116
+#: ../../../view/editEvents.php:129 ../../../view/newEstablishment.php:112
+#: ../../../view/newEvent.php:112
 msgid "La dirección no es correcta, debe seleccionar una de la lista."
 msgstr "The address is incorrect, you must selected one for the list."
 
-#: ../../../view/editEstablishment.php:131
-#: ../../../view/editEstablishment.php:539 ../../../view/editUser.php:116
-#: ../../../view/newEstablishment.php:153 ../../../view/register.php:134
+#: ../../../view/editEstablishment.php:133
+#: ../../../view/editEstablishment.php:548 ../../../view/editEvent.php:134
+#: ../../../view/editEvents.php:133 ../../../view/editEvents.php:548
+#: ../../../view/editUser.php:116 ../../../view/newEstablishment.php:153
+#: ../../../view/newEvent.php:150 ../../../view/register.php:134
 #: ../../../view/register.php:222
 msgid "*Nombre:"
 msgstr "*Name:"
 
-#: ../../../view/editEstablishment.php:133
-#: ../../../view/editEstablishment.php:541
+#: ../../../view/editEstablishment.php:135
+#: ../../../view/editEstablishment.php:550 ../../../view/editEvent.php:136
+#: ../../../view/editEvents.php:135 ../../../view/editEvents.php:550
 #: ../../../view/newEstablishment.php:155
-#: ../../../view/newEstablishment.php:426 ../../../view/register.php:136
-#: ../../../view/register.php:224
+#: ../../../view/newEstablishment.php:432 ../../../view/newEvent.php:152
+#: ../../../view/register.php:136 ../../../view/register.php:224
 msgid "Nombre"
 msgstr "Name"
 
-#: ../../../view/editEstablishment.php:137
+#: ../../../view/editEstablishment.php:139 ../../../view/editEvents.php:139
 msgid "Imagen"
 msgstr "Image"
 
-#: ../../../view/editEstablishment.php:154
+#: ../../../view/editEstablishment.php:156 ../../../view/editEvent.php:143
+#: ../../../view/editEvents.php:156
 #: ../../../view/informationEstablishment.php:290
-#: ../../../view/newEstablishment.php:165
+#: ../../../view/newEstablishment.php:165 ../../../view/newEvent.php:159
 msgid "Ubicación"
 msgstr "Location"
 
-#: ../../../view/editEstablishment.php:159
-#: ../../../view/newEstablishment.php:170
+#: ../../../view/editEstablishment.php:161 ../../../view/editEvent.php:148
+#: ../../../view/editEvents.php:161 ../../../view/newEstablishment.php:170
+#: ../../../view/newEvent.php:164
 msgid "*Dirección:"
 msgstr "*Address:"
 
-#: ../../../view/editEstablishment.php:183
+#: ../../../view/editEstablishment.php:185 ../../../view/editEvents.php:185
 msgid "Pulsa sobre el mapa para localizar manualmente."
 msgstr "Click on the map to manually locate it."
 
-#: ../../../view/editEstablishment.php:194 ../../../view/editUser.php:152
+#: ../../../view/editEstablishment.php:196 ../../../view/editEvents.php:196
+#: ../../../view/editUser.php:152
 #: ../../../view/informationEstablishment.php:130
 #: ../../../view/informationUser.php:140
-#: ../../../view/newEstablishment.php:208 ../../../view/register.php:178
+#: ../../../view/newEstablishment.php:214 ../../../view/register.php:178
 #: ../../../view/register.php:252
 msgid "Teléfono:"
 msgstr "Telephone:"
 
-#: ../../../view/editEstablishment.php:197
-#: ../../../view/newEstablishment.php:210 ../../../view/register.php:180
+#: ../../../view/editEstablishment.php:199 ../../../view/editEvents.php:199
+#: ../../../view/newEstablishment.php:216 ../../../view/register.php:180
 #: ../../../view/register.php:254
 msgid "Teléfono"
 msgstr "Telephone"
 
-#: ../../../view/editEstablishment.php:202
-#: ../../../view/newEstablishment.php:214
+#: ../../../view/editEstablishment.php:204 ../../../view/editEvents.php:204
+#: ../../../view/newEstablishment.php:220
 msgid "Email:"
 msgstr "Email:"
 
-#: ../../../view/editEstablishment.php:205
-#: ../../../view/newEstablishment.php:216
+#: ../../../view/editEstablishment.php:207 ../../../view/editEvents.php:207
+#: ../../../view/newEstablishment.php:222
 msgid "Email"
 msgstr "Email"
 
-#: ../../../view/editEstablishment.php:210
+#: ../../../view/editEstablishment.php:212 ../../../view/editEvents.php:212
 #: ../../../view/informationEstablishment.php:155
-#: ../../../view/newEstablishment.php:220
+#: ../../../view/newEstablishment.php:226
 msgid "Página web:"
 msgstr "Web page:"
 
-#: ../../../view/editEstablishment.php:218
+#: ../../../view/editEstablishment.php:220 ../../../view/editEvents.php:220
 #: ../../../view/informationEstablishment.php:162
-#: ../../../view/newEstablishment.php:226
+#: ../../../view/newEstablishment.php:232
 msgid "Horario:"
 msgstr "Schedule:"
 
-#: ../../../view/editEstablishment.php:220
-#: ../../../view/newEstablishment.php:228
+#: ../../../view/editEstablishment.php:222 ../../../view/editEvents.php:222
+#: ../../../view/newEstablishment.php:234
 msgid "Horario"
 msgstr "Schedule"
 
-#: ../../../view/editEstablishment.php:225
-#: ../../../view/newEstablishment.php:233
+#: ../../../view/editEstablishment.php:227 ../../../view/editEvents.php:227
+#: ../../../view/newEstablishment.php:239
 msgid "*Organización perteneciente:"
 msgstr "*Member of:"
 
-#: ../../../view/editEstablishment.php:300
+#: ../../../view/editEstablishment.php:302 ../../../view/editEvents.php:302
 #: ../../../view/informationEstablishment.php:183
-#: ../../../view/newEstablishment.php:269
+#: ../../../view/newEstablishment.php:275
 msgid "Organización importadora:"
 msgstr "Importing organization:"
 
-#: ../../../view/editEstablishment.php:350
-#: ../../../view/newEstablishment.php:298
+#: ../../../view/editEstablishment.php:352 ../../../view/editEvents.php:352
+#: ../../../view/newEstablishment.php:304
 msgid "Redes sociales"
 msgstr "Social networks"
 
-#: ../../../view/editEstablishment.php:408
-#: ../../../view/newEstablishment.php:332
+#: ../../../view/editEstablishment.php:410 ../../../view/editEvents.php:410
+#: ../../../view/newEstablishment.php:338
 msgid "Formas de pago y acceso"
 msgstr "Ways of payment & access"
 
-#: ../../../view/editEstablishment.php:419
-#: ../../../view/editEstablishment.php:423
-#: ../../../view/newEstablishment.php:340
+#: ../../../view/editEstablishment.php:421
+#: ../../../view/editEstablishment.php:425 ../../../view/editEvents.php:421
+#: ../../../view/editEvents.php:425 ../../../view/newEstablishment.php:346
 msgid "Moneda social"
 msgstr "Social currency"
 
-#: ../../../view/editEstablishment.php:435
-#: ../../../view/editEstablishment.php:439
-#: ../../../view/newEstablishment.php:345
+#: ../../../view/editEstablishment.php:437
+#: ../../../view/editEstablishment.php:441 ../../../view/editEvents.php:437
+#: ../../../view/editEvents.php:441 ../../../view/newEstablishment.php:351
 msgid "Tarjeta"
 msgstr "Credit card"
 
-#: ../../../view/editEstablishment.php:455
-#: ../../../view/editEstablishment.php:459
-#: ../../../view/newEstablishment.php:354
+#: ../../../view/editEstablishment.php:457
+#: ../../../view/editEstablishment.php:461 ../../../view/editEvents.php:457
+#: ../../../view/editEvents.php:461 ../../../view/newEstablishment.php:360
 msgid "Acceso para discapacitados"
 msgstr "Disability access"
 
-#: ../../../view/editEstablishment.php:475
-#: ../../../view/newEstablishment.php:366
+#: ../../../view/editEstablishment.php:477 ../../../view/editEvents.php:477
+#: ../../../view/newEstablishment.php:372
 msgid "*Sector"
 msgstr "*Sector"
 
-#: ../../../view/editEstablishment.php:477
-#: ../../../view/editEstablishment.php:491
-#: ../../../view/newEstablishment.php:368
-#: ../../../view/newEstablishment.php:381
+#: ../../../view/editEstablishment.php:479
+#: ../../../view/editEstablishment.php:493 ../../../view/editEvents.php:479
+#: ../../../view/editEvents.php:493 ../../../view/newEstablishment.php:374
+#: ../../../view/newEstablishment.php:387 ../../../view/newEvent.php:225
 msgid "-- Seleccione uno --"
 msgstr "-- Select one--"
 
-#: ../../../view/editEstablishment.php:478
+#: ../../../view/editEstablishment.php:480 ../../../view/editEvents.php:480
 #: ../../../view/informationEstablishment.php:198
-#: ../../../view/newEstablishment.php:369
+#: ../../../view/newEstablishment.php:375
 msgid "Comercio justo"
 msgstr "Fair Trade"
 
-#: ../../../view/editEstablishment.php:479
+#: ../../../view/editEstablishment.php:481 ../../../view/editEvents.php:481
 #: ../../../view/informationEstablishment.php:203
-#: ../../../view/newEstablishment.php:370
+#: ../../../view/newEstablishment.php:376
 msgid "Banca ética"
 msgstr "Ethical banking"
 
-#: ../../../view/editEstablishment.php:480
+#: ../../../view/editEstablishment.php:482 ../../../view/editEvents.php:482
 #: ../../../view/informationEstablishment.php:208
-#: ../../../view/newEstablishment.php:371
+#: ../../../view/newEstablishment.php:377
 msgid "Economía solidaria"
 msgstr "Solidarity economy"
 
-#: ../../../view/editEstablishment.php:481
+#: ../../../view/editEstablishment.php:483 ../../../view/editEvents.php:483
 #: ../../../view/informationEstablishment.php:213
-#: ../../../view/newEstablishment.php:372
+#: ../../../view/newEstablishment.php:378
 msgid "Consumidores y usuarios organizados"
 msgstr "Consumers and users organized"
 
-#: ../../../view/editEstablishment.php:489
-#: ../../../view/newEstablishment.php:379
+#: ../../../view/editEstablishment.php:491 ../../../view/editEvent.php:207
+#: ../../../view/editEvents.php:491 ../../../view/newEstablishment.php:385
+#: ../../../view/newEvent.php:223
 msgid "*Tipo"
 msgstr "*Type"
 
-#: ../../../view/editEstablishment.php:520
+#: ../../../view/editEstablishment.php:522 ../../../view/editEvents.php:522
 #: ../../../view/informationEstablishment.php:334
-#: ../../../view/newEstablishment.php:405
+#: ../../../view/newEstablishment.php:411
 msgid "Sección de productos"
 msgstr "Product section"
 
-#: ../../../view/editEstablishment.php:530
-#: ../../../view/newEstablishment.php:415
+#: ../../../view/editEstablishment.php:532 ../../../view/editEvents.php:532
+#: ../../../view/newEstablishment.php:421
 msgid "Nuevo producto"
 msgstr "New product"
 
-#: ../../../view/editEstablishment.php:535
-#: ../../../view/newEstablishment.php:420
+#: ../../../view/editEstablishment.php:537 ../../../view/editEvents.php:537
+#: ../../../view/newEstablishment.php:426
 msgid "Debe completar todos los campos."
 msgstr "You must fill out all fields."
 
-#: ../../../view/editEstablishment.php:545
-#: ../../../view/newEstablishment.php:430
+#: ../../../view/editEstablishment.php:541 ../../../view/editEvents.php:541
+msgid "Código:"
+msgstr "Code:"
+
+#: ../../../view/editEstablishment.php:543 ../../../view/editEvents.php:543
+msgid "Código de barras"
+msgstr "Bar code"
+
+#: ../../../view/editEstablishment.php:554 ../../../view/editEvents.php:554
+#: ../../../view/newEstablishment.php:436
 msgid "Descripción:"
 msgstr "Description:"
 
-#: ../../../view/editEstablishment.php:547
-#: ../../../view/newEstablishment.php:432
+#: ../../../view/editEstablishment.php:556 ../../../view/editEvents.php:556
+#: ../../../view/newEstablishment.php:438
 msgid "Descripción"
 msgstr "Description"
 
-#: ../../../view/editEstablishment.php:558
-#: ../../../view/newEstablishment.php:443
-msgid "-- *Categoría --"
-msgstr "-- *Category --"
+#: ../../../view/editEstablishment.php:563 ../../../view/editEvents.php:563
+#: ../../../view/informationEstablishment.php:114
+#: ../../../view/newEstablishment.php:159
+msgid "Imagen:"
+msgstr "Image:"
 
-#: ../../../view/editEstablishment.php:572
-#: ../../../view/newEstablishment.php:457
+#: ../../../view/editEstablishment.php:565 ../../../view/editEvents.php:565
+msgid "Seleccionar imagen"
+msgstr "Select image"
+
+#: ../../../view/editEstablishment.php:571 ../../../view/editEvents.php:571
+msgid "Categoría:"
+msgstr "Category:"
+
+#: ../../../view/editEstablishment.php:576 ../../../view/editEvents.php:576
+msgid "-- *Seleccionar Categoría --"
+msgstr "-- *Select Category --"
+
+#: ../../../view/editEstablishment.php:590 ../../../view/editEvents.php:590
+#: ../../../view/newEstablishment.php:463
 msgid "Añadir"
 msgstr "Add"
 
-#: ../../../view/editEstablishment.php:581
-#: ../../../view/newEstablishment.php:466
+#: ../../../view/editEstablishment.php:599 ../../../view/editEvents.php:599
+#: ../../../view/newEstablishment.php:472
 msgid "Todos los productos"
 msgstr "All products"
 
-#: ../../../view/editEstablishment.php:615
+#: ../../../view/editEstablishment.php:633 ../../../view/editEvents.php:633
 #: ../../../view/informationEstablishment.php:379
 msgid "Sección de comentarios"
 msgstr "Comments section"
 
-#: ../../../view/editEstablishment.php:650
+#: ../../../view/editEstablishment.php:668 ../../../view/editEvents.php:668
 #: ../../../view/informationEstablishment.php:406
 msgid "No existen comentarios sobre este establecimiento"
 msgstr "There are currently no comments available"
 
-#: ../../../view/editEstablishment.php:661 ../../../view/editUser.php:179
-#: ../../../view/newEstablishment.php:479 ../../../view/register.php:347
+#: ../../../view/editEstablishment.php:679 ../../../view/editEvent.php:232
+#: ../../../view/editEvents.php:679 ../../../view/editUser.php:179
+#: ../../../view/newEstablishment.php:485 ../../../view/newEvent.php:248
+#: ../../../view/register.php:347
 msgid "Los campos marcados con (*) deben rellenarse obligatoriamente."
 msgstr "Input fields marked with an asterisk (*) are required fields."
+
+#: ../../../view/editEvent.php:77 ../../../view/gestionEstablishment.php:109
+#: ../../../view/newEvent.php:73
+msgid "Nuevo evento"
+msgstr "New event"
+
+#: ../../../view/editEvent.php:120
+msgid "Eliminar evento"
+msgstr "Delete event"
+
+#: ../../../view/editEvent.php:121
+msgid "Guardar cambios"
+msgstr "Save changes"
+
+#: ../../../view/editEvent.php:156
+#: ../../../view/informationEstablishment.php:295
+#: ../../../view/newEstablishment.php:178 ../../../view/newEvent.php:172
+msgid "Dirección:"
+msgstr "Address:"
+
+#: ../../../view/editEvent.php:175 ../../../view/newEstablishment.php:197
+#: ../../../view/newEvent.php:191
+msgid "Pulse sobre el mapa para localizar manualmente."
+msgstr "Click on the map to locate manually."
+
+#: ../../../view/editEvent.php:186 ../../../view/newEvent.php:202
+msgid "*Descripción:"
+msgstr "*Description:"
+
+#: ../../../view/editEvent.php:192 ../../../view/newEvent.php:208
+msgid "*Fecha:"
+msgstr "*Date:"
+
+#: ../../../view/editEvent.php:198 ../../../view/newEvent.php:214
+msgid "*Horario:"
+msgstr "*Schedule:"
+
+#: ../../../view/editEvent.php:210 ../../../view/newEvent.php:226
+msgid "Charla/conferencia"
+msgstr "Chat/conference"
+
+#: ../../../view/editEvent.php:211 ../../../view/newEvent.php:227
+msgid "Videoforum"
+msgstr "Videoforum"
+
+#: ../../../view/editEvent.php:212 ../../../view/newEvent.php:228
+msgid "Presentación de libro"
+msgstr "Book release"
+
+#: ../../../view/editEvent.php:213 ../../../view/newEvent.php:229
+msgid "Encuentro con productores"
+msgstr "Meeting with producers"
+
+#: ../../../view/editEvent.php:214 ../../../view/newEvent.php:230
+msgid "Exposición"
+msgstr "Exhibition"
+
+#: ../../../view/editEvent.php:215 ../../../view/newEvent.php:231
+msgid "Actividad infantil"
+msgstr "Children's activity"
+
+#: ../../../view/editEvent.php:216 ../../../view/newEvent.php:232
+msgid "Degustación de productos"
+msgstr "Tasting products"
+
+#: ../../../view/editEvent.php:217 ../../../view/newEvent.php:233
+msgid "Taller formativo"
+msgstr "Training workshop"
+
+#: ../../../view/editEvent.php:218 ../../../view/newEvent.php:234
+msgid "Manifestación"
+msgstr "Manifestation"
 
 #: ../../../view/editUser.php:91 ../../../view/register.php:99
 msgid "Existen campos obligatorios (*) vacíos."
@@ -415,55 +563,94 @@ msgid ""
 "más tarde"
 msgstr "It has an error in the database please try again later"
 
-#: ../../../view/gestion.php:72
-msgid "Administración"
-msgstr "Management"
-
-#: ../../../view/gestion.php:77
-msgid "Usuarios"
-msgstr "Users"
-
-#: ../../../view/gestion.php:78
-msgid "Establecimientos"
-msgstr "Establishment"
-
-#: ../../../view/gestion.php:79
-msgid "Productos"
-msgstr "Products"
-
-#: ../../../view/gestion.php:80
+#: ../../../view/estadisticas.php:114 ../../../view/gestion.php:81
+#: ../../../view/historial.php:82
 msgid "Estadísticas"
 msgstr "Statistics"
 
-#: ../../../view/gestion.php:94 ../../../view/gestionUser.php:83
+#: ../../../view/gestion.php:73 ../../../view/historial.php:73
+msgid "Administración"
+msgstr "Management"
+
+#: ../../../view/gestion.php:77 ../../../view/historial.php:78
+msgid "Usuarios"
+msgstr "Users"
+
+#: ../../../view/gestion.php:78 ../../../view/historial.php:79
+msgid "Establecimientos"
+msgstr "Establishment"
+
+#: ../../../view/gestion.php:79 ../../../view/historial.php:80
+msgid "Eventos"
+msgstr "Events"
+
+#: ../../../view/gestion.php:80 ../../../view/historial.php:81
+msgid "Productos"
+msgstr "Products"
+
+#: ../../../view/gestion.php:96 ../../../view/gestionUser.php:83
 msgid "Gestión de usuarios"
 msgstr "User management"
 
-#: ../../../view/gestion.php:99 ../../../view/gestionEstablishment.php:83
+#: ../../../view/gestion.php:101 ../../../view/gestionEstablishment.php:83
 msgid "Gestión de establecimientos"
 msgstr "Establishment management"
+
+#: ../../../view/gestion.php:106 ../../../view/gestionEventos.php:83
+msgid "Gestión de eventos"
+msgstr "Events management"
 
 #: ../../../view/gestionEstablishment.php:87
 msgid "Mis establecimientos"
 msgstr "My establishment"
 
 #: ../../../view/gestionEstablishment.php:97
-#: ../../../view/gestionEstablishment.php:105 ../../../view/gestionUser.php:87
+#: ../../../view/gestionEventos.php:97 ../../../view/gestionEventos.php:105
+#: ../../../view/gestionUser.php:87
 msgid "Nuevo"
 msgstr "New"
 
-#: ../../../view/gestionEstablishment.php:153
-#: ../../../view/informationUser.php:200
+#: ../../../view/gestionEstablishment.php:105
+#: ../../../view/newEstablishment.php:73
+msgid "Nuevo establecimiento"
+msgstr "New establishment"
+
+#: ../../../view/gestionEstablishment.php:161
+#: ../../../view/gestionEstablishment.php:187
+#: ../../../view/gestionEventos.php:174 ../../../view/informationUser.php:200
 msgid "Dirección: "
 msgstr "Address:"
 
-#: ../../../view/gestionEstablishment.php:165
+#: ../../../view/gestionEstablishment.php:190
+#: ../../../view/gestionEventos.php:177
+msgid "Fecha: "
+msgstr "Date:"
+
+#: ../../../view/gestionEstablishment.php:191
+#: ../../../view/gestionEventos.php:178
+msgid "Descripción: "
+msgstr "Description:"
+
+#: ../../../view/gestionEstablishment.php:213
 msgid ""
 "No existen establecimientos almacenados para este usuario. Puede añadirlos "
-"pulsando sobre el botón 'Nuevo' en la barra de navegación superior."
+"pulsando sobre el botón 'Nuevo establecimiento' en la barra de navegación "
+"superior."
 msgstr ""
 "There are no establishments for this user. You can add one by clicking on "
-"the 'New' button in the navigation bar."
+"the 'New establishment' button in the navigation bar."
+
+#: ../../../view/gestionEventos.php:87
+msgid "Mis eventos"
+msgstr "My events"
+
+#: ../../../view/gestionEventos.php:190
+msgid ""
+"No existen eventos almacenados para este usuario. Puede añadirlos pulsando "
+"sobre el botón 'Nuevo' en la barra de navegación superior."
+msgstr ""
+"There are no events for this user. You can add one by clicking on the 'New' "
+"button in the navigation bar."
 
 #: ../../../view/gestionUser.php:105
 msgid "Validación de nuevos usuarios"
@@ -559,11 +746,6 @@ msgstr "Edit"
 msgid "Borrar"
 msgstr "Remove"
 
-#: ../../../view/informationEstablishment.php:114
-#: ../../../view/newEstablishment.php:159
-msgid "Imagen:"
-msgstr "Image:"
-
 #: ../../../view/informationEstablishment.php:148
 #: ../../../view/informationUser.php:154
 msgid "Correo electrónico:"
@@ -604,11 +786,6 @@ msgstr "Yes"
 #: ../../../view/informationEstablishment.php:277
 msgid "No"
 msgstr "No"
-
-#: ../../../view/informationEstablishment.php:295
-#: ../../../view/newEstablishment.php:178
-msgid "Dirección:"
-msgstr "Address:"
 
 #: ../../../view/informationEstablishment.php:301
 msgid "C.P:"
@@ -654,7 +831,7 @@ msgid "Datos personales"
 msgstr "Personal information"
 
 #: ../../../view/informationUser.php:117
-#: ../../../view/newEstablishment.php:424
+#: ../../../view/newEstablishment.php:430
 msgid "Nombre:"
 msgstr "Name:"
 
@@ -737,29 +914,33 @@ msgstr "Enter"
 msgid "Registrarse"
 msgstr "Register"
 
-#: ../../../view/newEstablishment.php:73
-msgid "Nuevo establecimiento"
-msgstr "New establishment"
-
 #: ../../../view/newEstablishment.php:116
 msgid "Dar de alta"
 msgstr "Save"
 
-#: ../../../view/newEstablishment.php:131
+#: ../../../view/newEstablishment.php:131 ../../../view/newEvent.php:131
 msgid "--  Seleccione uno --"
 msgstr "-- Select --"
 
-#: ../../../view/newEstablishment.php:197
-msgid "Pulse sobre el mapa para localizar manualmente."
-msgstr "Click on the map to locate manually."
-
-#: ../../../view/newEstablishment.php:308
+#: ../../../view/newEstablishment.php:314
 msgid "Ej:https://www.facebook.com/CEComercioJusto"
 msgstr "Example:https://www.facebook.com/CEComercioJusto"
 
-#: ../../../view/newEstablishment.php:319
+#: ../../../view/newEstablishment.php:325
 msgid "Ej:https://twitter.com/CEComercioJusto"
 msgstr "Ej:https://twitter.com/CEComercioJusto"
+
+#: ../../../view/newEstablishment.php:449
+msgid "-- *Categoría --"
+msgstr "-- *Category --"
+
+#: ../../../view/newEvent.php:116
+msgid "Crear evento"
+msgstr "Create event"
+
+#: ../../../view/newEvent.php:127
+msgid "*Establecimiento:"
+msgstr "*Establishment:"
 
 #: ../../../view/register.php:68
 msgid "Formulario de registro - Nuevo usuario"
@@ -993,10 +1174,6 @@ msgstr "Repeat password:"
 #, fuzzy
 #~ msgid "No existen establecimientos en Madrid"
 #~ msgstr "My establishment"
-
-#, fuzzy
-#~ msgid "Posición:"
-#~ msgstr "Description:"
 
 #, fuzzy
 #~ msgid "Texto:"

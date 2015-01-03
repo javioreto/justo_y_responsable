@@ -362,7 +362,7 @@ class DataBase{
         $result = mysql_query($sql, $con);
         $arrayComments = array();
         while ($row = mysql_fetch_array($result)) {
-            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion']);
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion'], $row['idevento'], $row['refidestablecimiento']);
             $arrayComments[] = $comment;
         }
         return $arrayComments;
@@ -1400,7 +1400,234 @@ class DataBase{
 	        }
        }
 
+//NOTIFICACIONES
+
+	//COMENTARIOS
+    function getCommentsNew($con){
+        $sql = "select * from comentario where validado = 0 order by fecha DESC ";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion'], $row['idevento'], $row['refidestablecimiento']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
     
+    function getCommentsMes($mes, $ano, $con){
+        $sql = "select * from comentario where MONTH(fecha) ='$mes' AND YEAR(fecha) ='$ano' AND validado = 1 order by fecha DESC ";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion'], $row['idevento'], $row['refidestablecimiento']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+
+
+    function commentOk($id,$connection){
+        $sql = "UPDATE comentario SET validado=1 WHERE idcomentario = ".$id;
+        mysql_query($sql,$connection);
+    }
+    
+    function commentCancel($id,$connection){
+        $sql = "DELETE FROM comentario WHERE idcomentario = ".$id;
+        mysql_query($sql,$connection);
+    }
+
+	//EVENTOS
+	
+	function getEventsNew($con){
+        $arrayEvent = array();
+        $sql = "select * from evento WHERE validado = 0 order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+    
+    function getEventsMes($mes,$ano,$con){
+        $arrayEvent = array();
+        $sql = "select * from evento WHERE MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano' AND validado = 1 order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+
+
+    
+    function eventOk($id,$connection){
+        $sql = "UPDATE evento SET validado=1 WHERE idEvento = ".$id;
+        mysql_query($sql,$connection);
+    }
+    
+    //ESTABLECIMIENTO
+
+    function getEstablishmentNew($con){
+        
+        $sql = "select * from establecimiento where validado = 0 order by idestablecimiento DESC";
+        $establishment = array();
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $idEstablishment = $row['idestablecimiento'];
+            $name = $row['nombre'];
+            $phone = $row['telefono'];          
+            $mail = $row['correo'];
+            $logo = $row['logo'];
+            $cash = $row['pagoefectivo'];
+            $card = $row['pagotarjeta'];
+            $postcode = $row['codigopostal'];
+            $address = $row['direccion'];
+            $website = $row['paginaweb'];
+            $schedule = $row['horario'];
+            $facebook = $row['facebook'];
+            $twitter = $row['twitter'];
+            $disabledaccess = $row['accesominusvalidos'];
+            $latitude = $row['latitud'];
+            $longitude = $row['longitud'];
+            $location = $row['localidad'];
+            $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$con);
+            $reds = $this->getIdsRedById($row['idestablecimiento'],$con);
+            $products = $this->getIdsProductsById($row['idestablecimiento'],$con);
+            $comments = $this->getCommentsById($row['idestablecimiento'],$con);
+            $schedule = $row['horario'];
+            $type = $this->getTypeById($row['refidtipo'], $con);
+            $sector = $this->getSectorById($row['refidsector'],$con);
+            $est = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
+    $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
+    $products,$comments, $type, $sector);
+    		$establishment[]=$est;
+    		}
+        return $establishment;
+    }
+
+function getEstablishmentMes($mes, $ano, $con){
+        
+        $sql = "select * from establecimiento where MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano' AND validado = 1 order by idestablecimiento DESC";
+        $establishment = array();
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $idEstablishment = $row['idestablecimiento'];
+            $name = $row['nombre'];
+            $phone = $row['telefono'];          
+            $mail = $row['correo'];
+            $logo = $row['logo'];
+            $cash = $row['pagoefectivo'];
+            $card = $row['pagotarjeta'];
+            $postcode = $row['codigopostal'];
+            $address = $row['direccion'];
+            $website = $row['paginaweb'];
+            $schedule = $row['horario'];
+            $facebook = $row['facebook'];
+            $twitter = $row['twitter'];
+            $disabledaccess = $row['accesominusvalidos'];
+            $latitude = $row['latitud'];
+            $longitude = $row['longitud'];
+            $location = $row['localidad'];
+            $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$con);
+            $reds = $this->getIdsRedById($row['idestablecimiento'],$con);
+            $products = $this->getIdsProductsById($row['idestablecimiento'],$con);
+            $comments = $this->getCommentsById($row['idestablecimiento'],$con);
+            $schedule = $row['horario'];
+            $type = $this->getTypeById($row['refidtipo'], $con);
+            $sector = $this->getSectorById($row['refidsector'],$con);
+            $est = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
+    $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
+    $products,$comments, $type, $sector);
+    		$establishment[]=$est;
+    		}
+        return $establishment;
+    }
+
+
+    
+    
+    function estOk($id,$connection){
+        $sql = "UPDATE establecimiento SET validado=1 WHERE idestablecimiento = ".$id;
+        mysql_query($sql,$connection);
+    }
+
+	//USUARIO
+	
+	function getUserNew($con){
+        $arrayUsers = array();
+        $sql = "select * from usuario where validado = 0 order by idusuario DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            $arrayUsers[] = $user;
+        }
+        return $arrayUsers;  
+
+    }
+    
+    function getUserMes($mes, $ano, $con){
+        $arrayUsers = array();
+        $sql = "select * from usuario where MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano' AND validado = 1 order by idusuario DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            $arrayUsers[] = $user;
+        }
+        return $arrayUsers;  
+
+    }
+
+
+    
+    function userOk($id,$connection){
+        $sql = "UPDATE usuario SET validado=1 WHERE idusuario = ".$id;
+        mysql_query($sql,$connection);
+    }
+
+	//PRODUCTOS
+	
+	function getProductsNew($connection){
+        $sql = "SELECT * FROM producto WHERE validado=0 order by idproducto DESC";
+        $result = mysql_query($sql, $connection);
+        $arrayProducts = array();
+        while ($row = mysql_fetch_array($result)) {
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $arrayProducts[] = $product;
+        }
+        return $arrayProducts;
+    }
+    
+   	function getProductsMes($mes, $ano, $connection){
+        $sql = "SELECT * FROM producto WHERE MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano' AND validado=1 order by idproducto DESC";
+        $result = mysql_query($sql, $connection);
+        $arrayProducts = array(); 
+        while ($row = mysql_fetch_array($result)) {
+
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $arrayProducts[] = $product;
+        }
+        return $arrayProducts;
+    }
+
+
+   function prodOk($id,$connection){
+        $sql = "UPDATE producto SET validado=1 WHERE idproducto = ".$id;
+        mysql_query($sql,$connection);
+    }
+
+    
+
 }
+
 
 ?>

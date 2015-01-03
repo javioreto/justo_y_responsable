@@ -42,7 +42,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         
         <script src="../js/static/bootstrap.min.js"></script>
         
-       
+        <script src="../js/eventos.js"></script>
+
         
     </head>
     
@@ -73,12 +74,12 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav navbar-right">
-          		<li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
 				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
 				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Productos") ?></a></li>
-				<li><a data-ajax="false" href="info.php"><?php echo _("Estadísticas") ?></a></li>
+				<li><a data-ajax="false" href="estadisticas.php"><?php echo _("Estadísticas") ?></a></li>
+				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
           </ul>
@@ -114,32 +115,147 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         </div>
         <div class="col-md-8">
         	<h3>Centro de notificaciones</h3>
+        	
+      <div class="alert alert-success alert-dismissible fade in hidden" role="alert" id="alertOk">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span></button>
+      Notificación supervisada.
+      </div>
+      
+     	<div class="alert alert-danger alert-dismissible fade in hidden" role="alert" id="alertOk">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span></button>
+      Notificación descartada.
+      </div>
+
         	<div id="contenedor-objetos" class="contenedor_eventos panel-group" role="tablist" aria-multiselectable="true" style="margin-bottom:0px;">
+	        		<?php
+	        		// COMENTARIOS
 	        		
-			<div class="panel panel-default" style=" border-radius:0px;">
+	        		$comment = Load::loadCommentNew(); 
+	        		$cont=0;
+	        		
+	        		if(sizeof($comment)>0){
+					foreach($comment as $co){
+					
+						if($co->getrefidestablecimiento()==0){
+							$donde="evento";
+						}else{
+							$donde="establecimiento";
+						}
+					
+			echo('<div class="panel panel-default" style=" border-radius:0px;" id="panelex'.$cont.'">
 				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
-				<a href="#panel1" data-toggle="collapse" aria-expanded="true" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Características</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
+				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo comentario en '.$donde.'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
 				</div>
-				<div class="panel-collapse collapse in" id="panel1" role="tabpanel" aria-labelledby="cabecera1">
-					<div class="panel-body">Texto sobre características del producto.
+				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
+					<div class="panel-body">'.$co->getDescription().'
 						<div style="text-align:right">
 							<h4>
-								<span class="glyphicon glyphicon-ok-sign"></span>
-								<span class="glyphicon glyphicon-remove-sign"></span>	
+								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getIdComment().', 5, \'#panelex'.$cont.'\');" title="Aceptar"></span>
+								<span class="glyphicon glyphicon-remove-sign cancel" onclick="eventCancel('.$co->getIdComment().', 5, \'#panelex'.$cont.'\');" title="Eliminar"></span>	
 							</h4>
 						</div>
 					</div>
 				</div>
-			</div>	
-			
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="cabecera2"><h4 class="panel-title">
-				<a href="#panel2" data-toggle="collapse" aria-expanded="false" aria-controls="panel2" class="collapsed" data-parent="#contenedor-objetos">Diseño</a></h4></div>
-				<div class="panel-collapse collapse" id="panel2" role="tabpanel" aria-labelledby="cabecera2">
-					<div class="panel-body">Texto sobre el diseño del producto.
+			</div>');	
+			$cont++;
+					}}
+					
+					
+			$comment = Load::loadEventsNew(); 
+		
+			if(sizeof($comment)>0){
+			foreach($comment as $co){
+								
+			echo('<div class="panel panel-default" style=" border-radius:0px;" id="panelex'.$cont.'">
+				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
+				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo evento en '.$co->getlocalidad().'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
+				</div>
+				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
+					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="informationEstablishment.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
+						<div style="text-align:right">
+							<h4>
+								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getidEvento().', 4, \'#panelex'.$cont.'\');" title="Aceptar"></span>
+							</h4>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div>');	
+			$cont++;
+					}}
+					
+					
+			$comment = Load::loadUserNew(); 
+			
+			if(sizeof($comment)>0){
+			foreach($comment as $co){
+								
+			echo('<div class="panel panel-default" style=" border-radius:0px;" id="panelex'.$cont.'">
+				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
+				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo usuario</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
+				</div>
+				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
+					<div class="panel-body">'.$co->getSurName().', '.$co->getName().'<br> <a href="informationUser.php?id='.$co->getIdUser().'">Click aquí para ver perfil completo.</a>
+						<div style="text-align:right">
+							<h4>
+								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getIdUser().', 1, \'#panelex'.$cont.'\');" title="Aceptar"></span>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>');	
+			$cont++;
+					}}
+
+					
+			
+			$comment = Load::loadEstNew(); 
+		
+			if(sizeof($comment)>0){
+			foreach($comment as $co){
+								
+			echo('<div class="panel panel-default" style=" border-radius:0px;" id="panelex'.$cont.'">
+				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
+				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo establecimiento en '.$co->getLocation().'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
+				</div>
+				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
+					<div class="panel-body">'.$co->getName().'<br> <a href="informationEstablishment.php?id='.$co->getIdEstablishment().'">Click aquí para ver descripción completa.</a>
+						<div style="text-align:right">
+							<h4>
+								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getIdEstablishment().', 2, \'#panelex'.$cont.'\');" title="Aceptar"></span>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>');	
+			$cont++;
+					}}
+
+				
+			$comment = Load::loadProdNew(); 
+		
+			if(sizeof($comment)>0){
+			foreach($comment as $co){
+								
+			echo('<div class="panel panel-default" style=" border-radius:0px;" id="panelex'.$cont.'">
+				<div class="panel-heading" role="tab" id="cabecera1"><h4 class="panel-title">
+				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo producto</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
+				</div>
+				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
+					<div class="panel-body"><strong>'.$co->getName().'</strong> '.substr($co->getDescription(),0,110).'
+						<div style="text-align:right">
+							<h4>
+								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getIdProduct().', 3, \'#panelex'.$cont.'\');" title="Aceptar"></span>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>');	
+			$cont++;
+					}}
+				
+			?>
 		
 		        		
         	</div>

@@ -74,11 +74,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav navbar-right">
           		<li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
-				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
-				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
-				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
-				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Productos") ?></a></li>
-				<li><a data-ajax="false" href="info.php"><?php echo _("Estadísticas") ?></a></li>
+				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
           </ul>
@@ -209,7 +205,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         } ?>
         
 		<h3><?php echo $txt; ?></h3>
-		<form action="configuracion.php" method="get" name="tipo">
+		<form action="configuracion.php" method="post" name="tipo">
 		<?php if($ty==3) {?>
 		<div class="col-md-2"><h4>*Categoría:</h4></div>
 		<div class="col-md-8" style="text-align:right;">

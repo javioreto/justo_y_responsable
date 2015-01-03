@@ -440,9 +440,95 @@ class Load{
             $dataBase->disconnectDataBase($con);
             return $event;
         }
+        
+        
+
+        //NOTIFICACIONES
+        
+        public static function loadCommentNew(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getCommentsNew($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+        public static function loadEventsNew(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEventsNew($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+
+        public static function loadEstNew(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEstablishmentNew($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+ 	
+ 	    public static function loadUserNew(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getUserNew($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+ 	    public static function loadProdNew(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getProductsNew($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+       public static function loadProdMes(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getProductsMes(date("m"),date("Y"),$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
 
         
-  		
+        public static function loadUserMes(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getUserMes(date("m"),date("Y"),$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+        public static function loadEstMes(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEstablishmentMes(date("m"),date("Y"),$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+        public static function loadEventsMes(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEventsMes(date("m"),date("Y"),$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+        public static function loadCommentMes(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getCommentsMes(date("m"),date("Y"),$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+ 		
         
         
    }

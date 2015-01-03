@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JustoYResponsable\n"
-"POT-Creation-Date: 2014-12-12 18:50+0100\n"
-"PO-Revision-Date: 2014-12-12 18:52+0100\n"
+"POT-Creation-Date: 2015-01-02 13:54+0100\n"
+"PO-Revision-Date: 2015-01-02 13:54+0100\n"
 "Last-Translator: Javier <jlm0051@alu.ubu.es>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -15,90 +15,106 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../view/advancedSearch.php:29 ../../../view/cameraScan.php:29
+#: ../../../view/advancedSearch.php:29
+#: ../../../view/advancedSearchEvents.php:29 ../../../view/cameraScan.php:29
 #: ../../../view/errorBd.php:7 ../../../view/establishmentMap.php:26
-#: ../../../view/establishmentMapNoResult.php:26 ../../../view/index.php:29
+#: ../../../view/establishmentMapNoResult.php:26 ../../../view/eventMap.php:26
+#: ../../../view/eventMapNoResult.php:26 ../../../view/index.php:29
 #: ../../../view/info.php:20 ../../../view/info.php:56
-#: ../../../view/information.php:33
+#: ../../../view/information.php:33 ../../../view/informationEvent.php:33
 #: ../../../view/loadSearchEstablishment.php:26
-#: ../../../view/loadSearchEvent.php:26 ../../../view/products.php:20
-#: ../../../view/start.php:28 ../../../view/startEvents.php:28
-#: ../../../view/viewMap.php:33 ../../../views/capturar.php:35
+#: ../../../view/loadSearchEvent.php:26 ../../../view/loadSearchEvents.php:26
+#: ../../../view/products.php:20 ../../../view/start.php:28
+#: ../../../view/startEvents.php:28 ../../../view/viewMap.php:33
+#: ../../../views/capturar.php:35
 msgid "Justo y Responsable"
 msgstr "Fair & Ethical"
 
-#: ../../../view/advancedSearch.php:63 ../../../view/cameraScan.php:63
+#: ../../../view/advancedSearch.php:63
+#: ../../../view/advancedSearchEvents.php:63 ../../../view/cameraScan.php:63
 #: ../../../view/establishmentMap.php:64
-#: ../../../view/establishmentMapNoResult.php:53 ../../../view/index.php:57
+#: ../../../view/establishmentMapNoResult.php:53 ../../../view/eventMap.php:64
+#: ../../../view/eventMapNoResult.php:53 ../../../view/index.php:57
 #: ../../../view/info.php:44 ../../../view/information.php:61
-#: ../../../view/products.php:42 ../../../view/start.php:65
-#: ../../../view/startEvents.php:65 ../../../view/viewMap.php:61
-#: ../../../views/capturar.php:57
+#: ../../../view/informationEvent.php:61 ../../../view/products.php:51
+#: ../../../view/start.php:65 ../../../view/startEvents.php:65
+#: ../../../view/viewMap.php:61 ../../../views/capturar.php:57
 msgid "JyR"
 msgstr "F&E"
 
-#: ../../../view/advancedSearch.php:75 ../../../view/information.php:209
+#: ../../../view/advancedSearch.php:75
+#: ../../../view/advancedSearchEvents.php:75 ../../../view/information.php:218
 msgid "Ubicación"
 msgstr "Location"
 
 #: ../../../view/advancedSearch.php:81
+#: ../../../view/advancedSearchEvents.php:81
 msgid "Mi ubicación"
 msgstr "My location"
 
 #: ../../../view/advancedSearch.php:85
+#: ../../../view/advancedSearchEvents.php:85
 msgid "Mi ubicación (solo disponible compartiendo la ubicación)"
 msgstr "My location (only available if the location is shared)"
 
 #: ../../../view/advancedSearch.php:90
+#: ../../../view/advancedSearchEvents.php:90
 msgid "Localidad"
 msgstr "Locality"
 
 #: ../../../view/advancedSearch.php:91
+#: ../../../view/advancedSearchEvents.php:91
 msgid "Introduce una localidad"
 msgstr "type the locality name"
 
 #: ../../../view/advancedSearch.php:99
+#: ../../../view/advancedSearchEvents.php:99
 msgid "Distancia(km):"
 msgstr "Distance(km):"
 
 #: ../../../view/advancedSearch.php:101
+#: ../../../view/advancedSearchEvents.php:101
 msgid "Si"
 msgstr "Yes"
 
 #: ../../../view/advancedSearch.php:102
+#: ../../../view/advancedSearchEvents.php:102
 msgid "No"
 msgstr "No"
 
-#: ../../../view/advancedSearch.php:113 ../../../view/information.php:155
+#: ../../../view/advancedSearch.php:113 ../../../view/information.php:164
 msgid "Sector"
 msgstr "Sector"
 
 #: ../../../view/advancedSearch.php:123 ../../../view/establishmentMap.php:263
-#: ../../../view/information.php:167 ../../../view/start.php:265
-#: ../../../view/startEvents.php:265 ../../../view/viewMap.php:113
+#: ../../../view/eventMap.php:214 ../../../view/information.php:176
+#: ../../../view/start.php:269 ../../../view/startEvents.php:214
+#: ../../../view/viewMap.php:113
 msgid "Comercio justo"
 msgstr "Fair Trade"
 
 #: ../../../view/advancedSearch.php:129 ../../../view/establishmentMap.php:267
-#: ../../../view/information.php:177 ../../../view/start.php:269
-#: ../../../view/startEvents.php:269 ../../../view/viewMap.php:117
+#: ../../../view/eventMap.php:218 ../../../view/information.php:186
+#: ../../../view/startEvents.php:218 ../../../view/viewMap.php:117
 msgid "Banca ética"
 msgstr "Ethical banking"
 
 #: ../../../view/advancedSearch.php:135 ../../../view/establishmentMap.php:271
-#: ../../../view/information.php:187 ../../../view/start.php:273
-#: ../../../view/startEvents.php:273 ../../../view/viewMap.php:121
+#: ../../../view/eventMap.php:222 ../../../view/information.php:196
+#: ../../../view/start.php:277 ../../../view/startEvents.php:222
+#: ../../../view/viewMap.php:121
 msgid "Economía solidaria"
 msgstr "Solidarity economy"
 
 #: ../../../view/advancedSearch.php:141 ../../../view/establishmentMap.php:275
-#: ../../../view/information.php:197 ../../../view/start.php:277
-#: ../../../view/startEvents.php:277 ../../../view/viewMap.php:125
+#: ../../../view/eventMap.php:226 ../../../view/information.php:206
+#: ../../../view/start.php:281 ../../../view/startEvents.php:226
+#: ../../../view/viewMap.php:125
 msgid "Consumidores y usuarios organizados"
 msgstr "Consumers and users organized"
 
-#: ../../../view/advancedSearch.php:157 ../../../view/information.php:85
-#: ../../../view/information.php:384
+#: ../../../view/advancedSearch.php:157 ../../../view/information.php:94
+#: ../../../view/information.php:401
 msgid "Productos"
 msgstr "Products"
 
@@ -107,53 +123,100 @@ msgid "Todas"
 msgstr "All"
 
 #: ../../../view/advancedSearch.php:205
+#: ../../../view/advancedSearchEvents.php:188
 msgid "Buscar"
 msgstr "Search"
 
-#: ../../../view/advancedSearch.php:213 ../../../view/establishmentMap.php:284
-#: ../../../view/establishmentMapNoResult.php:75 ../../../view/info.php:72
-#: ../../../view/information.php:366 ../../../view/products.php:72
-#: ../../../view/start.php:243 ../../../view/startEvents.php:243
-#: ../../../view/viewMap.php:91
+#: ../../../view/advancedSearch.php:213
+#: ../../../view/advancedSearchEvents.php:196
+#: ../../../view/establishmentMap.php:284
+#: ../../../view/establishmentMapNoResult.php:75
+#: ../../../view/eventMap.php:235 ../../../view/eventMapNoResult.php:75
+#: ../../../view/info.php:72 ../../../view/information.php:379
+#: ../../../view/informationEvent.php:234 ../../../view/products.php:91
+#: ../../../view/start.php:243 ../../../view/startEvents.php:188
+#: ../../../view/viewMap.php:91 ../../../views/capturar.php:103
 msgid "Menu"
 msgstr "Menu"
 
-#: ../../../view/advancedSearch.php:216 ../../../view/establishmentMap.php:246
+#: ../../../view/advancedSearch.php:216
+#: ../../../view/advancedSearchEvents.php:199 ../../../view/eventMap.php:238
+#: ../../../view/eventMapNoResult.php:78 ../../../view/info.php:75
+#: ../../../view/information.php:382 ../../../view/informationEvent.php:237
+#: ../../../view/products.php:94 ../../../view/start.php:246
+#: ../../../view/startEvents.php:191 ../../../views/capturar.php:106
+msgid "Volver a inicio"
+msgstr "Return home"
+
+#: ../../../view/advancedSearch.php:220
+#: ../../../view/advancedSearchEvents.php:203
+#: ../../../view/establishmentMap.php:246
 #: ../../../view/establishmentMap.php:287
 #: ../../../view/establishmentMapNoResult.php:69
-#: ../../../view/establishmentMapNoResult.php:78 ../../../view/info.php:75
-#: ../../../view/information.php:369 ../../../view/start.php:232
-#: ../../../view/start.php:246 ../../../view/startEvents.php:232
-#: ../../../view/startEvents.php:246 ../../../view/viewMap.php:94
+#: ../../../view/establishmentMapNoResult.php:78
+#: ../../../view/eventMap.php:197 ../../../view/eventMap.php:242
+#: ../../../view/eventMapNoResult.php:69 ../../../view/eventMapNoResult.php:82
+#: ../../../view/information.php:386 ../../../view/informationEvent.php:240
+#: ../../../view/products.php:98 ../../../view/start.php:232
+#: ../../../view/start.php:250 ../../../view/startEvents.php:177
+#: ../../../view/startEvents.php:195 ../../../view/viewMap.php:94
+#: ../../../views/capturar.php:110
 msgid "Nueva búsqueda"
 msgstr "New search"
 
-#: ../../../view/advancedSearch.php:219 ../../../view/establishmentMap.php:290
-#: ../../../view/establishmentMapNoResult.php:81 ../../../view/index.php:80
-#: ../../../view/info.php:78 ../../../view/information.php:372
-#: ../../../view/products.php:80 ../../../view/start.php:249
-#: ../../../view/startEvents.php:249 ../../../view/viewMap.php:97
+#: ../../../view/advancedSearch.php:223
+#: ../../../view/advancedSearchEvents.php:206
+#: ../../../view/establishmentMap.php:290
+#: ../../../view/establishmentMapNoResult.php:81
+#: ../../../view/eventMap.php:245 ../../../view/eventMapNoResult.php:85
+#: ../../../view/index.php:80 ../../../view/info.php:78
+#: ../../../view/information.php:389 ../../../view/informationEvent.php:243
+#: ../../../view/products.php:101 ../../../view/start.php:253
+#: ../../../view/startEvents.php:198 ../../../view/viewMap.php:97
+#: ../../../views/capturar.php:113
 msgid "Acerca de"
 msgstr "About"
 
-#: ../../../view/advancedSearch.php:222 ../../../view/establishmentMap.php:293
-#: ../../../view/establishmentMapNoResult.php:84 ../../../view/index.php:84
-#: ../../../view/info.php:81 ../../../view/information.php:375
-#: ../../../view/products.php:83 ../../../view/start.php:252
-#: ../../../view/startEvents.php:252 ../../../view/viewMap.php:100
+#: ../../../view/advancedSearch.php:226
+#: ../../../view/advancedSearchEvents.php:209
+#: ../../../view/establishmentMap.php:293
+#: ../../../view/establishmentMapNoResult.php:84
+#: ../../../view/eventMap.php:248 ../../../view/eventMapNoResult.php:88
+#: ../../../view/index.php:84 ../../../view/info.php:81
+#: ../../../view/information.php:392 ../../../view/informationEvent.php:246
+#: ../../../view/products.php:104 ../../../view/start.php:256
+#: ../../../view/startEvents.php:201 ../../../view/viewMap.php:100
+#: ../../../views/capturar.php:116
 msgid "Ayuda"
 msgstr "Help"
 
-#: ../../../view/advancedSearch.php:226 ../../../view/establishmentMap.php:279
+#: ../../../view/advancedSearch.php:230
+#: ../../../view/advancedSearchEvents.php:213
+#: ../../../view/establishmentMap.php:279
 #: ../../../view/establishmentMap.php:297
-#: ../../../view/establishmentMapNoResult.php:88 ../../../view/info.php:85
-#: ../../../view/information.php:379 ../../../view/information.php:406
-#: ../../../view/products.php:87 ../../../view/start.php:256
-#: ../../../view/start.php:281 ../../../view/startEvents.php:256
-#: ../../../view/startEvents.php:281 ../../../view/viewMap.php:104
-#: ../../../view/viewMap.php:129
+#: ../../../view/establishmentMapNoResult.php:88
+#: ../../../view/eventMap.php:230 ../../../view/eventMap.php:252
+#: ../../../view/eventMapNoResult.php:92 ../../../view/info.php:85
+#: ../../../view/information.php:396 ../../../view/information.php:423
+#: ../../../view/informationEvent.php:250 ../../../view/products.php:110
+#: ../../../view/start.php:260 ../../../view/start.php:285
+#: ../../../view/startEvents.php:205 ../../../view/startEvents.php:230
+#: ../../../view/viewMap.php:104 ../../../view/viewMap.php:129
+#: ../../../views/capturar.php:120
 msgid "Cerrar"
 msgstr "Close"
+
+#: ../../../view/advancedSearchEvents.php:113
+msgid "Rango de fechas"
+msgstr "Date range"
+
+#: ../../../view/advancedSearchEvents.php:152
+msgid "Categoría"
+msgstr "Category"
+
+#: ../../../view/advancedSearchEvents.php:174
+msgid "Establecimiento"
+msgstr "Establishment"
 
 #: ../../../view/errorBd.php:27
 msgid ""
@@ -161,17 +224,17 @@ msgid ""
 "más tarde"
 msgstr "It has an error in the database please try again later"
 
-#: ../../../view/establishmentMap.php:79 ../../../view/start.php:79
-#: ../../../view/startEvents.php:79
+#: ../../../view/establishmentMap.php:79 ../../../view/eventMap.php:79
+#: ../../../view/start.php:79 ../../../view/startEvents.php:79
 msgid "Lista"
 msgstr "List"
 
-#: ../../../view/establishmentMap.php:84 ../../../view/start.php:84
-#: ../../../view/startEvents.php:84
+#: ../../../view/establishmentMap.php:84 ../../../view/eventMap.php:84
+#: ../../../view/start.php:84 ../../../view/startEvents.php:84
 msgid "Mapa"
 msgstr "Map"
 
-#: ../../../view/establishmentMap.php:102
+#: ../../../view/establishmentMap.php:102 ../../../view/eventMap.php:102
 msgid "Establecimientos en la localidad"
 msgstr "Establishment in a locality"
 
@@ -181,22 +244,22 @@ msgstr "Establishments in my location"
 
 #: ../../../view/establishmentMap.php:189
 #: ../../../view/establishmentMap.php:221 ../../../view/start.php:169
-#: ../../../view/start.php:203 ../../../view/startEvents.php:169
-#: ../../../view/startEvents.php:203
+#: ../../../view/start.php:203
 msgid "No se conoce la distancia"
 msgstr "The distance is not know"
 
 #: ../../../view/establishmentMap.php:240 ../../../view/start.php:227
-#: ../../../view/startEvents.php:227
 msgid "No existen establecimientos en Madrid"
 msgstr "No establishments in Madrid"
 
-#: ../../../view/establishmentMap.php:259 ../../../view/start.php:261
-#: ../../../view/startEvents.php:261 ../../../view/viewMap.php:109
+#: ../../../view/establishmentMap.php:259 ../../../view/eventMap.php:210
+#: ../../../view/start.php:265 ../../../view/startEvents.php:210
+#: ../../../view/viewMap.php:109
 msgid "Leyenda"
 msgstr "Legend"
 
 #: ../../../view/establishmentMapNoResult.php:65
+#: ../../../view/eventMapNoResult.php:65
 msgid "No hay resultados"
 msgstr "No results"
 
@@ -209,21 +272,36 @@ msgstr ""
 "No establishment foundYour search returned no results for the given options. "
 "Try it again, with different values."
 
+#: ../../../view/eventMap.php:111
+msgid "Eventos en mi ubicación"
+msgstr "Events in my location"
+
+#: ../../../view/eventMap.php:191 ../../../view/startEvents.php:172
+msgid "No existen eventos en Madrid"
+msgstr "No events in Madrid"
+
+#: ../../../view/eventMapNoResult.php:66
+msgid ""
+"No se ha encontrado ningún evento que cumpla los criterios indicados para la "
+"búsqueda. Puede realizar una nueva búsqueda, modificando los distintos "
+"valores"
+msgstr ""
+"No events found, this search returned no results for the given options. Try "
+"it again, with different values."
+
 #: ../../../view/index.php:65
 msgid "Menú"
 msgstr "Menu"
 
-#: ../../../view/index.php:71 ../../../view/products.php:74
-#, fuzzy
+#: ../../../view/index.php:71
 msgid "Buscar establecimientos"
-msgstr "Establishments in Madrid"
+msgstr "Search establishments"
 
-#: ../../../view/index.php:74 ../../../view/products.php:76
-#, fuzzy
+#: ../../../view/index.php:74
 msgid "Buscar eventos"
-msgstr "Search"
+msgstr "Search events"
 
-#: ../../../view/index.php:77 ../../../view/products.php:78
+#: ../../../view/index.php:77
 msgid "Información de producto"
 msgstr "Product information"
 
@@ -232,37 +310,32 @@ msgid "Aplicación web para el consumo responsable"
 msgstr "Webapp for Ethical Consumption"
 
 #: ../../../view/info.php:58
-#, fuzzy
 msgid "Autor v2.0:"
-msgstr "Author"
+msgstr "Author v2.0:"
 
 #: ../../../view/info.php:58
 msgid "&nbspJavier López Martínez"
 msgstr "&nbspJavier López Martínez"
 
 #: ../../../view/info.php:59
-#, fuzzy
 msgid "email:"
-msgstr "Email:"
+msgstr "email:"
 
 #: ../../../view/info.php:59
-#, fuzzy
 msgid "&nbspjlm0051@alu.ubu.es"
-msgstr "&nbspghl0001@alu.ubu.es"
+msgstr "&nbspjlm0051@alu.ubu.es"
 
 #: ../../../view/info.php:60
 msgid "Tutores:"
 msgstr "Supervisors"
 
 #: ../../../view/info.php:60
-#, fuzzy
 msgid "&nbspÁlvaro Herrero Cosio"
-msgstr "&nbspÁlvaro Herrero y Ángel Arroyo"
+msgstr "&nbspÁlvaro Herrero Cosio"
 
 #: ../../../view/info.php:61
-#, fuzzy
 msgid "Autora v1.0:"
-msgstr "Author"
+msgstr "Author v1.0:"
 
 #: ../../../view/info.php:61
 msgid "&nbspGadea Hidalgo López"
@@ -289,126 +362,152 @@ msgid "Fecha de creación:"
 msgstr "Date of creation"
 
 #: ../../../view/info.php:65
-#, fuzzy
 msgid "&nbspDiciembre de 2014"
-msgstr "&nbspJune 2014"
+msgstr "&nbspDecember 2014"
 
 #: ../../../view/info.php:66
-#, fuzzy
 msgid "Versión 2.0"
-msgstr "Version 1.0"
+msgstr "Version 2.0"
 
-#: ../../../view/information.php:145
+#: ../../../view/information.php:154
 msgid "Pago con moneda social"
 msgstr "Accept social currency"
 
-#: ../../../view/information.php:148
+#: ../../../view/information.php:157
 msgid "Pago con tarjeta"
 msgstr "Accept credit card"
 
-#: ../../../view/information.php:151
+#: ../../../view/information.php:160
 msgid "Acceso para discapacitados"
 msgstr "Disability Access"
 
-#: ../../../view/information.php:212
+#: ../../../view/information.php:221
 msgid "Dirección:"
 msgstr "Address:"
 
-#: ../../../view/information.php:215
+#: ../../../view/information.php:224
 msgid "C.P:"
 msgstr "PO Box:"
 
-#: ../../../view/information.php:218
+#: ../../../view/information.php:227
 msgid "Localidad:"
 msgstr "Locality:"
 
-#: ../../../view/information.php:225
+#: ../../../view/information.php:234
 msgid "Posición:"
 msgstr "Position:"
 
-#: ../../../view/information.php:225
+#: ../../../view/information.php:234
 msgid "ver en mapa"
 msgstr "view in map"
 
-#: ../../../view/information.php:232
+#: ../../../view/information.php:241
 msgid "Contacto"
 msgstr "Contact"
 
-#: ../../../view/information.php:239
+#: ../../../view/information.php:248
 msgid "Horario:"
 msgstr "Schedule:"
 
-#: ../../../view/information.php:248
+#: ../../../view/information.php:257
 msgid "Teléfono:"
 msgstr "Telephone:"
 
-#: ../../../view/information.php:257
+#: ../../../view/information.php:266
 msgid "Email:"
 msgstr "Email:"
 
-#: ../../../view/information.php:266
+#: ../../../view/information.php:275
 msgid "Página web:"
 msgstr "Web page:"
 
-#: ../../../view/information.php:277
+#: ../../../view/information.php:286
 msgid "Redes sociales"
 msgstr "Social networks"
 
-#: ../../../view/information.php:284
+#: ../../../view/information.php:293
 msgid "Facebook:"
 msgstr "Facebook:"
 
-#: ../../../view/information.php:291
+#: ../../../view/information.php:300
 msgid "Twitter:"
 msgstr "Twitter:"
 
-#: ../../../view/information.php:303
+#: ../../../view/information.php:312 ../../../view/informationEvent.php:167
+msgid "Su comentario se ha publicado correctamente."
+msgstr "Your comment has been published successfully."
+
+#: ../../../view/information.php:316 ../../../view/informationEvent.php:171
 msgid "Comentarios"
 msgstr "Comments"
 
-#: ../../../view/information.php:308
+#: ../../../view/information.php:321 ../../../view/informationEvent.php:176
 msgid "Introduzca su comentario"
 msgstr "Type your comment"
 
-#: ../../../view/information.php:310
+#: ../../../view/information.php:323 ../../../view/informationEvent.php:178
 msgid "Nombre:"
 msgstr "Nickname:"
 
-#: ../../../view/information.php:312
+#: ../../../view/information.php:325 ../../../view/informationEvent.php:180
 msgid "Texto:"
 msgstr "Text:"
 
-#: ../../../view/information.php:318
+#: ../../../view/information.php:331 ../../../view/informationEvent.php:186
 msgid "recargar"
 msgstr "refresh"
 
-#: ../../../view/information.php:320
+#: ../../../view/information.php:333 ../../../view/informationEvent.php:188
 msgid "Introduzca el texto de la imagen:"
 msgstr "Type the words displayed in the image"
 
-#: ../../../view/information.php:327
+#: ../../../view/information.php:340 ../../../view/informationEvent.php:195
 msgid "Enviar"
 msgstr "Send"
 
-#: ../../../view/information.php:342
+#: ../../../view/information.php:355 ../../../view/informationEvent.php:210
 msgid "Fecha y hora: "
 msgstr "Date and Time:"
 
-#: ../../../view/information.php:355
+#: ../../../view/information.php:368 ../../../view/informationEvent.php:223
 msgid "No se ha introducido ningún comentario"
 msgstr "There are currently no comments available"
 
-#: ../../../view/information.php:400
+#: ../../../view/information.php:417
 msgid "No se conocen los productos de este establecimiento"
 msgstr "Products of this establishment is unknown"
 
-#: ../../../view/start.php:105 ../../../view/startEvents.php:105
+#: ../../../view/informationEvent.php:114
+msgid "Ver en mapa"
+msgstr "View in map"
+
+#: ../../../view/informationEvent.php:121
+msgid "Descripción"
+msgstr "Description"
+
+#: ../../../view/informationEvent.php:140
+msgid "Organizador"
+msgstr "Organizer"
+
+#: ../../../view/start.php:105
 msgid "Los establecimientos de Madrid"
 msgstr "Establishments in Madrid"
 
-#: ../../../view/start.php:116 ../../../view/startEvents.php:116
+#: ../../../view/start.php:116
 msgid "Los 10 establecimientos más cercanos"
 msgstr "10 closest establishments"
+
+#: ../../../view/start.php:273
+msgid "Finanzas éticas"
+msgstr "Ethical finance"
+
+#: ../../../view/startEvents.php:105
+msgid "Los eventos en Madrid"
+msgstr "Events in Madrid"
+
+#: ../../../view/startEvents.php:116
+msgid "Los 10 eventos más cercanos"
+msgstr "10 closest events"
 
 #~ msgid "Banca etica"
 #~ msgstr "Etic bank"
