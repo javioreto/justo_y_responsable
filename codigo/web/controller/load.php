@@ -527,6 +527,113 @@ class Load{
             $dataBase->disconnectDataBase($con);
             return $comments;
         }
+        
+        //estadisticas
+        
+       public static function obtenerAnoMes($mes,$ano){
+       		if($mes!=1){
+       			return array($mes-1,$ano);
+       		}else{
+       			return array(12,$ano-1);
+       		}
+       }
+        
+       public static function loadCommentStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getCommentsMes($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+	   public static function loadProductsStats(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $products = $dataBase->getProductsStats($con);
+            $dataBase->disconnectDataBase($con);
+            return $products;
+        }
+        
+       public static function loadUserStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $products = $dataBase->getUsersStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $products;
+        }
+
+		public static function loadEventsStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEventStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+        public static function loadEstStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getEstablishmentStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+       	public static function loadProdStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getProdStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+       	public static function loadComentStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getCommentStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+       	public static function loadComentsStats(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getAllCommentStats($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+        public static function loadAccesosStats(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getAccesosStats($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+        public static function loadAccesoStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getAccesoStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
+        public static function loadBusquedasStats(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getBusqedasStats($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+        
+        public static function loadBusquedaStats($mes,$ano){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getBusqedaStats($mes,$ano,$con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
 
  		
         

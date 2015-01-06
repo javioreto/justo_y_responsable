@@ -220,5 +220,21 @@ class Load{
             $dataBase->disconnectDataBase($con);
             return $sectors;
         }
+        
+        public static function insertAcceso($idioma){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->insertAcceso($idioma,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+        
+        public static function insertBusqueda($idobjeto, $tipo){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $dataBase->insertBusqueda($idobjeto,$tipo,$con);
+            $dataBase->disconnectDataBase($con);
+        }
+
+
    }
 ?>

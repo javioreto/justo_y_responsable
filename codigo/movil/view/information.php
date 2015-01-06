@@ -21,6 +21,9 @@ else {
 
 $dataBase = new dataBase();
 $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+
+Load::insertBusqueda($_GET['idEstablecimiento'], 1); 
+
 ?>
 
 

@@ -1,5 +1,12 @@
 <?php
 include_once ("../init.php");
+if (is_file("controller/load.php")){
+	include_once ("controller/load.php");
+}
+else {
+	include_once ("../controller/load.php");
+}
+
 if (is_file("controller/products.php")){
 	include_once ("controller/products.php");
 }
@@ -8,6 +15,7 @@ else {
 }
 
 
+Load::insertBusqueda($_GET['cod'], 3); 
 
 ?>
 

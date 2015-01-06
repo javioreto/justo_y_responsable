@@ -19,6 +19,11 @@ include_once("../model/network.php");
 
 include_once("../model/event.php");
 
+include_once("../model/accesos.php");
+
+include_once("../model/busqueda.php");
+
+
 
 /**
  * Class Database responsible for communicating with the database.
@@ -1541,6 +1546,7 @@ function getEstablishmentMes($mes, $ano, $con){
             $latitude = $row['latitud'];
             $longitude = $row['longitud'];
             $location = $row['localidad'];
+            $online = $row['online'];
             $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$con);
             $reds = $this->getIdsRedById($row['idestablecimiento'],$con);
             $products = $this->getIdsProductsById($row['idestablecimiento'],$con);
@@ -1550,7 +1556,7 @@ function getEstablishmentMes($mes, $ano, $con){
             $sector = $this->getSectorById($row['refidsector'],$con);
             $est = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
     $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
-    $products,$comments, $type, $sector);
+    $products,$comments, $type, $sector, $online);
     		$establishment[]=$est;
     		}
         return $establishment;
@@ -1629,8 +1635,169 @@ function getEstablishmentMes($mes, $ano, $con){
         $sql = "UPDATE producto SET validado=1 WHERE idproducto = ".$id;
         mysql_query($sql,$connection);
     }
+    
+    
+    
+    //estadisticas
+    
+    function getProdStats($mes, $ano, $connection){
+        $sql = "SELECT * FROM producto WHERE MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano'";
+        $result = mysql_query($sql, $connection);
+        $arrayProducts = array();
+        while ($row = mysql_fetch_array($result)) {
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $arrayProducts[] = $product;
+        }
+        return $arrayProducts;
+    }
 
     
+    function getProductsStats($connection){
+        $sql = "SELECT * FROM producto";
+        $result = mysql_query($sql, $connection);
+        $arrayProducts = array();
+        while ($row = mysql_fetch_array($result)) {
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $arrayProducts[] = $product;
+        }
+        return $arrayProducts;
+    }
+
+    function getUsersStats($mes,$ano,$con){
+        $arrayUsers = array();
+        $sql = "select * from usuario WHERE MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano'";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            $arrayUsers[] = $user;
+        }
+        return $arrayUsers;  
+    }
+
+    function getEventStats($mes,$ano,$con){
+        $arrayEvent = array();
+        $sql = "select * from evento WHERE MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano'";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    
+                    $arrayEvent[] = $event;
+        }
+        return $arrayEvent;  
+    }
+
+	function getEstablishmentStats($mes, $ano, $con){
+        
+        $sql = "select * from establecimiento where MONTH(fecha_creacion) ='$mes' AND YEAR(fecha_creacion) ='$ano'";
+        $establishment = array();
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {
+            $idEstablishment = $row['idestablecimiento'];
+            $name = $row['nombre'];
+            $phone = $row['telefono'];          
+            $mail = $row['correo'];
+            $logo = $row['logo'];
+            $cash = $row['pagoefectivo'];
+            $card = $row['pagotarjeta'];
+            $postcode = $row['codigopostal'];
+            $address = $row['direccion'];
+            $website = $row['paginaweb'];
+            $schedule = $row['horario'];
+            $facebook = $row['facebook'];
+            $twitter = $row['twitter'];
+            $disabledaccess = $row['accesominusvalidos'];
+            $latitude = $row['latitud'];
+            $longitude = $row['longitud'];
+            $location = $row['localidad'];
+            $online = $row['online'];
+            $importOrganizations = $this->getIdsImportOrganizationsById($row['idestablecimiento'],$con);
+            $reds = $this->getIdsRedById($row['idestablecimiento'],$con);
+            $products = $this->getIdsProductsById($row['idestablecimiento'],$con);
+            $comments = $this->getCommentsById($row['idestablecimiento'],$con);
+            $schedule = $row['horario'];
+            $type = $this->getTypeById($row['refidtipo'], $con);
+            $sector = $this->getSectorById($row['refidsector'],$con);
+            $est = new Establishment($idEstablishment, $name, $phone, $mail, $logo,$cash,$card,$postcode,$address, $website, 
+    $schedule,$facebook,$twitter,$disabledaccess,$latitude,$longitude,$location, $importOrganizations, $reds,
+    $products,$comments, $type, $sector, $online);
+    		$establishment[]=$est;
+    		}
+        return $establishment;
+    }
+    
+    function getAllCommentStats($con){
+        $sql = "select * from comentario";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion'], $row['idevento'], $row['refidestablecimiento']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+
+
+    function getCommentStats($mes, $ano, $con){
+        $sql = "select * from comentario where MONTH(fecha) ='$mes' AND YEAR(fecha) ='$ano'";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Comment($row['idcomentario'],$row['autor'],$row['fecha'], $row['descripcion'], $row['idevento'], $row['refidestablecimiento']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+    
+     function getAccesosStats($con){
+        $sql = "select * from accesos";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Acceso($row['id'],$row['fecha'],$row['idioma']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+
+    
+    function getAccesoStats($mes, $ano, $con){
+        $sql = "select * from accesos where MONTH(fecha) ='$mes' AND YEAR(fecha) ='$ano'";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Acceso($row['id'],$row['fecha'],$row['idioma']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+    
+    function getBusqedasStats($con){
+        $sql = "select * from busqueda";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Busqueda($row['idBusqueda'],$row['idObjeto'],$row['fecha'],$row['tipo']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+
+    
+    function getBusqedaStats($mes, $ano, $con){
+        $sql = "select * from busqueda where MONTH(fecha) ='$mes' AND YEAR(fecha) ='$ano'";
+        $result = mysql_query($sql, $con);
+        $arrayComments = array();
+        while ($row = mysql_fetch_array($result)) {
+            $comment = new Busqueda($row['idBusqueda'],$row['idObjeto'],$row['fecha'],$row['tipo']);
+            $arrayComments[] = $comment;
+        }
+        return $arrayComments;
+    }
+
+
 
 }
 

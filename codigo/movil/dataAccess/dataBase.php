@@ -1194,7 +1194,17 @@ class DataBase{
         return $arrayEstablishments;
     }
 
+    function insertAcceso($idioma,$connection){
+        $sql = "insert into accesos (id,idioma) values ('','$idioma')";
+        mysql_query($sql,$connection);
+    }
     
+    function insertBusqueda($idobjeto,$tipo,$connection){
+        $sql = "insert into busqueda (idBusqueda,idObjeto,tipo) values ('','$idobjeto','$tipo')";
+        mysql_query($sql,$connection);
+    }
+
+
 }
 
 ?>
