@@ -102,11 +102,6 @@ Load::insertBusqueda($_GET['idEstablecimiento'], 1);
 			
 		</div>
 		
-		<?php
-		  $idEstablishment = $_GET['idEstablecimiento'];
-          $establishment = Search::searchEstablishmentById($idEstablishment);
-          
-		?>
 		<div id='information'>
             <div  id='image' align = 'center'>
             <?php
@@ -327,8 +322,11 @@ Load::insertBusqueda($_GET['idEstablecimiento'], 1);
                             <input type="text" name="nameComment" id="nameComment" value="">
                             <label for="textComment"><?php echo _("Texto:") ?></label>
                             <textarea cols="40" rows="8" name="textComment" id="textComment"></textarea>
-                            
-                           
+                            <input type="hidden" name="id" id="id" value="<?php echo $_GET['idEstablecimiento']; ?>">
+                            <input type="hidden" name="nombre" id="nombre" value="<?php echo $establishment->getName(); ?>">
+                            <input type="hidden" name="email" id="email" value="<?php echo $establishment->getMail(); ?>">
+
+                          
                             <img  id="captcha" src="../../images/captcha.php" />
                            
                             <button style="display: block" class='ui-btn ui-btn-inline ui-mini ui-shadow ui-btn-corner-all' type="submit" onclick="document.getElementById('captcha').src='../images/captcha.php?'+Math.random();"><?php echo _("recargar") ?></button>

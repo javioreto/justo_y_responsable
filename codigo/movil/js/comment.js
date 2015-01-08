@@ -3,16 +3,18 @@ function addComment(id){
 	var name = $('#nameComment').val();
 	var text = $('#textComment').val();
 	var result = $('#result').val();
-
+	var id = $('#id').val();	
+	var nombre = $('#nombre').val();	
+	var email = $('#email').val();
 	
-
+	
 	if(name != "" && text != "" && result != ""){
 		
 	
 		//Tenemos que llamar a una funcion pasarle los parametros y que esta se conecte a la base de datos y si todo esta bien appen.
 		$.ajax({
 				dataType: "json",
-				data: {"name":name, "text":text, "refE":id, "captcha": result},
+				data: {"name":name, "text":text, "refE":id, "captcha": result, "id": id, "nombre": nombre, "email": email},
 				url:   '../controller/addNewComment.php',
 				type:  'post',
 				beforeSend: function(){
@@ -63,8 +65,10 @@ function addCommentEvent(id){
 	var name = $('#nameComment').val();
 	var text = $('#textComment').val();
 	var result = $('#result').val();
+	var id = $('#id').val();	
+	var nombre = $('#nombre').val();	
+	var email = $('#email').val();
 
-	
 
 	if(name != "" && text != "" && result != ""){
 		
@@ -72,7 +76,7 @@ function addCommentEvent(id){
 		//Tenemos que llamar a una funcion pasarle los parametros y que esta se conecte a la base de datos y si todo esta bien appen.
 		$.ajax({
 				dataType: "json",
-				data: {"name":name, "text":text, "refE":id, "captcha": result},
+				data: {"name":name, "text":text, "refE":id, "captcha": result, "id": id, "nombre": nombre, "email": email},
 				url:   '../controller/addNewCommentEvent.php',
 				type:  'post',
 				beforeSend: function(){

@@ -313,6 +313,7 @@ class Search{
             
     $dataBase->disconnectDataBase($con);
     }
+    
        
     /**
      * Method that return the correct character.

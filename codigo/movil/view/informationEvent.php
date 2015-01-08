@@ -182,7 +182,15 @@ Load::insertBusqueda($_GET['idEvent'], 2);
                             <input type="text" name="nameComment" id="nameComment" value="">
                             <label for="textComment"><?php echo _("Texto:") ?></label>
                             <textarea cols="40" rows="8" name="textComment" id="textComment"></textarea>
-                            
+                            <input type="hidden" name="id" id="id" value="<?php echo $_GET['idEvent']; ?>">
+                            <input type="hidden" name="nombre" id="nombre" value="<?php echo $establishment->getnombre(); ?>">
+                            <input type="hidden" name="email" id="email" value="
+                            <?php 
+                            $usuario = Search::searchEstablishmentById($establishment->getidEstablecimiento());
+                            echo $usuario->getMail(); 
+                            ?>
+                            ">
+
                            
                             <img  id="captcha" src="../../images/captcha.php" />
                            

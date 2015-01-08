@@ -290,7 +290,11 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 				}
 				
 				for($i=2014;$i<=date("Y");$i++){
-					echo('<option value="'.$i.'">'.$i.'</option>');
+					if($i==date("Y") && $_REQUEST['ano']==""){
+						echo('<option value="'.$i.'" selected="selected">'.$i.'</option>');
+					}else{
+						echo('<option value="'.$i.'">'.$i.'</option>');
+					}
 				}
 				
 				?>

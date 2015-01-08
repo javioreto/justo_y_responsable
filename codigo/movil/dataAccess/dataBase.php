@@ -1204,7 +1204,7 @@ class DataBase{
         mysql_query($sql,$connection);
     }
 
-
+  
 }
 
 ?>

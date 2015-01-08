@@ -107,6 +107,11 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 </a>
             </div>
             <div align="center" style="margin-top:10px;">
+                <a id="btngestionestablishment"  type="button" href="estadisticas.php" class="btn btn-default btn-lg btn_ancho">
+                  <span class="glyphicon glyphicon-stats pull-left"></span> <?php echo _("Estadísticas") ?>
+                </a>
+            </div>
+            <div align="center" style="margin-top:10px;">
                 <a id="btngestionestablishment"  type="button" href="configuracion.php" class="btn btn-default btn-lg btn_ancho">
                   <span class="glyphicon glyphicon-cog pull-left"></span> <?php echo _("Configuración") ?>
                 </a>

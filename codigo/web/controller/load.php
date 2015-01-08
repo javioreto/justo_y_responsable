@@ -635,7 +635,14 @@ class Load{
         }
 
 
- 		
+ 		public static function getAllUsers(){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $comments = $dataBase->getUsers($con);
+            $dataBase->disconnectDataBase($con);
+            return $comments;
+        }
+
         
         
    }
