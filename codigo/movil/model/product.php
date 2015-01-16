@@ -42,7 +42,7 @@ class Product{
      * @access private
      */
     private $img;
-
+	private $ref;
 
     /**
      * Constructor
@@ -53,12 +53,13 @@ class Product{
      * @param description the description
      * @param img the image
      */
-    function Product($idProduct,$date,$name, $description, $img) {
+    function Product($idProduct,$date,$name, $description, $img, $ref) {
         $this->idProduct = $idProduct;
         $this->date = $date;
         $this->name = $name;
         $this->description = $description;
         $this->img = $img;
+        $this->ref=$ref;
     }
     
     /**
@@ -150,6 +151,14 @@ class Product{
     function setImg($val){
         $this->img = $val;
     }    
+    
+    function getRef(){
+    	return $this->ref;
+    }
+    
+    function setRef($val){
+    	$this->ref=$val;
+    }
 
 }
 ?>

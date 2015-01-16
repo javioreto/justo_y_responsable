@@ -58,7 +58,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             <table>
                    <tr>
                        <td>
-                           <img src="../../images/logojyrm.png" />
+                           <img src="../../images/logojyrm.png" alt="logo JyR" />
                        </td>
                        <td>
                            <h1> <?php echo _("JyR") ?></h1>

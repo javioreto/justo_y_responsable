@@ -184,6 +184,22 @@ class DataBase{
 		}
 		return $arrayCategories;
 	}
+	
+	function getAllSubCategories($connection) {
+		
+		$sql = "select * from categoria where refcategoria is not null";
+		$result = mysql_query($sql, $connection);
+		
+		while ($row = mysql_fetch_array($result)) {
+		    $idCategory = $row['idcategoria']; 
+			$name = $row['nombre'];
+            $refcateg = $row['refcategoria'];
+			$category = new Category($idCategory,$name,$refcateg);
+			$arrayCategories[] = $category;
+		}
+		return $arrayCategories;
+	}
+
     
     /**
      * Method that returns subCategories from categoryid.
@@ -917,7 +933,7 @@ class DataBase{
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -991,7 +1007,7 @@ class DataBase{
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;

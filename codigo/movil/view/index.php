@@ -50,11 +50,11 @@ Load::insertAcceso($_SESSION["lang"]);
 	</head>
 	<body>
 	<div id="head" data-role="header" data-theme="a">
-	  <div id="tablehead" align="center">
-	    <table>
+	  <div id="tablehead">
+	    <table style="margin-left:auto; margin-right:auto;">
                <tr>
                    <td>
-                       <img src="../../images/logojyrm.png" />
+                       <img src="../../images/logojyrm.png" alt="logo JyR"/>
                    </td>
                    <td>
                        <h1> <?php echo _("JyR") ?></h1>

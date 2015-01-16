@@ -58,7 +58,7 @@ Load::insertBusqueda($_GET['idEvent'], 2);
             <table>
                    <tr>
                        <td>
-                           <img src="../../images/logojyrm.png" />
+                           <img src="../../images/logojyrm.png" alt="logo JyR" />
                        </td>
                        <td>
                            <h1> <?php echo _("JyR") ?></h1>

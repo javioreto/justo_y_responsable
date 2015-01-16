@@ -39,7 +39,7 @@ class Category{
 	function Category($idCategory,$name, $refCategory) {
 	    $this->idCategory = $idCategory;
 		$this->name = $name;
-		$this->refcategory = $refCategory;
+		$this->refCategory = $refCategory;
     }
     
     /**

@@ -53,7 +53,7 @@ Load::insertBusqueda($_GET['cod'], 3);
 	    <table>
                <tr>
                    <td>
-                       <img src="../../images/logojyrm.png" />
+                       <img src="../../images/logojyrm.png" alt="logo JyR" />
                    </td>
                    <td>
                        <h1> <?php echo _("JyR") ?></h1>
@@ -78,6 +78,7 @@ Load::insertBusqueda($_GET['cod'], 3);
 			?>
 		</center>
 	<div class="prod_contenedor">
+	<span style="margin-left:25px; margin-right:10px;"><img src="../../images/sig.png" alt="-" /></span><span style="font-weight:bold; font-size:20px;"><?php echo $categoria." > <span style='color:gray;'>".$subcategoria; ?></span></span>
 		<div class="prod_descrip">
 			<p><?php echo $descripcion; ?></p>
 		</div>
