@@ -10,10 +10,11 @@ else {
 $barcode=$_REQUEST['barcode'];
 $cod = explode(" ", $barcode);
 
+if($cod[1]!=""){
 $dataBase = new dataBase();
 $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
 $results = $dataBase-> checkProductsByCode($cod[1],$con);
-
+}
 echo $results;
 //Disconnect database.
 $dataBase->disconnectDataBase($con);

@@ -196,7 +196,7 @@ class DataBase{
         if(count($result)>0){
             while ($row = mysql_fetch_array($result)) {
                 $u = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-                ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+                ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
                  $user = $u;
             }
         }
@@ -212,15 +212,15 @@ class DataBase{
      * @return user
      */
     function getUserByDni($dni,$con){
-                         
-        $sql = "select * from usuario where dni like '$dni'";
+        $escaped = addslashes($dni);                
+        $sql = "select * from usuario where dni like '$escaped'";
         $result = mysql_query($sql, $con);
         $user = "";
         
         if(count($result)>0){
             while ($row = mysql_fetch_array($result)) {
                 $u = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-                ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+                ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
                  $user = $u;
             }
         }
@@ -240,7 +240,7 @@ class DataBase{
         $result = mysql_query($sql, $con);
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;  
@@ -346,7 +346,7 @@ class DataBase{
             $description = $row['descripcion'];
             $date = $row['fecha'];
             $refcateg = $row['refidcategoria'];
-            $product = new Product($id,$date,$name, $description);
+            $product = new Product($id,$date,$name, $description, $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayIdProducts[$i][0] = $product;
             $arrayIdProducts[$i][1] = $refcateg;
             $i = $i + 1;
@@ -700,7 +700,7 @@ class DataBase{
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -719,7 +719,7 @@ class DataBase{
         $arrayUsers = array();
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'], $row['password'], $row['dni']
-            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado']);
+            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;
@@ -738,7 +738,7 @@ class DataBase{
         $arrayUsers = array();
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'], $row['password'], $row['dni']
-            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado']);
+            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;
@@ -757,7 +757,7 @@ class DataBase{
         $arrayUsers = array();
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'], $row['password'], $row['dni']
-            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado']);
+            , $row['telefono'], $row['correo'], $row['administrador'], $row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;
@@ -1578,7 +1578,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $con);
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;  
@@ -1591,7 +1591,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $con);
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;  
@@ -1612,7 +1612,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -1624,7 +1624,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $arrayProducts = array(); 
         while ($row = mysql_fetch_array($result)) {
 
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -1645,7 +1645,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
@@ -1657,11 +1657,21 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $connection);
         $arrayProducts = array();
         while ($row = mysql_fetch_array($result)) {
-            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion']);
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
             $arrayProducts[] = $product;
         }
         return $arrayProducts;
     }
+    
+    function getProductById($id, $connection){
+        $sql = "SELECT * FROM producto WHERE idproducto = ".$id;
+        $result = mysql_query($sql, $connection);
+        while ($row = mysql_fetch_array($result)) {
+            $product = new Product($row['idproducto'],$row['fecha'],$row['nombre'], $row['descripcion'], $row['img'], $row['codbarras'], $row['refidcategoria']);
+        }
+        return $product;
+    }
+
 
     function getUsersStats($mes,$ano,$con){
         $arrayUsers = array();
@@ -1669,7 +1679,7 @@ function getEstablishmentMes($mes, $ano, $con){
         $result = mysql_query($sql, $con);
         while ($row = mysql_fetch_array($result)) {
             $user = new User($row['idusuario'],$row['nombre'],$row['apellidos'],$row['password'],$row['dni']
-            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado']);
+            ,$row['telefono'],$row['correo'],$row['administrador'],$row['validado'],$row['fecha_creacion']);
             $arrayUsers[] = $user;
         }
         return $arrayUsers;  
@@ -1797,6 +1807,11 @@ function getEstablishmentMes($mes, $ano, $con){
         return $arrayComments;
     }
 
+  
+	function updateProd($id, $nombre, $fecha, $descripcion, $refidcategoria, $img, $codbarras, $connection){
+        $sql = "UPDATE producto SET nombre='$nombre', fecha='$fecha', descripcion='$descripcion', refidcategoria='$refidcategoria', img='$img', codbarras='$codbarras' WHERE idproducto = ".$id;
+        mysql_query($sql,$connection);
+    }
 
 
 }

@@ -229,10 +229,10 @@ $objPHPExcel->getProperties()->setCreator("Sistema de exportación de estadísti
 // cabecera
 $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Resumen estadístico general')
-            ->setCellValue('D1', 'Fecha: '.DATE("m").'-'.DATE("Y"))
+            ->setCellValue('D1', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
             ->setCellValue('A3', 'Concepto')
             ->setCellValue('B3', 'Este mes')
-            ->setCellValue('C3', 'Último mes')
+            ->setCellValue('C3', 'Mes anterior')
             ->setCellValue('D3', 'Histórico');
 
 // conceptos
@@ -367,10 +367,10 @@ $objPHPExcel->getProperties()->setCreator("Sistema de exportación de estadísti
 // cabecera
 $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Resumen estadístico general')
-            ->setCellValue('D1', 'Fecha: '.DATE("m").'-'.DATE("Y"))
+            ->setCellValue('D1', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
             ->setCellValue('A3', 'Concepto')
             ->setCellValue('B3', 'Este mes')
-            ->setCellValue('C3', 'Último mes')
+            ->setCellValue('C3', 'Mes anterior')
             ->setCellValue('D3', 'Histórico');
 
 // conceptos

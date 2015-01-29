@@ -24,6 +24,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo _("Justo y Responsable") ?></title>
+        <link rel="icon" type="image/png" href="../../images/favicon.png" />
+
 		
 		<link rel="stylesheet" href="../css/themes/default/jyrtheme.min.css" />
         <link rel="stylesheet" href="../css/themes/default/jquery.mobile.icons.min.css" />
@@ -99,7 +101,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             if($mlatitude==0 && $mlongitude==0){
         ?>
             <div align='center' id='result' data-role='header'>
-                <p><?php echo _("Establecimientos en la localidad") ?></p>
+                <p><?php echo _("Eventos en la localidad") ?></p>
                 <div id="divpanellegen" >
                     <a data-ajax='false' href='#legenPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-info ui-btn-right ui-btn-icon-notext"></a>
                 </div>

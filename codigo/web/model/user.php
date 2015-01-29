@@ -71,6 +71,8 @@ class User{
      * @access private
      */
     private $valid;
+    
+    private $fval;
 
     /**
      * Constructor
@@ -85,7 +87,7 @@ class User{
      * @param admin the admin
      * @param valid the valid
      */
-	function User($idUser, $name, $surName, $password, $dni, $phone, $email, $admin, $valid){
+	function User($idUser, $name, $surName, $password, $dni, $phone, $email, $admin, $valid, $fval){
 	    $this->idUser = $idUser;
 		$this->name = $name;
         $this->surName = $surName;
@@ -95,6 +97,7 @@ class User{
         $this->email = $email;
         $this->admin = $admin;
         $this->valid = $valid;
+        $this->fval=$fval;
     }
 	
     /**
@@ -240,6 +243,12 @@ class User{
     function getValid(){
         return $this->valid;
     }
+    
+    function getFVal(){
+        return $this->fval;
+    }
+    
+
     
     /**
      * Method that change the valid of user.

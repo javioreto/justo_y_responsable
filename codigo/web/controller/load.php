@@ -358,8 +358,8 @@ class Load{
         
         public static function notifType($id){
                        
-            $array=array("-- Seleccionar tipo --","Nueva solicitud de usuario establecimiento","Nuevo establecimiento dado de alta","Nuevo producto dado de alta",
-							"Nuevo evento introducido","Nuevo comentario sobre un establecimiento/evento");                      
+            $array=array("-- Seleccione uno --","Nueva solicitud de usuario establecimiento","Nuevo establecimiento dado de alta","Nuevo producto dado de alta",
+							"Nuevo evento introducido","Nuevo comentario");                      
            if($id==0){
              return $array;
            }else{
@@ -643,7 +643,14 @@ class Load{
             return $comments;
         }
 
-        
+       public static function loadProductById($id){
+            $dataBase = new dataBase();
+            $con = $dataBase->ConnectDB($dataBase->getServer(),$dataBase->getUsername(),$dataBase->getPassword(),$dataBase->getDB());
+            $products = $dataBase->getProductById($id,$con);
+            $dataBase->disconnectDataBase($con);
+            return $products;
+        }
+
         
    }
 ?>

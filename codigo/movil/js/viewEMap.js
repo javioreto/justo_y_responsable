@@ -50,6 +50,8 @@ function showInMap(name,latitude,longitude,sector){
 	      				}else{
 	      					if(sec == "Consumidores y usuarios organizados"){
 	      						icon = "../../images/consumidores.png";
+	      					}else{
+	      						icon = "../../images/eventos.png";
 	      					}
 	      				}
 	      			}
@@ -99,7 +101,9 @@ function noLocation(name,latitude,longitude,sector){
 			}else{
 				if(sec == "Consumidores y usuarios organizados"){
 					icon = "../../images/consumidores.png";
-				}
+				}else{
+	      			icon = "../../images/eventos.png";
+	      		}
 			}
 		}
 	}

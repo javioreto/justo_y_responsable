@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JustoYResponsable\n"
 "POT-Creation-Date: 2015-01-23 04:01+0100\n"
-"PO-Revision-Date: 2015-01-23 04:01+0100\n"
+"PO-Revision-Date: 2015-01-29 02:59+0100\n"
 "Last-Translator: Javier <jlm0051@alu.ubu.es>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: ../../../view/startEvents.php:28 ../../../view/viewMap.php:33
 #: ../../../views/capturar.php:35
 msgid "Justo y Responsable"
-msgstr "Fair & Ethical"
+msgstr "Zuzen eta Arduradun"
 
 #: ../../../view/advancedSearch.php:65
 #: ../../../view/advancedSearchEvents.php:65 ../../../view/cameraScan.php:65
@@ -40,7 +40,7 @@ msgstr "Fair & Ethical"
 #: ../../../view/start.php:67 ../../../view/startEvents.php:67
 #: ../../../view/viewMap.php:63 ../../../views/capturar.php:59
 msgid "JyR"
-msgstr "F&E"
+msgstr "Z&A"
 
 #: ../../../view/advancedSearch.php:77
 #: ../../../view/advancedSearchEvents.php:77 ../../../view/information.php:218
@@ -79,12 +79,12 @@ msgstr "Distance(km):"
 #: ../../../view/advancedSearch.php:107
 #: ../../../view/advancedSearchEvents.php:103
 msgid "Si"
-msgstr "Yes"
+msgstr "Bai"
 
 #: ../../../view/advancedSearch.php:108
 #: ../../../view/advancedSearchEvents.php:104
 msgid "No"
-msgstr "No"
+msgstr "Ez"
 
 #: ../../../view/advancedSearch.php:119 ../../../view/information.php:164
 msgid "Sector"
@@ -176,7 +176,7 @@ msgstr "New search"
 #: ../../../view/startEvents.php:194 ../../../view/viewMap.php:99
 #: ../../../views/capturar.php:115
 msgid "Acerca de"
-msgstr "About"
+msgstr "Aplikazioari buruz"
 
 #: ../../../view/advancedSearch.php:232
 #: ../../../view/advancedSearchEvents.php:211
@@ -189,7 +189,7 @@ msgstr "About"
 #: ../../../view/startEvents.php:197 ../../../view/viewMap.php:102
 #: ../../../views/capturar.php:118
 msgid "Ayuda"
-msgstr "Help"
+msgstr "Laguntza"
 
 #: ../../../view/advancedSearch.php:236
 #: ../../../view/advancedSearchEvents.php:215
@@ -298,15 +298,15 @@ msgstr "Menu"
 
 #: ../../../view/index.php:75
 msgid "Buscar establecimientos"
-msgstr "Search establishments"
+msgstr "Saltegiak bilatu"
 
 #: ../../../view/index.php:78
 msgid "Buscar eventos"
-msgstr "Search events"
+msgstr "Gertaerak bilatu"
 
 #: ../../../view/index.php:81
 msgid "Información de producto"
-msgstr "Product information"
+msgstr "Produktu informazioa"
 
 #: ../../../view/info.php:59
 msgid "Aplicación web para el consumo responsable"

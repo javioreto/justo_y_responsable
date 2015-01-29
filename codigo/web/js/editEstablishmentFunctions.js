@@ -129,6 +129,64 @@ function addSubCat(id){
     }
 }
 
+function addSubCats(id, id2){ 
+	var sidSelect = id;
+	var idSelect = sidSelect.slice(3,sidSelect.length);
+	var selectSub = parseInt(idSelect)+1;
+	var entra = false;
+	while($("#cat"+selectSub).length){
+		$("#cat"+selectSub).remove();
+		selectSub = selectSub+1;
+		entra = true;
+	}
+	if(entra){
+		selectSub = selectSub-1;
+		document.getElementById('num').value = selectSub;
+	}else{
+		document.getElementById('num').value = selectSub;
+	}
+	var idCategSelec = $('#'+id).val();
+	document.getElementById('cat').value = idCategSelec;
+	
+	
+    if(idCategSelec!=0){
+    	$.ajax({
+			dataType: "json",
+			data: {"idCateg":idCategSelec},
+			url:   '../controller/loadSubCat.php',
+			type:  'post',
+			beforeSend: function(){
+				//Lo que se hace antes de enviar el formulario
+			},
+			success: function(response){
+				var categ = response.categ;
+				var arrayInformation = categ.split(";");
+				
+				var exist = arrayInformation[0];
+				
+				if(exist=="si"){
+					var i=1;	
+					var options = "<select id='cat"+selectSub+"' class='paramCateg form-control' onchange='addSubCat(this.id)'><option value='0'>-- *SubCategoría --</option>";
+					
+					for(i=1;i<arrayInformation.length-1;i = i+2){
+						if(arrayInformation[i]!=id2){
+							options += "<option value="+arrayInformation[i]+">"+arrayInformation[i+1]+"</option>";
+						}else{
+							options += "<option value="+arrayInformation[i]+" selected=\"selected\">"+arrayInformation[i+1]+"</option>";
+						}
+					}
+					$("#divSelect").append(options);
+					
+				}
+			},
+			error:	function(xhr,err){
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText); 
+			}
+		});
+    }
+}
+
+
 function addProducts(){
 	var idCateg = document.getElementById('cat').value; 
 	var num = document.getElementById('num').value;
@@ -468,3 +526,40 @@ function volverInicio(id){
 	}
 	
 }
+
+
+function editProduct(id){
+	var idCateg = document.getElementById('cat').value; 
+	var num = document.getElementById('num').value;
+	
+		var name = $("#namedata").val();
+		var description = $("#descriptiondata").val();
+		var code = $("#codedata").val();
+		var img = $("#nameimg").val();
+		var id = $("#id").val();
+
+		
+		if(name != "" && idCateg != ""){
+	    	$.ajax({
+				dataType: "json",
+				data: {"name":name, "description":description, "idCateg":idCateg, "code": code, "img": img, "id": id},
+				url:   '../controller/editProduct.php',
+				type:  'post',
+				beforeSend: function(){
+					//Lo que se hace antes de enviar el formulario
+				},
+				success: function(response){
+						    $('#alertOK').show();
+				},
+				error:	function(xhr,err){
+					alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText); 
+				}
+			});
+	    }else{
+	    	$('#alertCamposImp').hide();
+			$('#alertAddress').hide();
+			$('#alertCampos').hide();
+	    	$('#alertCamposPr').show();
+	    }
+}
+

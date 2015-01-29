@@ -86,16 +86,17 @@ if(isset($_SESSION["iduser"])){
     <body>
         
        <div id="divinfo" align="center">
-            <h1 ><b><?php echo _("Justo y Responsable")?></b></h1>
-            <h3><?php echo _("Aplicación web para el consumo responsable")?></h3>
-            <p><b><?php echo _("Autora:")?></b><?php echo _("&nbspGadea Hidalgo López")?></p>
-            <p><b><?php echo _("email:")?></b><?php echo _("&nbspghl0001@alu.ubu.es")?></p>
-            <p><b><?php echo _("Tutores:")?></b><?php echo _("&nbspÁlvaro Herrero y Ángel Arroyo")?></p>
-            <p><b><?php echo _("Colaborador:")?></b><?php echo _("&nbspCoordinadora Estatal de Comercio Justo")?></p>
-            <a target="_blank" href="http://www.ubu.es"><img style="margin-right: 40px;" src="../../images/ubu.png" /></a><a target="_blank" href="http://comerciojusto.org/"><img src="../../images/cecj.png" /></a>
-            <p style="margin-top: 20px;"><b><?php echo _("Licencia:")?></b><?php echo _("&nbspCreative Commons")?></p>
-            <p><b><?php echo _("Fecha de creación:")?></b><?php echo _("&nbspJunio de 2014")?></p>
-            <p><?php echo _("Versión 1.0")?></p>
+                <p style="font-size: 24px;"><b><?php echo _("Justo y Responsable")?></b></p>
+                <p style="font-size: 20px;"><?php echo _("Aplicación web para el consumo responsable")?></p>
+                <p><b><?php echo _("Autor v2.0:")?></b><?php echo _("&nbspJavier López Martínez")?></p>
+                <p><b><?php echo _("email:")?></b><?php echo _("&nbspjlm0051@alu.ubu.es")?></p>
+                <p><b><?php echo _("Tutores:")?></b><?php echo _("&nbspÁlvaro Herrero Cosio")?></p>
+                <p><b><?php echo _("Autora v1.0:")?></b><?php echo _("&nbspGadea Hidalgo López")?></p>
+                <p><b><?php echo _("Colaborador:")?></b><?php echo _("&nbspCoordinadora Estatal de Comercio Justo")?></p>
+                <a target="_blank" href="http://www.ubu.es"><img style="margin-right: 40px;" src="../../images/ubu.png" /></a><a target="_blank" href="http://comerciojusto.org/"><img src="../../images/cecj.png" /></a>
+                <p><b><?php echo _("Licencia:")?></b><?php echo _("&nbspCreative Commons")?></p>
+                <p><b><?php echo _("Fecha de creación:")?></b><?php echo _("&nbspEnero de 2015")?></p>
+                <p><?php echo _("Versión 2.0")?></p>
         </div>
         
     </body>

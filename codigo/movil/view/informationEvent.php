@@ -34,6 +34,8 @@ Load::insertBusqueda($_GET['idEvent'], 2);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo _("Justo y Responsable") ?></title>
+        <link rel="icon" type="image/png" href="../../images/favicon.png" />
+
         <link rel="stylesheet" href="../css/themes/default/jyrtheme.min.css" />
         <link rel="stylesheet" href="../css/themes/default/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
@@ -114,7 +116,7 @@ Load::insertBusqueda($_GET['idEvent'], 2);
                      <tr>
                      <td><img src="../../images/maps.png" style="margin:0px 10px;">	</td>
                      <td><p id='sector' ><?php echo $establishment->getdireccion() ?> <?php echo $establishment->getlocalidad() ?><br>
-                     <a style='color:#D50000' data-ajax='false' href = 'viewMap.php?name=<?php echo $establishment->getnombre() ?>&latitude=<?php echo  $establishment->getlatitud() ?>&longitude=<?php echo $establishment->getlongitud() ?>&sector=<?php echo Search::eventType($establishment->getidTipo()) ?>' ><?php echo _("Ver en mapa") ?></a>
+                     <a style='color:#D50000' data-ajax='false' href = 'viewMap.php?name=<?php echo Load::replace($establishment->getnombre()); ?>&latitude=<?php echo  $establishment->getlatitud() ?>&longitude=<?php echo $establishment->getlongitud() ?>&sector=<?php echo Load::replace(Search::eventType($establishment->getidTipo())); ?>' ><?php echo _("Ver en mapa") ?></a>
                      </p></td>
                      </tr>
                  </table>
@@ -133,7 +135,7 @@ Load::insertBusqueda($_GET['idEvent'], 2);
                                                                           
                      </tr>
                      <tr>
-                     <td><?php echo $establishment->getdescripcion() ?><br><br></td>
+                     <td><?php echo nl2br($establishment->getdescripcion()); ?><br><br></td>
                      </tr>
                  </table>
              </div>

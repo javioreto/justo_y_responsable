@@ -36,6 +36,12 @@ class Product{
      * @access private
      */
     private $description;
+    
+    private $img;
+    
+    private $cod;
+    
+    private $ref;
 
     /**
      * Constructor
@@ -45,11 +51,14 @@ class Product{
      * @param name the name
      * @param description the description
      */
-    function Product($idProduct,$date,$name, $description) {
+    function Product($idProduct,$date,$name, $description, $img, $cod, $ref) {
         $this->idProduct = $idProduct;
         $this->date = $date;
         $this->name = $name;
         $this->description = $description;
+        $this->img = $img;
+        $this->cod = $cod;
+        $this->ref = $ref;
     }
     
     /**
@@ -60,6 +69,31 @@ class Product{
     function getIdProduct(){
         return $this->idProduct;
     }
+    
+    function getImg(){
+        return $this->img;
+    }
+    
+    function getCod(){
+        return $this->cod;
+    }
+    
+    function getRef(){
+        return $this->ref;
+    }
+    
+    function setImg($val){
+        $this->img = $val;
+    }
+    
+    function setCod($val){
+        $this->cod = $val;
+    }
+    
+    function setRef($val){
+        $this->ref = $val;
+    }
+
     
     /**
      * Method that change the id of product.

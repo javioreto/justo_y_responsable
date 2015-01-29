@@ -166,19 +166,19 @@ $user = Load::loadUserById($id);
                 <?php
                     
                     foreach($events AS $est){
-                    ?>
+                    ?><div class="row">
                         <a id="<?php $est->getidEvento() ?>" href='editEvent.php?id=<?php echo $est->getidEvento() ?>' class='list-group-item'>
-                                <div id="listestab" class='form-group col-md-12'>
-                                    <div id="info" class="col-md-offset-1 col-md-4">
-                                        <p id='name'><strong><?php echo $est->getnombre() ?></strong> - <small><?php echo Load::eventType($est->getidTipo()) ?></small></p>
-                                        <p><b><?php echo _("Dirección: ") ?></b><?php echo $est->getdireccion() ?> - <?php echo $est->getlocalidad() ?></p>
+                                <div id="listestab" class='form-group col-md-12' style="height:auto">
+                                    <div id="info" class="col-md-offset-1 col-md-5">
+                                        <h5><strong><?php echo substr($est->getnombre(),0,35) ?></strong></h5><small><?php echo Load::eventType($est->getidTipo()) ?></small><br>
+                                        <b><?php echo _("Dirección: ") ?></b><?php echo substr($est->getdireccion(),0,35) ?> - <?php echo $est->getlocalidad() ?>
                                     </div>  
-                                    <div class="col-md-offset-1 col-md-4">
+                                    <div class="col-md-offset-0 col-md-5">
                                         <p><b><?php echo _("Fecha: ") ?></b><?php echo $est->getfecha() ?> &nbsp; <b>Horario: </b> de <?php echo $est->getinicio() ?> a <?php echo $est->getfin() ?> </p>
-										<p><b><?php echo _("Descripción: ") ?></b><?php echo substr($est->getdescripcion(),0,110)."..." ?></p>
+										<p><b><?php echo _("Descripción: ") ?></b><?php echo substr($est->getdescripcion(),0,50)."..." ?></p>
                                     </div> 
                                 </div>
-                              </a>
+                              </a></div>
                 <?php
                   }
                 ?> 

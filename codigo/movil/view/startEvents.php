@@ -26,6 +26,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo _("Justo y Responsable") ?></title>
+        <link rel="icon" type="image/png" href="../../images/favicon.png" />
+
 		
 		<link rel="stylesheet" href="../css/themes/default/jyrtheme.min.css" />
         <link rel="stylesheet" href="../css/themes/default/jquery.mobile.icons.min.css" />
@@ -104,10 +106,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                         <p>
                         <?php echo _("Los eventos en Madrid") ?>
                         </p>
-                        <div id="divpanellegen" >
-                            <a data-ajax='false' href='#legenPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-info ui-btn-right ui-btn-icon-notext"></a>
-                        </div>
-                    </div>
+                      </div>
                 <?php
                 }else{
                 ?>
@@ -115,10 +114,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                         <p> 
                         <?php echo _("Los 10 eventos más cercanos") ?>
                         </p>
-                        <div id="divpanellegen" >
-                            <a data-ajax='false' href='#legenPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-info ui-btn-right ui-btn-icon-notext"></a>
-                        </div>
-                    </div>
+                      </div>
                 <?php
                 }
             ?>
@@ -206,30 +202,5 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             </div>
         </div>
         
-        <div data-role="panel" id="legenPanel" data-position="right" data-display="overlay" >
-        <h2 id="titleLegenPanel" align="center"><?php echo _("Leyenda") ?></h2>
-            <ul id="legenList" data-role="listview" data-inset="false">
-                <li>
-                    <img src="../../images/comerciojusto.png" />
-                    <p><?php echo _("Comercio justo") ?></p>
-                </li>
-                <li>
-                    <img src="../../images/bancaetica.png" />
-                    <p><?php echo _("Banca ética") ?></p>
-                </li>
-                <li>
-                    <img  src="../../images/economiasolidaria.png" />
-                    <p><?php echo _("Economía solidaria") ?></p>
-                </li>
-                <li>
-                    <img  src="../../images/consumidores.png" />
-                    <p><?php echo _("Consumidores y usuarios organizados") ?></p>
-                </li>
-            </ul>
-            <div id="btnclose" align="center">
-                <a href="#demo-links" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline"><?php echo _("Cerrar") ?></a>
-            </div>
-        </div>
-        
-    </div>
+         </div>
 </html>

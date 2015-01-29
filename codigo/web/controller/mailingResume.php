@@ -8,8 +8,7 @@ if (is_file("dataAccess/dataBase.php")){
 else {
     include_once ("../dataAccess/dataBase.php");
 }
-
-
+	
 	$system_mail="info@factoria76.com";
 	
 	$admin_mail="javioreto@gmail.com";
@@ -461,7 +460,7 @@ padding:4px 8px;
 		mail($admin_mail,$ssubject,$cuerpoEmail,$sheader);
 		
 	function getURL(){
-		$url="http://".$_SERVER['HTTP_HOST']."/jyr/web";
+		$url="http://www.factoria76.com/jyr/web";
 		return $url;
 	}
 

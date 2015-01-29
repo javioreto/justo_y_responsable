@@ -73,7 +73,7 @@ else {
 				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo evento en '.$co->getlocalidad().'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
 				</div>
 				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
-					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="informationEstablishment.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
+					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="editEvent.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
 						<div style="text-align:right">
 							<h4>
 								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getidEvento().', 4, \'#panelex'.$cont.'\');" title="Aceptar"></span>
@@ -95,7 +95,7 @@ else {
 				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo evento en '.$co->getlocalidad().'</a><span class="glyphicon glyphicon-ok-sign pull-right"></span></h4>				
 				</div>
 				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
-					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="informationEstablishment.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
+					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="editEvent.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
 					</div>
 				</div>
 			</div>';	

@@ -21,13 +21,13 @@ if(isset($_POST['language'])){
 	    case "english":	$lang = "en_US";
 	    				break;
 	    				
-	    case "eus":		$lang = "es_ES";
+	    case "eus":		$lang = "eu_ES";
 	    				break;
 	
-	    case "cat":		$lang = "es_ES";
+	    case "cat":		$lang = "ca_ES";
 	    				break;
 	    				
-	    case "gal":		$lang = "es_ES";
+	    case "gal":		$lang = "gl_ES";
 	    				break;  
 	    				
 	    default: 		$lang = "es_ES";

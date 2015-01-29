@@ -156,6 +156,14 @@ $user = Load::loadUserById($id);
                                   <p for="email"><?php echo $user->getEmail() ?></p>
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="col-md-offset-1 col-md-6"><strong><?php echo _("Fecha de validación:") ?></strong></label>
+                                <div class="col-md-5">
+                                  <p for="email"><?php echo $user->getFVal() ?></p>
+                                </div>
+                            </div>
+
                         </div>
                       </div>
                     </div>

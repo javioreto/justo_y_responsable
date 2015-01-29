@@ -125,7 +125,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 							array_push($datos,sizeOf(Load::loadUserStats($i,$ano)));
 						}
 			}
-			
+			$titulo1=$titulo;
 			$titulo.=" en el año ".$ano;
 			
 			switch($grafica){
@@ -201,9 +201,13 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 	        echo("var options = {'title':'".$titulo."', 'subtitle': 'Correspondiente al año ".$ano."' };
 	        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));");
         }
+        if($_REQUEST['filtro']!=""){
+        echo "chart.draw(data, options);";
+		}else{
+		echo '$("#mensaje").removeClass("hidden");';
+		}
         ?>
 
-        chart.draw(data, options);
       }
     </script>
        
@@ -256,19 +260,22 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		<h3>Gráfica</h3>
 		
 	<div class="col-md-12"  style="margin-top:35px;">
+		<div id="mensaje" class="alert alert-warning hidden" role="alert">Seleccione las opciones de filtrado para generar la gráfica.</div>
 		<div id="chart_div" style="width:100%; height:400px;"></div>
 	</div>
        </div>
        
-    <div class="col-md-4">
-		<h3>Filtrado</h3>
+    <div class="col-md-4"><br>
+		<h4>Filtrado de la gráfica</h4>
 		<form method="post" action="estadisticas.php" style="margin-top:35px;">
+		Indicador:<br>
 			<select class="form-control" name="filtro" id="filtro">
 				<?php
 				if($filtro!=""){
-					echo('<option value="'.$filtro.'" selected="selected">'.$titulo.'</option>');
+					echo('<option value="'.$filtro.'" selected="selected">'.$titulo1.'</option>');
 				}
 				?>
+				<option value="0">-- Seleccione uno --</option>
 				<option value="1">Usuarios dados de alta</option>
 				<option value="2">Establecimiento dados de alta</option>
 				<option value="3">Eventos dados de alta</option>
@@ -281,8 +288,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			</select>
 			
 			<div class="row" style="margin-top:10px;">
-			<div class="col-md-3">Año: </div>
-			<div class="col-md-9">
+			<div class="col-md-9 col-md-offset-3">Año: <br>
+
 			<select class="form-control" name="ano" id="ano">
 				<?php
 				if($_REQUEST['ano']!=""){
@@ -303,8 +310,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			</div>
 			
 			<div class="row" style="margin-top:10px; margin-bottom:10px;">
-			<div class="col-md-3">Tipo de gráfica: </div>
-			<div class="col-md-9">
+			<div class="col-md-9 col-md-offset-3">Tipo de gráfica: <br>
+			
 			<select class="form-control" name="grafica" id="grafica">
 				<?php
 				if($grafica!=""){
@@ -317,7 +324,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			</div>
 			</div>
 
-			<input class="btn btn-default pull-right" name="Submit1" type="submit" value="Actualizar" />
+			<input class="btnrojo pull-right" name="Submit1" type="submit" value="Actualizar" />
 		</form>
 	</div>
 
@@ -331,7 +338,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			<tr>
 				<th>Concepto</th>
 				<th>Este mes</th>
-				<th>Último mes</th>
+				<th>Mes anterior</th>
 				<th>Histórico</th>
 			</tr>
 			</thead>
@@ -663,7 +670,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
       		<input type="hidden" value="1" name="exportar">
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Exportar</button>
+        <button type="submit" class="btnrojo">Exportar</button>
       </div>
       </form>
     </div>
@@ -671,7 +678,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 </div>
 
 
-	<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#exportar">
+	<button type="button" class="btnrojo" data-toggle="modal" data-target="#exportar">
   			<span class="glyphicon glyphicon-floppy-save"></span> Exportar
 	</button>
 	<br><br>

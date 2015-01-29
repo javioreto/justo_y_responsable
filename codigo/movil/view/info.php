@@ -18,6 +18,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo _("Justo y Responsable") ?></title>
+        <link rel="icon" type="image/png" href="../../images/favicon.png" />
+
 		
 		<link rel="stylesheet" href="../css/themes/default/jyrtheme.min.css" />
         <link rel="stylesheet" href="../css/themes/default/jquery.mobile.icons.min.css" />
@@ -62,7 +64,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 <p><b><?php echo _("Colaborador:")?></b><?php echo _("&nbspCoordinadora Estatal de Comercio Justo")?></p>
                 <a target="_blank" href="http://www.ubu.es"><img style="margin-right: 40px;" src="../../images/ubu.png" /></a><a target="_blank" href="http://comerciojusto.org/"><img src="../../images/cecj.png" /></a>
                 <p><b><?php echo _("Licencia:")?></b><?php echo _("&nbspCreative Commons")?></p>
-                <p><b><?php echo _("Fecha de creación:")?></b><?php echo _("&nbspDiciembre de 2014")?></p>
+                <p><b><?php echo _("Fecha de creación:")?></b><?php echo _("&nbspEnero de 2015")?></p>
                 <p><?php echo _("Versión 2.0")?></p>
             </div>
             

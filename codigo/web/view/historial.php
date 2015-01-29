@@ -70,17 +70,13 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <p id="textnav2" class="navbar-brand"><?php echo _("Administración") ?></p>
+          <p id="textnav2" class="navbar-brand"><?php echo _("Historial de notificaciones") ?></p>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav navbar-right">
-          		<li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
-				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
-				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
-				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
-				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Productos") ?></a></li>
-				<li><a data-ajax="false" href="info.php"><?php echo _("Estadísticas") ?></a></li>
-              <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
+          		<li><a data-ajax="false" href="gestion.php"><?php echo _("Volver") ?></a></li>
+				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
+                <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
           </ul>
         </nav>
@@ -158,7 +154,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo evento en '.$co->getlocalidad().'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
 				</div>
 				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
-					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="informationEstablishment.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
+					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="editEvent.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
 						<div style="text-align:right">
 							<h4>
 								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getidEvento().', 4, \'#panelex'.$cont.'\');" title="Aceptar"></span>

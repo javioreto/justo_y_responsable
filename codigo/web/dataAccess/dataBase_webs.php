@@ -63,7 +63,7 @@ class DataBase{
         $this->username = "dbo552234123";
         $this->password = "1234567";
         $this->database = "db552234123";
-        	}
+	}
 	
 	/**
      * Method that returns the server of database.

@@ -27,6 +27,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php echo _("Justo y Responsable") ?></title>
+        <link rel="icon" type="image/png" href="../../images/favicon.png" />
+
         
         <link rel="stylesheet" href="../css/themes/default/jyrtheme.min.css" />
         <link rel="stylesheet" href="../css/themes/default/jquery.mobile.icons.min.css" />
@@ -114,7 +116,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
             </div>    
                 <form name="rango">
                     <fieldset data-role="controlgroup">
-                       Desde: <input type="date" name="desde" id="desde">
+                       Desde: <input type="date" name="desde" id="desde" value="<?php echo date('Y-m-d'); ?>">
                        Hasta: <input type="date" name="hasta" id="hasta">
                        Horario:
                        

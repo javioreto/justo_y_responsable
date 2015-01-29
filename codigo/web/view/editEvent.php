@@ -133,7 +133,7 @@ $user = Load::loadUserById($id);
                 <div class="form-group">
                     <label for="name" class="col-md-2 control-label"><?php echo _("*Nombre:") ?></label>
                     <div class="col-md-10">
-                      <input  type="text" class="form-control" id="name" name="name" placeholder="<?php echo _("Nombre") ?>" value="<?php echo $event->getnombre() ?>">
+                      <input  type="text" class="form-control" id="name" name="name" placeholder="<?php echo _("Nombre") ?>" value="<?php echo str_replace("\"", "'", $event->getnombre()); ?>">
                     </div>
                 </div>
                 

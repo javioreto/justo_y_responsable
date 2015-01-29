@@ -236,7 +236,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			<input type="hidden" name="form" value="true">
 			<input type="hidden" name="idref" value="<?php echo $_REQUEST['idref']; ?>">
 			<input type="hidden" name="nombreref" value="<?php echo $_REQUEST['nombreref']; ?>">
-			<input type="submit" class="btn btn-default btn-lg" value="<?php echo $txt; ?>" style="margin-top:15px;">
+			<input type="submit" class="btnrojo" value="<?php echo $txt; ?>" style="margin-top:15px;">
 		</div>
 
 		</form>
@@ -259,7 +259,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		}
 		?>
 		</div>
-		<a href="configuracion.php?ty=1&a=1" class="btn btn-default btn-lg" style="margin:8px 15px;">Nuevo tipo</a>
+		<a href="configuracion.php?ty=1&a=1" class="btnrojo" style="margin:8px 15px;">Nuevo tipo</a>
 		<h3>Importadores</h3>
 		<div class="cont-tipo">
 		<?php
@@ -271,7 +271,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		}
 		?>
 		</div>
-		<a href="configuracion.php?ty=2&a=1" class="btn btn-default btn-lg" style="margin:8px 15px;">Nuevo importador</a>
+		<a href="configuracion.php?ty=2&a=1" class="btnrojo" style="margin:8px 15px;">Nuevo importador</a>
 
 		<h3><strong>Categorías</strong> y subcategorías de productos</h3>
 		<div class="cont-tipo">
@@ -294,7 +294,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 
 		</div>
 		
-		<a href="configuracion.php?ty=3&a=1" class="btn btn-default btn-lg" style="margin:8px 15px;">Nueva categoría/subcategoría</a>
+		<a href="configuracion.php?ty=3&a=1" class="btnrojo" style="margin:8px 15px;">Nueva categoría/subcategoría</a>
        </div>
     </div>
     </body> 

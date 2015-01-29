@@ -77,7 +77,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
 				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
-				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Productos") ?></a></li>
+				<li><a data-ajax="false" href="configuracion.php"><?php echo _("Configuración") ?></a></li>
 				<li><a data-ajax="false" href="estadisticas.php"><?php echo _("Estadísticas") ?></a></li>
 				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
@@ -178,7 +178,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 				<a href="#panel'.$cont.'" data-toggle="collapse" aria-expanded="false" aria-controls="panel1" class="collapsed" data-parent="#contenedor-objetos">Nuevo evento en '.$co->getlocalidad().'</a><span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>				
 				</div>
 				<div class="panel-collapse collapse" id="panel'.$cont.'" role="tabpanel" aria-labelledby="cabecera1">
-					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="informationEstablishment.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
+					<div class="panel-body">'.substr($co->getdescripcion(),0,250).'...<br> <a href="editEvent.php?id='.$co->getidEvento().'">Click aquí para ver descripción completa.</a>
 						<div style="text-align:right">
 							<h4>
 								<span class="glyphicon glyphicon-ok-sign ok" onclick="eventOk('.$co->getidEvento().', 4, \'#panelex'.$cont.'\');" title="Aceptar"></span>

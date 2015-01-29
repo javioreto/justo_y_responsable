@@ -128,6 +128,8 @@ $user = Load::loadUserById($id);
                <button type="button" class="close" onclick="$('#alertAddress').hide()" aria-hidden="true">&times;</button>
                <strong><?php echo _("Error: ") ?></strong><?php echo _("La dirección no es correcta, debe seleccionar una de la lista.") ?>
             </div>
+            
+
             <div class="form-horizontal col-md-offset-0 col-md-4" role="form">
                 <div class="form-group">
                     <label for="name" class="col-md-2 control-label"><?php echo _("*Nombre:") ?></label>
@@ -520,6 +522,7 @@ $user = Load::loadUserById($id);
         </form>
         
         <div id="productSection" class="col-md-12">
+        <a name="editar"></a>
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
                 <div id="headpanelproducts" class="panel-heading">
@@ -531,6 +534,8 @@ $user = Load::loadUserById($id);
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in">
                   <div id="bodypanelproducts" class="panel-body">
+                    
+                    <?php if($_REQUEST['idprod']=="") {?>
                     
                     <div id="divpanelnewproduct" class="form-horizontal  col-md-12" role="form">
                         <div class="panel panel-default">
@@ -597,10 +602,114 @@ $user = Load::loadUserById($id);
                                      </div>
                                 </div>
                             </div>
-                            
+                            </div>
+                          
+                          </div> </div>
+                          <?php }else{ 
+                          
+                         $products = Load::loadProductById($_REQUEST['idprod']);
+                          
+                          ?>
+                                      <div id="alertOK" class="alert alert-success" style="display: none">
+               <button type="button" class="close" onclick="$('#alertOK').hide()" aria-hidden="true">&times;</button>
+               <strong><?php echo _("Correcto: ") ?></strong><?php echo _("Se ha actualizado el producto satisfactóriamente.") ?>
+            </div>
+
+                           <div id="divpanelnewproduct" class="form-horizontal  col-md-12" role="form">
+                        <div class="panel panel-default">
+                          <div id="headpanelnewproduct" class="panel-heading col-md-13">
+                            <h3 class="panel-title"><?php echo _("Editar producto") ?></h3>
+                            <input type="hidden" name="id" id="id" value="<?php echo $_REQUEST['idprod']; ?>">
                           </div>
-                        </div>
-                    </div>
+                          <div id="bodypanelnewproduct" class="panel-body">
+                            <div id="alertCampos" class="alert alert-danger" style="display: none">
+                               <button type="button" class="close" onclick="$('#alertCampos').hide()" aria-hidden="true">&times;</button>
+                               <strong><?php echo _("Error: ") ?></strong><?php echo _("Debe completar todos los campos.") ?>
+                            </div>
+                            <div class="form-horizontal col-md-offset-0 col-md-5" role="form">
+                                  <div class="form-group">
+                                    <label for="codedata" class="col-md-3 control-label"><?php echo _("Código:") ?></label>
+                                    <div class="col-md-offset-1 col-md-8">
+                                      <input type="text" class="form-control" id="codedata" value="<?php echo $products->getCod(); ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="namedata" class="col-md-3 control-label"><?php echo _("*Nombre:") ?></label>
+                                    <div class="col-md-offset-1 col-md-8">
+                                      <input type="text" class="form-control" id="namedata" value="<?php echo $products->getName(); ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descriptiondata" class="col-md-3 control-label"><?php echo _("Descripción:") ?></label>
+                                    <div class="col-md-offset-1 col-md-8">
+                                        <textarea class="form-control" id="descriptiondata"><?php echo $products->getDescription(); ?></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-horizontal col-md-offset-0 col-md-7" role="form">
+                             <div class="form-group">
+                                    <label for="imgdata" class="col-md-3 control-label"><?php echo _("Imagen:") ?></label>
+                                    <div class="col-md-offset-1 col-md-8">
+                                         <button id="upload_button" class="btn btn-default"><?php echo _("Seleccionar imagen") ?></button>
+                                         <input type="text" value="<?php echo $products->getImg(); ?>" id="nameimg" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                <label for="catdata" class="col-md-3 control-label"><?php echo _("Categoría:") ?></label>
+                                    <div id="divSelect" class="col-md-offset-1 col-md-8">
+                                        <input type="hidden" id="cat" name="cat" />
+                                        <input type="hidden" id="num" name="num" />
+                                                     <?php
+                                            $catsuperior=1;
+                                            $cats = Load::loadAllCat();
+                                            foreach($cats AS $cat){
+                                                if($products->getRef()==$cat->getIdCategory()){
+                                               	 $catsuperior=$cat->getRefCategory();
+                                                }
+                                            } 
+                                            
+                                            ?>
+                                     
+                                        <select id="cat0" class="paramCateg form-control" onchange="addSubCat(this.id)">
+                                            <option value="0"><?php echo _("-- *Seleccionar Categoría --") ?></option>
+                               
+
+                                            <?php
+                                            $categories = Load::loadCategories(); 
+                                            foreach($categories AS $cat){
+                                            
+                                                echo '<option value="'.$cat->getIdCategory().'"';
+                                                if($catsuperior==$cat->getIdCategory()){
+                                               	 echo ' selected="selected"';
+                                                }
+                                                echo">"; 
+                                                echo _($cat->getName());
+                                                echo "</option>";
+                                            }
+                                            
+                                            ?>
+                                         </select>
+                                     </div>
+                                </div>
+                                  <script type="text/javascript">
+                                  addSubCats(document.getElementById('cat0').value, <?php echo $products->getRef(); ?>);
+                                  document.getElementById('cat').value=<?php echo $products->getRef(); ?>;
+                                  document.getElementById('num').value=2;
+                                  </script>
+                                <div class="form-group">
+                                    <div class="col-md-offset-10 col-md-2">
+                                        <button id="btnadd" class="btn btn-default" onclick="editProduct(<?php echo $_REQUEST['id']; ?>)"><?php echo _("Modificar") ?></button>
+                                     </div>
+                                </div>
+                            </div>
+                            </div>
+                          
+                          </div> </div>
+                   <?php } ?>
+                   
                     <div id="titleallproduct">
                         <h3><?php echo _("Todos los productos") ?></h3>
                     </div>
@@ -616,6 +725,7 @@ $user = Load::loadUserById($id);
                             <?php $funcdelete = "deleteProduct(".$p->getIdProduct().")"?>
                             <h4 class="list-group-item-heading"><?php echo $p->getName() ?></h4>
                             <button id="btdelp" style='float:right; margin-top:-30px;' class='btn btn-default' onclick='<?php echo $funcdelete ?>' >Borrar</button>
+                            <a id="btdedit" style='float:right; margin-top:-30px; margin-right:10px;' class='btn btn-default' href="editEstablishment.php?id=<?php echo $_REQUEST['id'].'&idprod='.$p->getIdProduct(); ?>#editar">Editar</a>            
                             <p class="list-group-item-text"><?php echo $p->getDescription() ?></p>
                         </li>
                         <?php    
