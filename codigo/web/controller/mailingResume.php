@@ -451,11 +451,11 @@ padding:4px 8px;
 	
 		/* Send first mail to admin */
 	
-		$ssubject="Resumen mensual ".$meses[(int) date("m")]." de ".date("Y");
+		$ssubject="[JyR] Resumen mensual ".$meses[(int) date("m")]." de ".date("Y");
 		$sheader="From: Justo y Responsable <".$system_mail.">\nReply-To:".$system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($admin_mail,$ssubject,$cuerpoEmail,$sheader);
 		

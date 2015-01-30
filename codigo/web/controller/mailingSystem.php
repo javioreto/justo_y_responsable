@@ -24,21 +24,21 @@ class mailingSystem{
 	
 		/* Send first mail to admin */
 	
-		$ssubject="Nueva cuenta de usuario";
+		$ssubject="[JyR] Nueva cuenta de usuario";
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($this->admin_mail,$ssubject,$newUserRequestConfirmationToAdmin,$sheader);
 		
 		/* Send second mail to user */
 		
-		$ssubject="Confirmación nueva cuenta de usuario";
+		$ssubject="[JyR] Confirmación nueva cuenta de usuario";
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($email,$ssubject,$newUserRequestConfirmationToUser,$sheader);
 	$newUserAceptConfirmation;
@@ -60,11 +60,11 @@ class mailingSystem{
 	
 		/* Send first mail to admin */
 	
-		$ssubject="Cuenta de usuario activada";
+		$ssubject="[JyR] Cuenta de usuario activada";
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($email,$ssubject,$newUserAceptConfirmation,$sheader);
 	}
@@ -86,11 +86,11 @@ class mailingSystem{
 	
 		/* Notification to admin */
 	
-		$ssubject="Nuevo establecimiento";
+		$ssubject="[JyR] Nuevo establecimiento";
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($this->admin_mail,$ssubject,$newEstablishmentConfirmationToAdmin,$sheader);
 	
@@ -109,11 +109,11 @@ class mailingSystem{
 	    include_once ("../view/mailView.php");
 	}
 	
-		$ssubject="Cambiar tu contraseña";
+		$ssubject="[JyR] Cambiar tu contraseña";
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($email,$ssubject,$restorePass,$sheader);
 	
@@ -132,11 +132,11 @@ class mailingSystem{
 	    include_once ("../view/mailView.php");
 	}
 	
-		$ssubject="Nuevo comentario en su ".$tipo;
+		$ssubject="[JyR] Nuevo comentario en su ".$tipo;
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($email,$ssubject,$newComment,$sheader);
 	

@@ -228,60 +228,61 @@ $objPHPExcel->getProperties()->setCreator("Sistema de exportación de estadísti
 
 // cabecera
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Resumen estadístico general')
-            ->setCellValue('D1', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
-            ->setCellValue('A3', 'Concepto')
-            ->setCellValue('B3', 'Este mes')
-            ->setCellValue('C3', 'Mes anterior')
-            ->setCellValue('D3', 'Histórico');
+            ->setCellValue('A1', 'Justo y Responsable')
+            ->setCellValue('A2', 'Resumen estadístico general')
+            ->setCellValue('D2', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
+            ->setCellValue('A4', 'Concepto')
+            ->setCellValue('B4', 'Mes actual')
+            ->setCellValue('C4', 'Mes anterior')
+            ->setCellValue('D4', 'Histórico');
 
 // conceptos
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A4', 'Usuarios dados de alta')
-            ->setCellValue('A5', 'Establecimiento dados de alta')
-            ->setCellValue('A6', 'Eventos dados de alta')
-            ->setCellValue('A7', 'Productos dados de alta')
-            ->setCellValue('A8', 'Busquedas de establecimientos')
-            ->setCellValue('A9', 'Busquedas de eventos')
-            ->setCellValue('A10', 'Busquedas de productos')
-            ->setCellValue('A11', 'Número de comentarios')
-            ->setCellValue('A12', 'Número de accesos a la aplicación');
+            ->setCellValue('A5', 'Usuarios dados de alta')
+            ->setCellValue('A6', 'Establecimiento dados de alta')
+            ->setCellValue('A7', 'Eventos dados de alta')
+            ->setCellValue('A8', 'Productos dados de alta')
+            ->setCellValue('A9', 'Búsquedas de establecimientos')
+            ->setCellValue('A10', 'Búsquedas de eventos')
+            ->setCellValue('A11', 'Búsquedas de productos')
+            ->setCellValue('A12', 'Número de comentarios')
+            ->setCellValue('A13', 'Número de accesos a la aplicación');
       
 // mes
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('B4', $b4)
-            ->setCellValue('B5', $b5)
-            ->setCellValue('B6', $b6)
-            ->setCellValue('B7', $b7)
-            ->setCellValue('B8', $b8)
-            ->setCellValue('B9', $b9)
-            ->setCellValue('B10', $b10)
-            ->setCellValue('B11', $b11)
-            ->setCellValue('B12', $b12);
+            ->setCellValue('B5', $b4)
+            ->setCellValue('B6', $b5)
+            ->setCellValue('B7', $b6)
+            ->setCellValue('B8', $b7)
+            ->setCellValue('B9', $b8)
+            ->setCellValue('B10', $b9)
+            ->setCellValue('B11', $b10)
+            ->setCellValue('B12', $b11)
+            ->setCellValue('B13', $b12);
 
 // mes anterior
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('C4', $c4)
-            ->setCellValue('C5', $c5)
-            ->setCellValue('C6', $c6)
-            ->setCellValue('C7', $c7)
-            ->setCellValue('C8', $c8)
-            ->setCellValue('C9', $c9)
-            ->setCellValue('C10', $c10)
-            ->setCellValue('C11', $c11)
-            ->setCellValue('C12', $c12);
+            ->setCellValue('C5', $c4)
+            ->setCellValue('C6', $c5)
+            ->setCellValue('C7', $c6)
+            ->setCellValue('C8', $c7)
+            ->setCellValue('C9', $c8)
+            ->setCellValue('C10', $c9)
+            ->setCellValue('C11', $c10)
+            ->setCellValue('C12', $c11)
+            ->setCellValue('C13', $c12);
 
 // historico
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('D4', $d4)
-            ->setCellValue('D5', $d5)
-            ->setCellValue('D6', $d6)
-            ->setCellValue('D7', $d7)
-            ->setCellValue('D8', $d8)
-            ->setCellValue('D9', $d9)
-            ->setCellValue('D10', $d10)
-            ->setCellValue('D11', $d11)
-            ->setCellValue('D12', $d12);
+            ->setCellValue('D5', $d4)
+            ->setCellValue('D6', $d5)
+            ->setCellValue('D7', $d6)
+            ->setCellValue('D8', $d7)
+            ->setCellValue('D9', $d8)
+            ->setCellValue('D10', $d9)
+            ->setCellValue('D11', $d10)
+            ->setCellValue('D12', $d11)
+            ->setCellValue('D13', $d12);
 
 
 // Rename worksheet
@@ -366,60 +367,61 @@ $objPHPExcel->getProperties()->setCreator("Sistema de exportación de estadísti
 
 // cabecera
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Resumen estadístico general')
-            ->setCellValue('D1', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
-            ->setCellValue('A3', 'Concepto')
-            ->setCellValue('B3', 'Este mes')
-            ->setCellValue('C3', 'Mes anterior')
-            ->setCellValue('D3', 'Histórico');
+            ->setCellValue('A1', 'Justo y Responsable')
+            ->setCellValue('A2', 'Resumen estadístico general')
+            ->setCellValue('D2', 'Fecha: '.DATE("d").'/'.DATE("m").'/'.DATE("Y"))
+            ->setCellValue('A4', 'Concepto')
+            ->setCellValue('B4', 'Mes actual')
+            ->setCellValue('C4', 'Mes anterior')
+            ->setCellValue('D4', 'Histórico');
 
 // conceptos
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A4', 'Usuarios dados de alta')
-            ->setCellValue('A5', 'Establecimiento dados de alta')
-            ->setCellValue('A6', 'Eventos dados de alta')
-            ->setCellValue('A7', 'Productos dados de alta')
-            ->setCellValue('A8', 'Busquedas de establecimientos')
-            ->setCellValue('A9', 'Busquedas de eventos')
-            ->setCellValue('A10', 'Busquedas de productos')
-            ->setCellValue('A11', 'Número de comentarios')
-            ->setCellValue('A12', 'Número de accesos a la aplicación');
+            ->setCellValue('A5', 'Usuarios dados de alta')
+            ->setCellValue('A6', 'Establecimiento dados de alta')
+            ->setCellValue('A7', 'Eventos dados de alta')
+            ->setCellValue('A8', 'Productos dados de alta')
+            ->setCellValue('A9', 'Búsquedas de establecimientos')
+            ->setCellValue('A10', 'Búsquedas de eventos')
+            ->setCellValue('A11', 'Búsquedas de productos')
+            ->setCellValue('A12', 'Número de comentarios')
+            ->setCellValue('A13', 'Número de accesos a la aplicación');
       
 // mes
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('B4', $b4)
-            ->setCellValue('B5', $b5)
-            ->setCellValue('B6', $b6)
-            ->setCellValue('B7', $b7)
-            ->setCellValue('B8', $b8)
-            ->setCellValue('B9', $b9)
-            ->setCellValue('B10', $b10)
-            ->setCellValue('B11', $b11)
-            ->setCellValue('B12', $b12);
+            ->setCellValue('B5', $b4)
+            ->setCellValue('B6', $b5)
+            ->setCellValue('B7', $b6)
+            ->setCellValue('B8', $b7)
+            ->setCellValue('B9', $b8)
+            ->setCellValue('B10', $b9)
+            ->setCellValue('B11', $b10)
+            ->setCellValue('B12', $b11)
+            ->setCellValue('B13', $b12);
 
 // mes anterior
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('C4', $c4)
-            ->setCellValue('C5', $c5)
-            ->setCellValue('C6', $c6)
-            ->setCellValue('C7', $c7)
-            ->setCellValue('C8', $c8)
-            ->setCellValue('C9', $c9)
-            ->setCellValue('C10', $c10)
-            ->setCellValue('C11', $c11)
-            ->setCellValue('C12', $c12);
+            ->setCellValue('C5', $c4)
+            ->setCellValue('C6', $c5)
+            ->setCellValue('C7', $c6)
+            ->setCellValue('C8', $c7)
+            ->setCellValue('C9', $c8)
+            ->setCellValue('C10', $c9)
+            ->setCellValue('C11', $c10)
+            ->setCellValue('C12', $c11)
+            ->setCellValue('C13', $c12);
 
 // historico
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('D4', $d4)
-            ->setCellValue('D5', $d5)
-            ->setCellValue('D6', $d6)
-            ->setCellValue('D7', $d7)
-            ->setCellValue('D8', $d8)
-            ->setCellValue('D9', $d9)
-            ->setCellValue('D10', $d10)
-            ->setCellValue('D11', $d11)
-            ->setCellValue('D12', $d12);
+            ->setCellValue('D5', $d4)
+            ->setCellValue('D6', $d5)
+            ->setCellValue('D7', $d6)
+            ->setCellValue('D8', $d7)
+            ->setCellValue('D9', $d8)
+            ->setCellValue('D10', $d9)
+            ->setCellValue('D11', $d10)
+            ->setCellValue('D12', $d11)
+            ->setCellValue('D13', $d12);
 
 // Rename worksheet
 $objPHPExcel->getActiveSheet()->setTitle('Simple');

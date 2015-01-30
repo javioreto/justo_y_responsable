@@ -64,14 +64,14 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 		
 		<a data-ajax='false' href='#settingPanel' class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-right ui-btn-icon-notext"></a>
 	</div>	
-	<div id="resultado" class="ver hidden">Se ha obtenido el código <p id="result"></p></div>
+	<div id="resultado" class="ver hidden"><p id="result"></p></div>
 	
 	<div id="introducir" class="ver hidden">
-	No se ha podido acceder a la camara para escanear los códigos de barras.
+	<div style="margin-right:50px; margin-top:20px;">No se ha podido acceder a la camara para escanear los códigos de barras.
 	<br>
 		<div style="width:60%; margin-left:auto; margin-right:auto;">
 			<input type="text" id="codText" name="cod" placeholder="Intro. Cód. de barras">
-			<a href="#" id="buscar" data-role="button" data-icon="search">Buscar</a>
+			<a href="#" id="buscar" data-role="button" data-icon="search">Buscar</a></div>
 			
 			<div data-role="popup" id="popupBasic" data-theme="a" class="ui-content">
 			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
@@ -79,10 +79,10 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 			</div>
 		</div>
 	</div>
-	
+	<div style="width:100%; background-color:gray">
     <video id="video" style="width:100%; margin-left:auto; margin-right:auto; max-height:800px; z-index:3;">
     </video>	
-    
+    </div>
 
     	<div class="banner_over_scan" id="txt1">
 		Escanee el código de barras del producto
@@ -109,7 +109,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 </li>
 
                 <li>
-                    <a data-ajax="false" href="capturar.php"><p><?php echo _("Nueva búsqueda") ?></p></a>
+                    <a data-ajax="false" href="capturar.php"><p><?php echo _("Nuevo escaneo") ?></p></a>
                 </li>
                 <li>
                     <a data-ajax="false" href="info.php" ><p><?php echo _("Acerca de") ?></p></a>
@@ -117,7 +117,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                 <li>
                     <a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><p><?php echo _("Ayuda") ?></p></a>
                 </li>
-            </ul>
+            </ul><br>
             <div id="btnclose" align="center">
                 <a href="#demo-links" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline"><?php echo _("Cerrar") ?></a>
             </div>

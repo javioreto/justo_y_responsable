@@ -31,7 +31,11 @@ if(isset($_POST['name']) && isset($_POST['text']) && isset($_POST['refE']) && ($
         //Insert comment.
         $dataBase->insertComment($_POST['name'],$date,$_POST['text'],$_POST['refE'],$con);  
         if($_POST['email']!=""){  
-        	$mail->newComment($_POST['nombre'],"establecimiento ".$_POST['email'],"javioreto@gmail.com");
+        	//pruebas
+        	$mail->newComment($_POST['nombre'],"establecimiento","javioreto@gmail.com");
+        	//final
+        	//$mail->newComment($_POST['nombre'],"establecimiento",$_POST['email']);
+
         }
     }
     $html .= $date;

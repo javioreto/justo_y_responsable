@@ -73,10 +73,11 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav navbar-right">
-          		<li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
 				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
+              <li><a data-ajax="false" href="gestion.php"><?php echo _("Inicio") ?></a></li>
+
           </ul>
         </nav>
       </div>

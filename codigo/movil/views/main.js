@@ -59,7 +59,7 @@ barcode_scanner = {
       				$('#resultado').removeClass('hidden').addClass('visible');
             setTimeout(function () {
       				$('#resultado').removeClass('visible').addClass('hidden');
-   				 }, 3000);
+   				 }, 2500);
           }else {
           	$('#resultado').removeClass('hidden').addClass('visible');
             barcode_scanner.result.show(barcode_scanner.decode.eddie.resultArray + "<br /><img src='../../images/cargador.gif' style='margin:15px 0px -10px 0px;'>");
@@ -144,6 +144,7 @@ if (navigator.getMedia) {
   }
 
   startbutton.addEventListener('click', function(ev){
+  	$('#introducir').addClass('hidden');
     scanTimeout();
     ev.preventDefault();
   }, false); 

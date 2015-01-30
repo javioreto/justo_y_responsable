@@ -162,7 +162,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
                             $establishment = Search::searchEventsByArrayId($arrE);
                             if(count($establishment)>0){
                                                                    
- 								foreach($event as $result){ 
+ 								foreach($establishment as $result){ 
  								echo("<li>
                         <a data-ajax='false' href='informationEvent.php?idEvent=".$result->getidEvento()."'>
                            <table class='tablelist'>

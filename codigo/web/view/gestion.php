@@ -77,8 +77,8 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 				<li><a data-ajax="false" href="gestionUser.php"><?php echo _("Usuarios") ?></a></li>
 				<li><a data-ajax="false" href="gestionEstablishment.php"><?php echo _("Establecimientos") ?></a></li>
 				<li><a data-ajax="false" href="gestionEventos.php"><?php echo _("Eventos") ?></a></li>
-				<li><a data-ajax="false" href="configuracion.php"><?php echo _("Configuración") ?></a></li>
 				<li><a data-ajax="false" href="estadisticas.php"><?php echo _("Estadísticas") ?></a></li>
+				<li><a data-ajax="false" href="configuracion.php"><?php echo _("Configuración") ?></a></li>				
 				<li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li>
               <!-- <li><a data-ajax="false" href="info.php"><?php echo _("Acerca de") ?></a></li> -->
               <li><a target="_blank" data-ajax="false" href="../images/manualUsuario.pdf"><?php echo _("Ayuda") ?></a></li>     
@@ -119,7 +119,7 @@ $con = $dataBase->CheckConnectDB($dataBase->getServer(),$dataBase->getUsername()
 
         </div>
         <div class="col-md-8">
-        	<h3>Centro de notificaciones</h3>
+        	<h3>Últimas notificaciones</h3>
         	
       <div class="alert alert-success alert-dismissible fade in hidden" role="alert" id="alertOk">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">

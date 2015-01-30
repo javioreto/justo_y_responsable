@@ -375,6 +375,20 @@ Load::insertBusqueda($_GET['idEstablecimiento'], 1);
             ?>
             </ul>
         </div>
+        
+        
+            <br><br><br>
+
+        <div class="footer">
+    	<div class="redes">
+    	<div class="redes-contenido">
+			<div class="fb-like" data-href="<?php echo "http://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>   
+		</div>	
+		<div class="redes-contenido">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Me gusta <?php echo $establishment->getName() ?>" data-via="CEComercioJusto">Tweet</a></div>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+	</div>
 		
 	</body>
 	
@@ -427,16 +441,6 @@ Load::insertBusqueda($_GET['idEstablecimiento'], 1);
             </div>
     </div>
     
-        <div class="footer">
-    	<div class="redes">
-    	<div class="redes-contenido">
-			<div class="fb-like" data-href="<?php echo "http://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>   
-		</div>	
-		<div class="redes-contenido">
-		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Me gusta <?php echo $establishment->getName() ?>" data-via="CEComercioJusto">Tweet</a></div>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</div>
-	</div>
 
     <script>
         document.getElementById('captcha').src='../images/captcha.php?'+Math.random();

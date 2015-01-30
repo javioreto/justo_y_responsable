@@ -68,10 +68,10 @@ class Search{
                     }    
                 }
             }
-            
+			
             
             for($h=0;$h<count($array) && $h<10 ;$h++){
-					if(substr($array[$h][1],0,4)<50){
+					if(substr($array[$h][1],0,4)<50 ){
                     echo "<li>";
                         echo"<a data-ajax='false' href='informationEvent.php?idEvent=".$array[$h][0]->getidEvento()."'>
                            <table class='tablelist'>

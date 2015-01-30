@@ -19,11 +19,11 @@ class mailingSystem{
 	    include_once ("../view/mailView.php");
 	}
 	
-		$ssubject="Nuevo comentario en su ".$tipo;
+		$ssubject="[JyR] Nuevo comentario en su ".$tipo;
 		$sheader="From: Justo y Responsable <".$this->system_mail.">\nReply-To:".$this->system_mail."\n";
 		$sheader=$sheader."X-Mailer:PHP/".phpversion()."\n";
 		$sheader=$sheader."Mime-Version: 1.0\n";
-		$sheader=$sheader."Content-Type: text/html";
+		$sheader=$sheader."Content-Type: text/html; charset=UTF-8";
 	
 		mail($email,$ssubject,$newComment,$sheader);
 	

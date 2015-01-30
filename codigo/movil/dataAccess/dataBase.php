@@ -1024,11 +1024,28 @@ class DataBase{
                     $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
                     $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
                     $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
+                    if(date('Y-m-d') < $row['fecha']){
+                    $arrayEvent[] = $event;
+                    }
+        }
+        return $arrayEvent;  
+    }
+    
+        function getAllEventss($con){
+        $arrayEvent = array();
+        $sql = "select * from evento order by idEvento DESC";
+        $result = mysql_query($sql, $con);
+        while ($row = mysql_fetch_array($result)) {                    
+                    $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
+                    $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
+                    $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
                     
                     $arrayEvent[] = $event;
         }
         return $arrayEvent;  
     }
+    
+
     
     
     function getAllEventsByEstablishmentId($id,$con){
@@ -1063,8 +1080,9 @@ class DataBase{
                     $event = new Event($row['idEvento'], $row['descripcion'], $row['direccion'],$row['localidad'],$row['cp'],
                     $row['fecha'],$row['inicio'], $row['fin'],$row['fecha_creacion'],$row['nombre'],$row['longitud'],$row['latitud'],
                     $row['validado'],$row['idTipo'],$row['idEstablecimiento']);
-                    
+                    if(date('Y-m-d') < $row['fecha']){
                     $arrayEvent[] = $event;
+                    }
                 }
         return $arrayEvent;  
     }
